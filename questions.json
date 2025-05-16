@@ -1,222 +1,1002 @@
 [
   {
     "id": 1,
-    "question": "Quale dei seguenti protocolli di routing è un protocollo di gateway interno (IGP) basato sullo stato dei link?",
-    "options": [
-      "BGP",
-      "RIP",
-      "OSPF",
-      "EIGRP"
-    ],
-    "correctAnswer": "OSPF"
+    "question": "Cosa significa l'acronimo TCP/IP?",
+    "answer": "Transmission Control Protocol/Internet Protocol"
   },
   {
     "id": 2,
-    "question": "In AWS, quale servizio è più adatto per l'esecuzione di carichi di lavoro batch a elevate prestazioni e scalabilità?",
-    "options": [
-      "AWS Lambda",
-      "Amazon EC2",
-      "AWS Batch",
-      "Amazon SQS"
-    ],
-    "correctAnswer": "AWS Batch"
+    "question": "Qual è lo scopo principale di un firewall?",
+    "answer": "Monitorare e controllare il traffico di rete"
   },
   {
     "id": 3,
-    "question": "Quale principio di sicurezza cloud si occupa di garantire che i dati rimangano riservati e non vengano divulgati a entità non autorizzate?",
-    "options": [
-      "Integrità",
-      "Disponibilità",
-      "Confidenzialità",
-      "Non ripudio"
-    ],
-    "correctAnswer": "Confidenzialità"
+    "question": "Cosa si intende per 'phishing' in sicurezza informatica?",
+    "answer": "Tentativo fraudolento di ottenere informazioni sensibili spacciandosi per un'entità fidata"
   },
   {
     "id": 4,
-    "question": "Quale dei seguenti non è un modello di deployment cloud definito dal NIST?",
-    "options": [
-      "Cloud Pubblico",
-      "Cloud Privato",
-      "Cloud Distribuito",
-      "Cloud Ibrido"
-    ],
-    "correctAnswer": "Cloud Distribuito"
+    "question": "Quale linguaggio di programmazione è spesso usato per lo sviluppo web lato client?",
+    "answer": "JavaScript"
   },
   {
     "id": 5,
-    "question": "In Kubernetes, quale oggetto gestisce un set di repliche di pod e fornisce aggiornamenti rolling e rollback?",
-    "options": [
-      "Pod",
-      "Service",
-      "Deployment",
-      "StatefulSet"
-    ],
-    "correctAnswer": "Deployment"
+    "question": "Cosa rappresenta l'acronimo SQL?",
+    "answer": "Structured Query Language"
   },
   {
     "id": 6,
-    "question": "Quale algoritmo di crittografia asimmetrica è comunemente usato per la firma digitale e lo scambio di chiavi?",
-    "options": [
-      "AES",
-      "SHA-256",
-      "RSA",
-      "DES"
-    ],
-    "correctAnswer": "RSA"
+    "question": "Qual è il ruolo di un router in una rete?",
+    "answer": "Smistare i pacchetti di dati tra diverse reti"
   },
   {
     "id": 7,
-    "question": "In una rete TCP/IP, a quale livello del modello OSI opera principalmente un router?",
-    "options": [
-      "Livello di Rete (Network Layer)",
-      "Livello di Trasporto (Transport Layer)",
-      "Livello di Datalink (Data Link Layer)",
-      "Livello di Applicazione (Application Layer)"
-    ],
-    "correctAnswer": "Livello di Rete (Network Layer)"
+    "question": "Cosa si intende per 'crittografia end-to-end'?",
+    "answer": "Solo i mittenti e i destinatari previsti possono leggere i messaggi"
   },
   {
     "id": 8,
-    "question": "Quale termine descrive una vulnerabilità di sicurezza che è sconosciuta agli sviluppatori del software e per la quale non esiste ancora una patch?",
-    "options": [
-      "Buffer Overflow",
-      "Zero-Day Exploit",
-      "SQL Injection",
-      "Cross-Site Scripting (XSS)"
-    ],
-    "correctAnswer": "Zero-Day Exploit"
+    "question": "Qual è un esempio di sistema operativo open source?",
+    "answer": "Linux"
   },
   {
     "id": 9,
-    "question": "In Azure, quale servizio offre un data warehouse basato su cloud elastico e scalabile?",
-    "options": [
-      "Azure Cosmos DB",
-      "Azure Data Lake Storage",
-      "Azure Synapse Analytics",
-      "Azure SQL Database"
-    ],
-    "correctAnswer": "Azure Synapse Analytics"
+    "question": "Cosa indica l'acronimo API?",
+    "answer": "Application Programming Interface"
   },
   {
     "id": 10,
-    "question": "Quale dei seguenti è uno standard per l'automazione della configurazione e del deployment, spesso usato nell'Infrastructure as Code (IaC)?",
-    "options": [
-      "Docker",
-      "Jenkins",
-      "Ansible",
-      "Nagios"
-    ],
-    "correctAnswer": "Ansible"
+    "question": "Qual è la funzione di un database?",
+    "answer": "Archiviare, gestire e recuperare dati"
   },
-  {
+    {
     "id": 11,
-    "question": "Quale dei seguenti non è un tipo di database NoSQL?",
-    "options": [
-      "Document Store",
-      "Graph Database",
-      "Column-Family Store",
-      "Relational Database"
-    ],
-    "correctAnswer": "Relational Database"
+    "question": "Cosa si intende per 'Cloud Computing'?",
+    "answer": "Fornitura di risorse informatiche (server, storage, database, software) via Internet"
   },
   {
     "id": 12,
-    "question": "Cosa si intende per 'idempotenza' nel contesto delle API o dei sistemi distribuiti?",
-    "options": [
-      "Una chiamata API restituisce sempre lo stesso risultato per lo stesso input",
-      "Una chiamata API può essere ripetuta più volte producendo lo stesso risultato finale, senza effetti collaterali indesiderati dopo la prima esecuzione riuscita",
-      "Una chiamata API garantisce l'integrità transazionale tra più servizi",
-      "Una chiamata API è stateless e non mantiene informazioni sulla sessione"
-    ],
-    "correctAnswer": "Una chiamata API può essere ripetuta più volte producendo lo stesso risultato finale, senza effetti collaterali indesiderati dopo la prima esecuzione riuscita"
+    "question": "Quali sono i tre principali modelli di servizio del cloud computing?",
+    "answer": "IaaS, PaaS, SaaS"
   },
   {
     "id": 13,
-    "question": "In Google Cloud Platform (GCP), quale servizio è un data warehouse serverless e altamente scalabile?",
-    "options": [
-      "Cloud SQL",
-      "Cloud Storage",
-      "BigQuery",
-      "Datastore"
-    ],
-    "correctAnswer": "BigQuery"
+    "question": "Cosa sta per IaaS nel cloud computing?",
+    "answer": "Infrastructure as a Service"
   },
   {
     "id": 14,
-    "question": "Quale dei seguenti è un protocollo utilizzato principalmente per il trasferimento di file in modo sicuro?",
-    "options": [
-      "FTP",
-      "SFTP",
-      "TFTP",
-      "HTTP"
-    ],
-    "correctAnswer": "SFTP"
+    "question": "Cosa sta per PaaS nel cloud computing?",
+    "answer": "Platform as a Service"
   },
   {
     "id": 15,
-    "question": "In termini di sicurezza informatica, cosa significa 'attacco Man-in-the-Middle' (MITM)?",
-    "options": [
-      "Un attacco in cui un utente malintenzionato si posiziona tra due parti che comunicano per intercettare o modificare i dati",
-      "Un attacco che sfrutta una debolezza nella gestione della memoria di un programma",
-      "Un attacco che tenta di indovinare le password provando tutte le combinazioni possibili",
-      "Un attacco che rende un servizio non disponibile sovraccaricandolo di traffico"
-    ],
-    "correctAnswer": "Un attacco in cui un utente malintenzionato si posiziona tra due parti che comunicano per intercettare o modificare i dati"
+    "question": "Cosa sta per SaaS nel cloud computing?",
+    "answer": "Software as a Service"
   },
-    {
+  {
     "id": 16,
-    "question": "Quale modello di Machine Learning è comunemente usato per compiti di classificazione binaria?",
-    "options": [
-      "Regressione Lineare",
-      "K-Means Clustering",
-      "Support Vector Machine (SVM)",
-      "Principal Component Analysis (PCA)"
-    ],
-    "correctAnswer": "Support Vector Machine (SVM)"
+    "question": "Qual è un esempio di servizio IaaS?",
+    "answer": "Amazon EC2 (Elastic Compute Cloud)"
   },
   {
     "id": 17,
-    "question": "In un'architettura a microservizi, quale pattern di comunicazione è spesso utilizzato per l'integrazione asincrona tra servizi?",
-    "options": [
-      "REST API Calls",
-      "RPC (Remote Procedure Call)",
-      "Message Queues (es. RabbitMQ, Kafka)",
-      "Synchronous HTTP Requests"
-    ],
-    "correctAnswer": "Message Queues (es. RabbitMQ, Kafka)"
+    "question": "Qual è un esempio di servizio PaaS?",
+    "answer": "Google App Engine"
   },
   {
     "id": 18,
-    "question": "Quale dei seguenti non è un componente fondamentale di una rete definita dal software (SDN)?",
-    "options": [
-      "Piano di Controllo (Control Plane)",
-      "Piano Dati (Data Plane)",
-      "Interfaccia Northbound",
-      "Firewall Hardware Dedicato"
-    ],
-    "correctAnswer": "Firewall Hardware Dedicato"
+    "question": "Qual è un esempio di servizio SaaS?",
+    "answer": "Google Workspace (precedentemente G Suite) o Microsoft 365"
   },
   {
     "id": 19,
-    "question": "Cosa si intende per 'Eventual Consistency' in un sistema distribuito?",
-    "options": [
-      "Tutte le repliche dei dati sono sempre aggiornate in tempo reale",
-      "Dopo un certo periodo di tempo, tutte le repliche dei dati diventeranno coerenti, a meno che non ci siano nuove modifiche",
-      "Solo un nodo alla volta può modificare un dato",
-      "Le modifiche ai dati vengono applicate solo a un sottoinsieme di repliche"
-    ],
-    "correctAnswer": "Dopo un certo periodo di tempo, tutte le repliche dei dati diventeranno coerenti, a meno che non ci siano nuove modifiche"
+    "question": "Cosa si intende per 'scalabilità' nel cloud?",
+    "answer": "La capacità di aumentare o diminuire le risorse in base alla domanda"
   },
   {
     "id": 20,
-    "question": "In AWS, quale servizio offre un'infrastruttura desktop virtuale persistente e scalabile?",
-    "options": [
-      "Amazon EC2",
-      "AWS Lambda",
-      "Amazon WorkSpaces",
-      "Amazon AppStream 2.0"
-    ],
-    "correctAnswer": "Amazon WorkSpaces"
+    "question": "Cosa si intende per 'elasticità' nel cloud?",
+    "answer": "La capacità di scalare automaticamente le risorse in tempo reale"
+  },
+    {
+    "id": 21,
+    "question": "Qual è un vantaggio del cloud computing in termini di costi?",
+    "answer": "Pagamento in base all'utilizzo (pay-as-you-go)"
+  },
+  {
+    "id": 22,
+    "question": "Cosa si intende per 'cloud pubblico'?",
+    "answer": "Risorse di cloud fornite da un provider esterno e condivise tra più utenti"
+  },
+  {
+    "id": 23,
+    "question": "Cosa si intende per 'cloud privato'?",
+    "answer": "Risorse di cloud utilizzate esclusivamente da una singola organizzazione"
+  },
+  {
+    "id": 24,
+    "question": "Cosa si intende per 'cloud ibrido'?",
+    "answer": "Combinazione di cloud pubblico e cloud privato"
+  },
+  {
+    "id": 25,
+    "question": "Cosa si intende per 'multi-cloud'?",
+    "answer": "Utilizzo di servizi di cloud da più provider diversi"
+  },
+  {
+    "id": 26,
+    "question": "Qual è un provider leader nel mercato del cloud pubblico?",
+    "answer": "Amazon Web Services (AWS), Microsoft Azure, Google Cloud Platform (GCP)"
+  },
+  {
+    "id": 27,
+    "question": "Cosa sono i 'container' nel contesto IT?",
+    "answer": "Unità standard di software che impacchettano codice e tutte le sue dipendenze"
+  },
+  {
+    "id": 28,
+    "question": "Qual è una piattaforma popolare per la gestione dei container?",
+    "answer": "Kubernetes o Docker Swarm"
+  },
+  {
+    "id": 29,
+    "question": "Cosa si intende per 'serverless computing'?",
+    "answer": "Un modello di esecuzione in cui il provider di cloud gestisce l'infrastruttura sottostante e alloca risorse in base all'esecuzione del codice"
+  },
+  {
+    "id": 30,
+    "question": "Qual è un esempio di servizio serverless?",
+    "answer": "AWS Lambda, Azure Functions, Google Cloud Functions"
+  },
+    {
+    "id": 31,
+    "question": "Cosa si intende per 'DevOps'?",
+    "answer": "Un insieme di pratiche che combina sviluppo software (Dev) e operazioni IT (Ops)"
+  },
+  {
+    "id": 32,
+    "question": "Qual è lo scopo principale di DevOps?",
+    "answer": "Accelerare i processi di sviluppo e distribuzione software in modo affidabile"
+  },
+  {
+    "id": 33,
+    "question": "Cosa si intende per 'CI/CD'?",
+    "answer": "Continuous Integration/Continuous Deployment (o Delivery)"
+  },
+  {
+    "id": 34,
+    "question": "Qual è uno strumento comune per la Continuous Integration?",
+    "answer": "Jenkins, GitLab CI, GitHub Actions"
+  },
+  {
+    "id": 35,
+    "question": "Cosa si intende per 'IaC' nel cloud computing?",
+    "answer": "Infrastructure as Code"
+  },
+  {
+    "id": 36,
+    "question": "Qual è uno strumento popolare per l'IaC?",
+    "answer": "Terraform, AWS CloudFormation, Ansible"
+  },
+  {
+    "id": 37,
+    "question": "Cosa si intende per 'monitoraggio' nel cloud?",
+    "answer": "Raccogliere e analizzare dati sulle prestazioni e l'utilizzo delle risorse cloud"
+  },
+  {
+    "id": 38,
+    "question": "Qual è un aspetto importante della sicurezza nel cloud?",
+    "answer": "Gestione delle identità e degli accessi (IAM)"
+  },
+  {
+    "id": 39,
+    "question": "Cosa si intende per 'resilienza' nel cloud?",
+    "answer": "La capacità di un sistema di riprendersi da guasti e continuare a funzionare"
+  },
+  {
+    "id": 40,
+    "question": "Cosa si intende per 'backup e disaster recovery' nel cloud?",
+    "answer": "Strategie per salvare i dati e ripristinare i sistemi dopo un evento disastroso"
+  },
+    {
+    "id": 41,
+    "question": "Cosa si intende per 'migrazione al cloud'?",
+    "answer": "Il processo di spostamento di dati, applicazioni e carichi di lavoro verso un'infrastruttura cloud"
+  },
+  {
+    "id": 42,
+    "question": "Qual è un modello di migrazione al cloud comune?",
+    "answer": "Lift and Shift (Rehosting)"
+  },
+  {
+    "id": 43,
+    "question": "Cosa si intende per 'ottimizzazione dei costi' nel cloud?",
+    "answer": "Strategie per ridurre le spese relative all'utilizzo delle risorse cloud"
+  },
+  {
+    "id": 44,
+    "question": "Qual è un servizio di storage oggetti nel cloud?",
+    "answer": "Amazon S3 (Simple Storage Service), Azure Blob Storage, Google Cloud Storage"
+  },
+  {
+    "id": 45,
+    "question": "Cosa si intende per 'rete virtuale' nel cloud?",
+    "answer": "Una rete logica isolata all'interno del cloud"
+  },
+  {
+    "id": 46,
+    "question": "Qual è un servizio di database gestito nel cloud?",
+    "answer": "Amazon RDS (Relational Database Service), Azure SQL Database, Google Cloud SQL"
+  },
+  {
+    "id": 47,
+    "question": "Cosa si intende per 'edge computing'?",
+    "answer": "Elaborazione dei dati più vicino alla fonte di generazione dei dati anziché in un data center centralizzato"
+  },
+  {
+    "id": 48,
+    "question": "Qual è un caso d'uso comune per l'edge computing?",
+    "answer": "Dispositivi IoT (Internet of Things)"
+  },
+  {
+    "id": 49,
+    "question": "Cosa si intende per 'machine learning as a service' (MLaaS)?",
+    "answer": "Servizi cloud che forniscono strumenti e modelli pre-addestrati per sviluppare e distribuire applicazioni di machine learning"
+  },
+  {
+    "id": 50,
+    "question": "Qual è un esempio di servizio MLaaS?",
+    "answer": "Amazon SageMaker, Azure Machine Learning, Google AI Platform"
+  },
+    {
+    "id": 51,
+    "question": "Cosa si intende per 'big data'?",
+    "answer": "Grandi volumi di dati che richiedono tecniche e tecnologie specifiche per essere elaborati e analizzati"
+  },
+  {
+    "id": 52,
+    "question": "Qual è un servizio cloud per l'elaborazione di big data?",
+    "answer": "Amazon EMR (Elastic MapReduce), Azure HDInsight, Google Cloud Dataproc"
+  },
+  {
+    "id": 53,
+    "question": "Cosa si intende per 'data lake' nel cloud?",
+    "answer": "Un repository centralizzato per archiviare dati strutturati e non strutturati su larga scala"
+  },
+  {
+    "id": 54,
+    "question": "Qual è un servizio cloud per la gestione dei data lake?",
+    "answer": "AWS Lake Formation, Azure Data Lake Storage, Google Cloud Storage"
+  },
+  {
+    "id": 55,
+    "question": "Cosa si intende per 'API Gateway' nel cloud?",
+    "answer": "Un punto di ingresso singolo per gestire le chiamate API ai servizi backend"
+  },
+  {
+    "id": 56,
+    "question": "Qual è un servizio cloud di API Gateway?",
+    "answer": "Amazon API Gateway, Azure API Management, Google Cloud API Gateway"
+  },
+  {
+    "id": 57,
+    "question": "Cosa si intende per 'load balancing' nel cloud?",
+    "answer": "Distribuzione del traffico di rete su più server per migliorare le prestazioni e la disponibilità"
+  },
+  {
+    "id": 58,
+    "question": "Qual è un servizio cloud di load balancing?",
+    "answer": "Elastic Load Balancing (AWS), Azure Load Balancer, Google Cloud Load Balancing"
+  },
+  {
+    "id": 59,
+    "question": "Cosa si intende per 'Virtual Private Cloud' (VPC)?",
+    "answer": "Una sezione isolata di un cloud pubblico dedicata a un singolo utente o organizzazione"
+  },
+  {
+    "id": 60,
+    "question": "Qual è un servizio cloud per la creazione di VPC?",
+    "answer": "Amazon VPC, Azure Virtual Network, Google Cloud Virtual Private Cloud"
+  },
+    {
+    "id": 61,
+    "question": "Cosa si intende per 'Content Delivery Network' (CDN)?",
+    "answer": "Una rete distribuita di server che forniscono contenuti web agli utenti in base alla loro posizione geografica"
+  },
+  {
+    "id": 62,
+    "question": "Qual è un servizio cloud di CDN?",
+    "answer": "Amazon CloudFront, Azure CDN, Google Cloud CDN"
+  },
+  {
+    "id": 63,
+    "question": "Cosa si intende per 'identity and access management' (IAM) nel cloud?",
+    "answer": "Gestione degli utenti e delle loro autorizzazioni per accedere alle risorse cloud"
+  },
+  {
+    "id": 64,
+    "question": "Qual è un servizio cloud di IAM?",
+    "answer": "AWS IAM, Azure Active Directory, Google Cloud IAM"
+  },
+  {
+    "id": 65,
+    "question": "Cosa si intende per 'monitoraggio delle prestazioni' nel cloud?",
+    "answer": "Tracciare e analizzare le metriche per valutare l'efficienza e la reattività delle applicazioni cloud"
+  },
+  {
+    "id": 66,
+    "question": "Qual è un servizio cloud per il monitoraggio delle prestazioni?",
+    "answer": "Amazon CloudWatch, Azure Monitor, Google Cloud Monitoring"
+  },
+  {
+    "id": 67,
+    "question": "Cosa si intende per 'logging' nel cloud?",
+    "answer": "Registrazione degli eventi e delle attività che si verificano nelle risorse cloud"
+  },
+  {
+    "id": 68,
+    "question": "Qual è un servizio cloud di logging?",
+    "answer": "Amazon CloudTrail, Azure Activity Logs, Google Cloud Logging"
+  },
+  {
+    "id": 69,
+    "question": "Cosa si intende per 'automazione' nel cloud?",
+    "answer": "Utilizzo di strumenti e script per eseguire attività ripetitive nell'ambiente cloud"
+  },
+  {
+    "id": 70,
+    "question": "Qual è un vantaggio dell'automazione nel cloud?",
+    "answer": "Riduzione degli errori manuali e accelerazione dei processi"
+  },
+    {
+    "id": 71,
+    "question": "Cosa si intende per 'orchestration' nel cloud?",
+    "answer": "Automazione del coordinamento di più servizi e componenti cloud per eseguire un'attività complessa"
+  },
+  {
+    "id": 72,
+    "question": "Qual è uno strumento popolare per l'orchestration di container?",
+    "answer": "Kubernetes"
+  },
+  {
+    "id": 73,
+    "question": "Cosa si intende per 'microservizi'?",
+    "answer": "Un'architettura software in cui le applicazioni sono composte da piccoli servizi indipendenti"
+  },
+  {
+    "id": 74,
+    "question": "Qual è un vantaggio dell'architettura a microservizi?",
+    "answer": "Maggiore scalabilità, resilienza e flessibilità"
+  },
+  {
+    "id": 75,
+    "question": "Cosa si intende per 'API-first' approach?",
+    "answer": "Progettare le applicazioni partendo dalla definizione delle loro API"
+  },
+  {
+    "id": 76,
+    "question": "Qual è un protocollo comune per le API web?",
+    "answer": "HTTP/HTTPS"
+  },
+  {
+    "id": 77,
+    "question": "Cosa si intende per 'GraphQL'?",
+    "answer": "Un linguaggio di query per le API e un runtime per l'esecuzione di quelle query con i dati esistenti"
+  },
+  {
+    "id": 78,
+    "question": "Cosa si intende per 'monitoring sintetico' nel cloud?",
+    "answer": "Simulare il comportamento degli utenti per testare la disponibilità e le prestazioni delle applicazioni"
+  },
+  {
+    "id": 79,
+    "question": "Cosa si intende per 'monitoring reale dell'utente' (RUM)?",
+    "answer": "Raccogliere dati sulle interazioni reali degli utenti con le applicazioni"
+  },
+  {
+    "id": 80,
+    "question": "Qual è lo scopo del 'capacity planning' nel cloud?",
+    "answer": "Pianificare le risorse cloud necessarie per soddisfare la domanda futura"
+  },
+    {
+    "id": 81,
+    "question": "Cosa si intende per 'cost allocation tags' nel cloud?",
+    "answer": "Etichette utilizzate per organizzare le risorse cloud e tenere traccia dei costi per diversi progetti o team"
+  },
+  {
+    "id": 82,
+    "question": "Qual è un servizio cloud per l'analisi dei costi?",
+    "answer": "AWS Cost Explorer, Azure Cost Management, Google Cloud Cost Management"
+  },
+  {
+    "id": 83,
+    "question": "Cosa si intende per 'Reserved Instances' (RI) o 'Committed Use Discounts' nel cloud?",
+    "answer": "Opzioni di acquisto che offrono sconti significativi in cambio di un impegno sull'utilizzo delle risorse per un periodo di tempo"
+  },
+  {
+    "id": 84,
+    "question": "Cosa si intende per 'spot instances' nel cloud?",
+    "answer": "Istanze virtuali non utilizzate che vengono offerte a prezzi notevolmente ridotti"
+  },
+  {
+    "id": 85,
+    "question": "Qual è un caso d'uso ideale per le spot instances?",
+    "answer": "Carichi di lavoro flessibili e non critici che possono tollerare interruzioni"
+  },
+  {
+    "id": 86,
+    "question": "Cosa si intende per 'cloud security posture management' (CSPM)?",
+    "answer": "Strumenti che aiutano a identificare e correggere i rischi di sicurezza nell'ambiente cloud"
+  },
+  {
+    "id": 87,
+    "question": "Cosa si intende per 'cloud access security broker' (CASB)?",
+    "answer": "Software che si trova tra gli utenti e i servizi cloud per applicare le policy di sicurezza"
+  },
+  {
+    "id": 88,
+    "question": "Cosa si intende per 'Data Loss Prevention' (DLP) nel cloud?",
+    "answer": "Strategie e strumenti per prevenire l'esfiltrazione di dati sensibili dal cloud"
+  },
+  {
+    "id": 89,
+    "question": "Qual è un aspetto importante della conformità normativa nel cloud?",
+    "answer": "Rispettare standard come GDPR, HIPAA, PCI DSS, ecc."
+  },
+  {
+    "id": 90,
+    "question": "Cosa si intende per 'audit trail' nel cloud?",
+    "answer": "Registrazione cronologica di tutte le attività eseguite sulle risorse cloud per scopi di sicurezza e conformità"
+  },
+    {
+    "id": 91,
+    "question": "Cosa si intende per 'Software Defined Networking' (SDN)?",
+    "answer": "Un approccio alla gestione di rete che consente il controllo centralizzato tramite software"
+  },
+  {
+    "id": 92,
+    "question": "Cosa si intende per 'Network Functions Virtualization' (NFV)?",
+    "answer": "Virtualizzazione delle funzioni di rete tradizionali (come router, firewall, ecc.) come software"
+  },
+  {
+    "id": 93,
+    "question": "Cosa si intende per 'VPN' nel contesto di rete?",
+    "answer": "Virtual Private Network - una connessione sicura su una rete pubblica"
+  },
+  {
+    "id": 94,
+    "question": "Qual è un protocollo comune per le VPN?",
+    "answer": "IPsec o OpenVPN"
+  },
+  {
+    "id": 95,
+    "question": "Cosa si intende per 'Subnet' in una rete?",
+    "answer": "Una suddivisione logica di una rete IP"
+  },
+  {
+    "id": 96,
+    "question": "Cosa si intende per 'Gateway' in una rete?",
+    "answer": "Un dispositivo che consente a una rete di comunicare con un'altra rete"
+  },
+  {
+    "id": 97,
+    "question": "Cosa si intende per 'DNS'?",
+    "answer": "Domain Name System - sistema per tradurre nomi di dominio in indirizzi IP"
+  },
+  {
+    "id": 98,
+    "question": "Qual è la porta standard per il traffico HTTP?",
+    "answer": "80"
+  },
+  {
+    "id": 99,
+    "question": "Qual è la porta standard per il traffico HTTPS?",
+    "answer": "443"
+  },
+  {
+    "id": 100,
+    "question": "Cosa si intende per 'Load Balancer'?",
+    "answer": "Un dispositivo o software che distribuisce il traffico di rete tra più server"
+  },
+    {
+    "id": 101,
+    "question": "Cosa si intende per 'caching'?",
+    "answer": "Memorizzazione temporanea di dati per un accesso più rapido in futuro"
+  },
+  {
+    "id": 102,
+    "question": "Qual è un esempio di database NoSQL?",
+    "answer": "MongoDB, Cassandra, DynamoDB"
+  },
+  {
+    "id": 103,
+    "question": "Cosa si intende per 'data warehousing'?",
+    "answer": "Archiviazione centralizzata di grandi quantità di dati provenienti da fonti diverse per l'analisi"
+  },
+  {
+    "id": 104,
+    "question": "Qual è un servizio cloud di data warehousing?",
+    "answer": "Amazon Redshift, Azure Synapse Analytics, Google BigQuery"
+  },
+  {
+    "id": 105,
+    "question": "Cosa si intende per 'ETL'?",
+    "answer": "Extract, Transform, Load - processo di integrazione dati"
+  },
+  {
+    "id": 106,
+    "question": "Cosa si intende per 'data streaming'?",
+    "answer": "Elaborazione di flussi continui di dati in tempo reale"
+  },
+  {
+    "id": 107,
+    "question": "Qual è un servizio cloud per il data streaming?",
+    "answer": "Amazon Kinesis, Azure Event Hubs, Google Cloud Pub/Sub"
+  },
+  {
+    "id": 108,
+    "question": "Cosa si intende per 'Internet delle cose' (IoT)?",
+    "answer": "Rete di oggetti fisici 'intelligenti' connessi a Internet"
+  },
+  {
+    "id": 109,
+    "question": "Qual è un servizio cloud per la gestione dei dispositivi IoT?",
+    "answer": "AWS IoT Core, Azure IoT Hub, Google Cloud IoT Core"
+  },
+  {
+    "id": 110,
+    "question": "Cosa si intende per 'Intelligenza Artificiale' (AI)?",
+    "answer": "Simulazione dei processi di intelligenza umana da parte delle macchine"
+  },
+    {
+    "id": 111,
+    "question": "Cosa si intende per 'Machine Learning' (ML)?",
+    "answer": "Sottocampo dell'AI che consente ai sistemi di 'imparare' dai dati senza essere esplicitamente programmati"
+  },
+  {
+    "id": 112,
+    "question": "Qual è un servizio cloud per il Machine Learning?",
+    "answer": "Amazon SageMaker, Azure Machine Learning, Google AI Platform"
+  },
+  {
+    "id": 113,
+    "question": "Cosa si intende per 'Deep Learning'?",
+    "answer": "Un sottocampo del Machine Learning che utilizza reti neurali artificiali con molti strati"
+  },
+  {
+    "id": 114,
+    "question": "Cosa si intende per 'Natural Language Processing' (NLP)?",
+    "answer": "Campo dell'AI che si occupa dell'interazione tra computer e linguaggio umano"
+  },
+  {
+    "id": 115,
+    "question": "Qual è un servizio cloud di NLP?",
+    "answer": "Amazon Comprehend, Azure Text Analytics, Google Cloud Natural Language AI"
+  },
+  {
+    "id": 116,
+    "question": "Cosa si intende per 'Computer Vision'?",
+    "answer": "Campo dell'AI che consente ai computer di 'vedere' e interpretare immagini e video"
+  },
+  {
+    "id": 117,
+    "question": "Qual è un servizio cloud di Computer Vision?",
+    "answer": "Amazon Rekognition, Azure Computer Vision, Google Cloud Vision AI"
+  },
+  {
+    "id": 118,
+    "question": "Cosa si intende per 'blockchain'?",
+    "answer": "Registro digitale distribuito e immutabile di transazioni"
+  },
+  {
+    "id": 119,
+    "question": "Qual è una criptovaluta basata su blockchain?",
+    "answer": "Bitcoin o Ethereum"
+  },
+  {
+    "id": 120,
+    "question": "Cosa si intende per 'smart contract'?",
+    "answer": "Contratti auto-eseguibili con i termini dell'accordo direttamente scritti nel codice"
+  },
+   {
+    "id": 121,
+    "question": "Cosa si intende per 'Cybersecurity'?",
+    "answer": "Protezione di sistemi, reti e programmi da attacchi digitali"
+  },
+  {
+    "id": 122,
+    "question": "Qual è un tipo comune di attacco informatico?",
+    "answer": "Malware, Phishing, DDoS, Ransomware"
+  },
+  {
+    "id": 123,
+    "question": "Cosa si intende per 'Malware'?",
+    "answer": "Software dannoso progettato per danneggiare o sfruttare sistemi informatici"
+  },
+  {
+    "id": 124,
+    "question": "Cosa si intende per 'Ransomware'?",
+    "answer": "Malware che cripta i file della vittima e richiede un riscatto per ripristinarli"
+  },
+  {
+    "id": 125,
+    "question": "Cosa si intende per 'Distributed Denial of Service' (DDoS)?",
+    "answer": "Attacco che sovraccarica un server o una rete con traffico per renderli non disponibili"
+  },
+  {
+    "id": 126,
+    "question": "Qual è un metodo per proteggersi dagli attacchi DDoS?",
+    "answer": "Utilizzare servizi di mitigazione DDoS"
+  },
+  {
+    "id": 127,
+    "question": "Cosa si intende per 'VPN' (Virtual Private Network)?",
+    "answer": "Rete privata virtuale che crea una connessione sicura su una rete pubblica"
+  },
+  {
+    "id": 128,
+    "question": "Qual è lo scopo di una VPN?",
+    "answer": "Crittografare il traffico internet e nascondere l'indirizzo IP"
+  },
+  {
+    "id": 129,
+    "question": "Cosa si intende per 'autenticazione a due fattori' (2FA)?",
+    "answer": "Un metodo di sicurezza che richiede due diverse forme di identificazione per accedere a un account"
+  },
+  {
+    "id": 130,
+    "question": "Qual è un esempio di secondo fattore nell'autenticazione 2FA?",
+    "answer": "Un codice inviato via SMS, un'app di autenticazione, un'impronta digitale"
+  },
+    {
+    "id": 131,
+    "question": "Cosa si intende per 'encryption'?",
+    "answer": "Processo di conversione dei dati in un codice per impedirne l'accesso non autorizzato"
+  },
+  {
+    "id": 132,
+    "question": "Cosa si intende per 'decryption'?",
+    "answer": "Processo di conversione dei dati crittografati nel loro formato originale"
+  },
+  {
+    "id": 133,
+    "question": "Qual è la differenza tra crittografia simmetrica e asimmetrica?",
+    "answer": "Simmetrica usa una singola chiave per crittografia e decrittografia, asimmetrica usa una coppia di chiavi (pubblica e privata)"
+  },
+  {
+    "id": 134,
+    "question": "Cosa si intende per 'certificato digitale'?",
+    "answer": "Un file elettronico utilizzato per verificare l'identità di un utente o server"
+  },
+  {
+    "id": 135,
+    "question": "Qual è lo scopo principale di un certificato digitale?",
+    "answer": "Garantire l'autenticità e l'integrità delle comunicazioni online"
+  },
+  {
+    "id": 136,
+    "question": "Cosa si intende per 'firewall'?",
+    "answer": "Un sistema di sicurezza che controlla il traffico di rete in entrata e in uscita"
+  },
+  {
+    "id": 137,
+    "question": "Qual è la differenza tra un firewall basato su host e un firewall di rete?",
+    "answer": "Basato su host protegge un singolo dispositivo, di rete protegge un'intera rete"
+  },
+  {
+    "id": 138,
+    "question": "Cosa si intende per 'Intrusion Detection System' (IDS)?",
+    "answer": "Un sistema che monitora il traffico di rete per attività sospette"
+  },
+  {
+    "id": 139,
+    "question": "Cosa si intende per 'Intrusion Prevention System' (IPS)?",
+    "answer": "Un sistema che non solo rileva ma cerca anche di bloccare le intrusioni"
+  },
+  {
+    "id": 140,
+    "question": "Cosa si intende per 'vulnerability assessment'?",
+    "answer": "Processo di identificazione delle debolezze di sicurezza in un sistema o rete"
+  },
+    {
+    "id": 141,
+    "question": "Cosa si intende per 'penetration testing' (pen test)?",
+    "answer": "Simulazione di un attacco informatico per valutare l'efficacia delle misure di sicurezza"
+  },
+  {
+    "id": 142,
+    "question": "Qual è l'obiettivo di un pen test?",
+    "answer": "Trovare vulnerabilità che un attaccante reale potrebbe sfruttare"
+  },
+  {
+    "id": 143,
+    "question": "Cosa si intende per 'social engineering' in cybersecurity?",
+    "answer": "Manipolazione psicologica delle persone per indurle a compiere azioni o divulgare informazioni riservate"
+  },
+  {
+    "id": 144,
+    "question": "Qual è un esempio di attacco di social engineering?",
+    "answer": "Phishing, Pretexting, Baiting"
+  },
+  {
+    "id": 145,
+    "question": "Cosa si intende per 'malware analysis'?",
+    "answer": "Studio e comprensione del comportamento di un malware"
+  },
+  {
+    "id": 146,
+    "question": "Cosa si intende per 'reverse engineering' di software dannoso?",
+    "answer": "Analizzare il codice di un malware per capirne il funzionamento"
+  },
+  {
+    "id": 147,
+    "question": "Cosa si intende per 'Threat Intelligence'?",
+    "answer": "Raccolta e analisi di informazioni sulle minacce informatiche per anticipare gli attacchi"
+  },
+  {
+    "id": 148,
+    "question": "Qual è un esempio di minaccia persistente avanzata (APT)?",
+    "answer": "Attacchi mirati e a lungo termine spesso supportati da stati nazionali"
+  },
+  {
+    "id": 149,
+    "question": "Cosa si intende per 'incident response'?",
+    "answer": "Processo di gestione e contenimento di un incidente di sicurezza informatica"
+  },
+  {
+    "id": 150,
+    "question": "Qual è una fase chiave dell'incident response?",
+    "answer": "Preparazione, Identificazione, Contenimento, Eradicazione, Ripristino, Lezioni apprese"
+  },
+   {
+    "id": 151,
+    "question": "Cosa si intende per 'Cloud Formation' in AWS?",
+    "answer": "Un servizio per modellare e automatizzare la creazione di risorse AWS"
+  },
+  {
+    "id": 152,
+    "question": "Cosa si intende per 'Terraform'?",
+    "answer": "Uno strumento open source per l'Infrastructure as Code (IaC) che supporta multi-cloud"
+  },
+  {
+    "id": 153,
+    "question": "Qual è lo scopo di 'Kubernetes'?",
+    "answer": "Automatizzare il deployment, lo scaling e la gestione di applicazioni containerizzate"
+  },
+  {
+    "id": 154,
+    "question": "Cosa si intende per 'Docker'?",
+    "answer": "Una piattaforma per sviluppatori e sysadmin per costruire, eseguire e distribuire applicazioni con i container"
+  },
+  {
+    "id": 155,
+    "question": "Cosa si intende per 'Serverless' in AWS?",
+    "answer": "Un modello di sviluppo che consente di eseguire codice senza provisioning o gestione di server (es. AWS Lambda)"
+  },
+  {
+    "id": 156,
+    "question": "Cosa si intende per 'Blob Storage' in Azure?",
+    "answer": "Servizio di storage oggetti scalabile per dati non strutturati"
+  },
+  {
+    "id": 157,
+    "question": "Cosa si intende per 'Virtual Machine Scale Sets' in Azure?",
+    "answer": "Gruppi di macchine virtuali identiche e con bilanciamento del carico per gestire carichi di lavoro su larga scala"
+  },
+  {
+    "id": 158,
+    "question": "Cosa si intende per 'Google Compute Engine' (GCE)?",
+    "answer": "Il servizio IaaS di Google Cloud per l'esecuzione di macchine virtuali"
+  },
+  {
+    "id": 159,
+    "question": "Cosa si intende per 'Google Kubernetes Engine' (GKE)?",
+    "answer": "Il servizio gestito di Kubernetes su Google Cloud"
+  },
+  {
+    "id": 160,
+    "question": "Cosa si intende per 'BigQuery' in Google Cloud?",
+    "answer": "Un data warehouse serverless completamente gestito e scalabile"
+  },
+    {
+    "id": 161,
+    "question": "Qual è la differenza tra un database relazionale e un database NoSQL?",
+    "answer": "Relazionale usa tabelle con schemi fissi, NoSQL usa modelli flessibili (documenti, chiavi-valore, ecc.)"
+  },
+  {
+    "id": 162,
+    "question": "Cosa si intende per 'Microservices Architecture'?",
+    "answer": "Un'architettura in cui un'applicazione è costruita come una collezione di piccoli servizi autonomi"
+  },
+  {
+    "id": 163,
+    "question": "Qual è un vantaggio dei microservizi?",
+    "answer": "Sviluppo e deployment indipendenti, scalabilità per singolo servizio"
+  },
+  {
+    "id": 164,
+    "question": "Cosa si intende per 'API Gateway'?",
+    "answer": "Punto di ingresso singolo per gestire le richieste dei client ai microservizi backend"
+  },
+  {
+    "id": 165,
+    "question": "Cosa si intende per 'Service Mesh'?",
+    "answer": "Uno strato di infrastruttura dedicato per gestire la comunicazione tra microservizi"
+  },
+  {
+    "id": 166,
+    "question": "Qual è un esempio di Service Mesh?",
+    "answer": "Istio o Linkerd"
+  },
+  {
+    "id": 167,
+    "question": "Cosa si intende per 'Infrastructure as Code' (IaC)?",
+    "answer": "Gestione e provisioning dell'infrastruttura tramite codice anziché processi manuali"
+  },
+  {
+    "id": 168,
+    "question": "Qual è un vantaggio dell'IaC?",
+    "answer": "Coerenza, ripetibilità e riduzione degli errori"
+  },
+  {
+    "id": 169,
+    "question": "Cosa si intende per 'Configuration Management'?",
+    "answer": "Mantenere i sistemi software, l'hardware e la documentazione in uno stato coerente"
+  },
+  {
+    "id": 170,
+    "question": "Qual è uno strumento popolare per la Configuration Management?",
+    "answer": "Ansible, Chef, Puppet"
+  },
+    {
+    "id": 171,
+    "question": "Cosa si intende per 'Continuous Integration' (CI)?",
+    "answer": "Pratica di integrare frequentemente il codice degli sviluppatori in un repository condiviso"
+  },
+  {
+    "id": 172,
+    "question": "Cosa si intende per 'Continuous Deployment' (CD)?",
+    "answer": "Pratica di rilasciare automaticamente ogni modifica di codice che supera i test in produzione"
+  },
+  {
+    "id": 173,
+    "question": "Qual è un beneficio della CI/CD?",
+    "answer": "Cicli di rilascio più rapidi e affidabili"
+  },
+  {
+    "id": 174,
+    "question": "Cosa si intende per 'Monitoring' nel contesto DevOps?",
+    "answer": "Raccolta e analisi continua di dati per valutare le prestazioni e la salute dei sistemi"
+  },
+  {
+    "id": 175,
+    "question": "Cosa si intende per 'Logging' nel contesto DevOps?",
+    "answer": "Registrazione sistematica degli eventi generati dalle applicazioni e dall'infrastruttura"
+  },
+  {
+    "id": 176,
+    "question": "Cosa si intende per 'Alerting' nel contesto DevOps?",
+    "answer": "Invio di notifiche quando si verificano eventi o condizioni che richiedono attenzione"
+  },
+  {
+    "id": 177,
+    "question": "Cosa si intende per 'Site Reliability Engineering' (SRE)?",
+    "answer": "Una disciplina che applica aspetti dell'informatica ai problemi di ingegneria operativa"
+  },
+  {
+    "id": 178,
+    "question": "Qual è l'obiettivo principale dell'SRE?",
+    "answer": "Garantire l'affidabilità, la scalabilità e l'efficienza dei sistemi software"
+  },
+  {
+    "id": 179,
+    "question": "Cosa si intende per 'Service Level Objective' (SLO)?",
+    "answer": "Un obiettivo misurabile per il livello di servizio fornito da un sistema"
+  },
+  {
+    "id": 180,
+    "question": "Cosa si intende per 'Service Level Agreement' (SLA)?",
+    "answer": "Un contratto tra un fornitore di servizi e un cliente che definisce il livello di servizio promesso"
+  },
+   {
+    "id": 181,
+    "question": "Cosa si intende per 'datacenter'?",
+    "answer": "Una struttura fisica utilizzata per ospitare sistemi informatici e apparecchiature correlate"
+  },
+  {
+    "id": 182,
+    "question": "Qual è una sfida dei datacenter on-premise rispetto al cloud?",
+    "answer": "Costi iniziali elevati, manutenzione, scalabilità limitata"
+  },
+  {
+    "id": 183,
+    "question": "Cosa si intende per 'virtualizzazione'?",
+    "answer": "Creazione di una versione virtuale di una risorsa informatica (es. server, storage, rete)"
+  },
+  {
+    "id": 184,
+    "question": "Qual è un vantaggio della virtualizzazione?",
+    "answer": "Migliore utilizzo delle risorse hardware, isolamento, flessibilità"
+  },
+  {
+    "id": 185,
+    "question": "Cosa si intende per 'hypervisor'?",
+    "answer": "Software che crea e gestisce macchine virtuali"
+  },
+  {
+    "id": 186,
+    "question": "Qual è la differenza tra un hypervisor Type 1 e Type 2?",
+    "answer": "Type 1 gira direttamente sull'hardware fisico, Type 2 gira su un sistema operativo host"
+  },
+  {
+    "id": 187,
+    "question": "Cosa si intende per 'storage area network' (SAN)?",
+    "answer": "Una rete dedicata che fornisce accesso a livello di blocco a dispositivi di archiviazione"
+  },
+  {
+    "id": 188,
+    "question": "Cosa si intende per 'network attached storage' (NAS)?",
+    "answer": "Un dispositivo di archiviazione collegato a una rete che fornisce accesso a livello di file"
+  },
+  {
+    "id": 189,
+    "question": "Qual è la differenza principale tra SAN e NAS?",
+    "answer": "SAN fornisce accesso a blocchi (più veloce per database), NAS fornisce accesso a file (più semplice per condivisione file)"
+  },
+  {
+    "id": 190,
+    "question": "Cosa si intende per 'backup'?",
+    "answer": "Copia dei dati per ripristinarli in caso di perdita o danneggiamento"
+  },
+    {
+    "id": 191,
+    "question": "Cosa si intende per 'disaster recovery' (DR)?",
+    "answer": "Processo di ripristino delle operazioni IT dopo un evento disastroso"
+  },
+  {
+    "id": 192,
+    "question": "Qual è l'obiettivo principale del disaster recovery?",
+    "answer": "Minimizzare i tempi di inattività e la perdita di dati"
+  },
+  {
+    "id": 193,
+    "question": "Cosa si intende per 'Recovery Point Objective' (RPO)?",
+    "answer": "La massima quantità di dati che un'azienda è disposta a perdere in caso di disastro"
+  },
+  {
+    "id": 194,
+    "question": "Cosa si intende per 'Recovery Time Objective' (RTO)?",
+    "answer": "Il tempo massimo accettabile per il ripristino delle operazioni aziendali dopo un disastro"
+  },
+  {
+    "id": 195,
+    "question": "Cosa si intende per 'Business Continuity'?",
+    "answer": "La capacità di un'organizzazione di continuare a funzionare durante e dopo un'interruzione"
+  },
+  {
+    "id": 196,
+    "question": "Qual è la relazione tra Disaster Recovery e Business Continuity?",
+    "answer": "DR è una parte della più ampia strategia di Business Continuity"
+  },
+  {
+    "id": 197,
+    "question": "Cosa si intende per 'networking'?",
+    "answer": "La connessione di dispositivi e sistemi informatici per consentire la comunicazione e la condivisione di risorse"
+  },
+  {
+    "id": 198,
+    "question": "Qual è la differenza tra LAN e WAN?",
+    "answer": "LAN copre un'area geografica limitata (es. ufficio), WAN copre un'area geografica più ampia (es. città, paesi)"
+  },
+  {
+    "id": 199,
+    "question": "Cosa si intende per 'protocollo di rete'?",
+    "answer": "Un insieme di regole che governano la comunicazione tra dispositivi di rete"
+  },
+  {
+    "id": 200,
+    "question": "Qual è un esempio di protocollo di rete comune?",
+    "answer": "HTTP, FTP, SMTP, DNS"
   }
 ]
