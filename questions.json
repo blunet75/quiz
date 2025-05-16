@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "question": "Qual è il protocollo standard per la navigazione web sicura?",
+    "answer": "HTTPS"
+  },
+  {
+    "id": 2,
+    "question": "In informatica, cosa indica l'acronimo CPU?",
+    "answer": "Central Processing Unit"
+  },
+  {
+    "id": 3,
+    "question": "Qual è il nome del sistema operativo sviluppato da Apple per i suoi computer?",
+    "answer": "macOS"
+  },
+  {
+    "id": 4,
+    "question": "Quale tipo di memoria perde i suoi dati quando il computer viene spento?",
+    "answer": "RAM"
+  },
+  {
+    "id": 5,
+    "question": "Qual è il linguaggio di markup utilizzato per creare pagine web?",
+    "answer": "HTML"
+  }
+  // Devi aggiungere qui le tue restanti ~995 domande seguendo lo stesso formato:
+  // ,
+  // {
+  //   "id": 6,
+  //   "question": "La tua sesta domanda?",
+  //   "answer": "La risposta della sesta domanda"
+  // },
+  // ... e così via per arrivare a 1000+ domande
+]

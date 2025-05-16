@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Domanda Secca da File</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            margin: 50px auto;
+            max-width: 600px;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background: #fff;
+        }
+        h1 {
+            color: #333;
+        }
+        #loadingMessage {
+             font-style: italic;
+             color: #555;
+             margin-bottom: 20px;
+        }
+        #quizArea {
+            display: none; /* Nascosto finché le domande non vengono caricate */
+        }
+        #questionText {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            min-height: 3em; /* Riserva spazio per la domanda */
+        }
+        input[type="text"] {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 80%;
+            font-size: 1em;
+            text-align: center;
+        }
+        button {
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        #resultMessage {
+            margin-top: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+            min-height: 1.5em;
+        }
+        .win {
+            color: green;
+        }
+        .lose {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>La Domanda per Vincere</h1>
+
+    <div id="loadingMessage">Caricamento domande...</div>
+
+    <div id="quizArea">
+        <p id="questionText">Domanda verrà caricata qui...</p>
+        <input type="text" id="userAnswer" placeholder="Scrivi la tua risposta qui">
+        <button onclick="checkAnswer()">Invia Risposta</button>
+    </div>
+
+    <div id="resultMessage"></div>
+
+    <script>
+        // AREA PER IL CODICE JAVASCRIPT
+
+        let allQuestions = []; // Array per memorizzare tutte le domande caricate
+        let currentQuestion = null; // Oggetto per memorizzare la domanda corrente mostrata
+
+        // Funzione per caricare le domande dal file JSON
+        async function loadQuestions() {
+            try {
+                const response = await fetch('questions.json'); // Assicurati che 'questions.json' sia nella stessa directory o specifica il percorso corretto
+                if (!response.ok) {
+                    throw new Error(`Errore caricamento file: ${response.status}`);
+                }
+                allQuestions = await response.json();
+                console.log(`Caricate ${allQuestions.length} domande.`); // Debugging
+                if (allQuestions.length > 0) {
+                    document.getElementById('loadingMessage').style.display = 'none'; // Nasconde il messaggio di caricamento
+                    document.getElementById('quizArea').style.display = 'block'; // Mostra l'area quiz
+                    displayRandomQuestion(); // Mostra la prima domanda casuale
+                } else {
+                    document.getElementById('loadingMessage').textContent = 'Errore: Nessuna domanda trovata nel file.';
+                }
+            } catch (error) {
+                console.error("Errore nel caricare le domande:", error);
+                document.getElementById('loadingMessage').textContent = `Errore nel caricamento delle domande: ${error.message}`;
+            }
+        }
+
+        // Funzione per selezionare e visualizzare una domanda casuale
+        function displayRandomQuestion() {
+            if (allQuestions.length === 0) {
+                document.getElementById('questionText').textContent = 'Nessuna domanda disponibile.';
+                return;
+            }
+            const randomIndex = Math.floor(Math.random() * allQuestions.length);
+            currentQuestion = allQuestions[randomIndex];
+            document.getElementById('questionText').textContent = currentQuestion.question;
+            document.getElementById('userAnswer').value = ''; // Pulisce il campo input
+            document.getElementById('resultMessage').textContent = ''; // Pulisce il messaggio precedente
+            document.getElementById('resultMessage').className = ''; // Rimuove classi colore
+        }
+
+        // Funzione per controllare la risposta dell'utente
+        function checkAnswer() {
+            if (!currentQuestion) {
+                document.getElementById('resultMessage').textContent = "Errore: Nessuna domanda caricata.";
+                document.getElementById('resultMessage').className = 'lose';
+                return;
+            }
+
+            const userAnswerInput = document.getElementById('userAnswer');
+            const resultMessageDiv = document.getElementById('resultMessage');
+
+            // Pulisci e normalizza la risposta dell'utente e la risposta corretta
+            const userAnswer = userAnswerInput.value.trim().toLowerCase();
+            const correctAnswer = currentQuestion.answer.trim().toLowerCase();
+
+            if (userAnswer === correctAnswer) {
+                resultMessageDiv.textContent = "Complimenti! Risposta Esatta! HAI VINTO!";
+                resultMessageDiv.className = 'win'; // Applica classe per colore verde
+                // Opzionale: disabilita il pulsante o il campo input dopo aver vinto
+                // userAnswerInput.disabled = true;
+                // document.querySelector('button').disabled = true;
+            } else {
+                resultMessageDiv.textContent = "Mi dispiace, risposta errata. Riprova!";
+                resultMessageDiv.className = 'lose'; // Applica classe per colore rosso
+                 // Opzionale: svuota il campo input per un nuovo tentativo
+                 // userAnswerInput.value = '';
+            }
+        }
+
+        // Carica le domande all'avvio della pagina
+        loadQuestions();
+
+        // Opzionale: Aggiungi la possibilità di ottenere una nuova domanda casuale dopo un errore
+        // Aggiungi un pulsante "Nuova Domanda" nell'HTML dentro #quizArea
+        // <button onclick="displayRandomQuestion()">Nuova Domanda</button>
+        // E rimuovi l'opzione di svuotare l'input field nel caso di risposta errata se vuoi che l'utente ci riprovi sulla stessa domanda.
+        // Se vuoi che l'utente riprovi *solo* con una nuova domanda dopo aver sbagliato, gestisci la visibilità del pulsante "Invia Risposta" e "Nuova Domanda".
+
+    </script>
+
+</body>
+</html>
