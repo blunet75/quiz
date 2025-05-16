@@ -1,35 +1,223 @@
 [
   {
     "id": 1,
-    "question": "Qual è il protocollo standard per la navigazione web sicura?",
-    "answer": "HTTPS"
+    "question": "Quale dei seguenti protocolli di routing è un protocollo di gateway interno (IGP) basato sullo stato dei link?",
+    "options": [
+      "BGP",
+      "RIP",
+      "OSPF",
+      "EIGRP"
+    ],
+    "correctAnswer": "OSPF"
   },
   {
     "id": 2,
-    "question": "In informatica, cosa indica l'acronimo CPU?",
-    "answer": "Central Processing Unit"
+    "question": "In AWS, quale servizio è più adatto per l'esecuzione di carichi di lavoro batch a elevate prestazioni e scalabilità?",
+    "options": [
+      "AWS Lambda",
+      "Amazon EC2",
+      "AWS Batch",
+      "Amazon SQS"
+    ],
+    "correctAnswer": "AWS Batch"
   },
   {
     "id": 3,
-    "question": "Qual è il nome del sistema operativo sviluppato da Apple per i suoi computer?",
-    "answer": "macOS"
+    "question": "Quale principio di sicurezza cloud si occupa di garantire che i dati rimangano riservati e non vengano divulgati a entità non autorizzate?",
+    "options": [
+      "Integrità",
+      "Disponibilità",
+      "Confidenzialità",
+      "Non ripudio"
+    ],
+    "correctAnswer": "Confidenzialità"
   },
   {
     "id": 4,
-    "question": "Quale tipo di memoria perde i suoi dati quando il computer viene spento?",
-    "answer": "RAM"
+    "question": "Quale dei seguenti non è un modello di deployment cloud definito dal NIST?",
+    "options": [
+      "Cloud Pubblico",
+      "Cloud Privato",
+      "Cloud Distribuito",
+      "Cloud Ibrido"
+    ],
+    "correctAnswer": "Cloud Distribuito"
   },
   {
     "id": 5,
-    "question": "Qual è il linguaggio di markup utilizzato per creare pagine web?",
-    "answer": "HTML"
+    "question": "In Kubernetes, quale oggetto gestisce un set di repliche di pod e fornisce aggiornamenti rolling e rollback?",
+    "options": [
+      "Pod",
+      "Service",
+      "Deployment",
+      "StatefulSet"
+    ],
+    "correctAnswer": "Deployment"
+  },
+  {
+    "id": 6,
+    "question": "Quale algoritmo di crittografia asimmetrica è comunemente usato per la firma digitale e lo scambio di chiavi?",
+    "options": [
+      "AES",
+      "SHA-256",
+      "RSA",
+      "DES"
+    ],
+    "correctAnswer": "RSA"
+  },
+  {
+    "id": 7,
+    "question": "In una rete TCP/IP, a quale livello del modello OSI opera principalmente un router?",
+    "options": [
+      "Livello di Rete (Network Layer)",
+      "Livello di Trasporto (Transport Layer)",
+      "Livello di Datalink (Data Link Layer)",
+      "Livello di Applicazione (Application Layer)"
+    ],
+    "correctAnswer": "Livello di Rete (Network Layer)"
+  },
+  {
+    "id": 8,
+    "question": "Quale termine descrive una vulnerabilità di sicurezza che è sconosciuta agli sviluppatori del software e per la quale non esiste ancora una patch?",
+    "options": [
+      "Buffer Overflow",
+      "Zero-Day Exploit",
+      "SQL Injection",
+      "Cross-Site Scripting (XSS)"
+    ],
+    "correctAnswer": "Zero-Day Exploit"
+  },
+  {
+    "id": 9,
+    "question": "In Azure, quale servizio offre un data warehouse basato su cloud elastico e scalabile?",
+    "options": [
+      "Azure Cosmos DB",
+      "Azure Data Lake Storage",
+      "Azure Synapse Analytics",
+      "Azure SQL Database"
+    ],
+    "correctAnswer": "Azure Synapse Analytics"
+  },
+  {
+    "id": 10,
+    "question": "Quale dei seguenti è uno standard per l'automazione della configurazione e del deployment, spesso usato nell'Infrastructure as Code (IaC)?",
+    "options": [
+      "Docker",
+      "Jenkins",
+      "Ansible",
+      "Nagios"
+    ],
+    "correctAnswer": "Ansible"
+  },
+  {
+    "id": 11,
+    "question": "Quale dei seguenti non è un tipo di database NoSQL?",
+    "options": [
+      "Document Store",
+      "Graph Database",
+      "Column-Family Store",
+      "Relational Database"
+    ],
+    "correctAnswer": "Relational Database"
+  },
+  {
+    "id": 12,
+    "question": "Cosa si intende per 'idempotenza' nel contesto delle API o dei sistemi distribuiti?",
+    "options": [
+      "Una chiamata API restituisce sempre lo stesso risultato per lo stesso input",
+      "Una chiamata API può essere ripetuta più volte producendo lo stesso risultato finale, senza effetti collaterali indesiderati dopo la prima esecuzione riuscita",
+      "Una chiamata API garantisce l'integrità transazionale tra più servizi",
+      "Una chiamata API è stateless e non mantiene informazioni sulla sessione"
+    ],
+    "correctAnswer": "Una chiamata API può essere ripetuta più volte producendo lo stesso risultato finale, senza effetti collaterali indesiderati dopo la prima esecuzione riuscita"
+  },
+  {
+    "id": 13,
+    "question": "In Google Cloud Platform (GCP), quale servizio è un data warehouse serverless e altamente scalabile?",
+    "options": [
+      "Cloud SQL",
+      "Cloud Storage",
+      "BigQuery",
+      "Datastore"
+    ],
+    "correctAnswer": "BigQuery"
+  },
+  {
+    "id": 14,
+    "question": "Quale dei seguenti è un protocollo utilizzato principalmente per il trasferimento di file in modo sicuro?",
+    "options": [
+      "FTP",
+      "SFTP",
+      "TFTP",
+      "HTTP"
+    ],
+    "correctAnswer": "SFTP"
+  },
+  {
+    "id": 15,
+    "question": "In termini di sicurezza informatica, cosa significa 'attacco Man-in-the-Middle' (MITM)?",
+    "options": [
+      "Un attacco in cui un utente malintenzionato si posiziona tra due parti che comunicano per intercettare o modificare i dati",
+      "Un attacco che sfrutta una debolezza nella gestione della memoria di un programma",
+      "Un attacco che tenta di indovinare le password provando tutte le combinazioni possibili",
+      "Un attacco che rende un servizio non disponibile sovraccaricandolo di traffico"
+    ],
+    "correctAnswer": "Un attacco in cui un utente malintenzionato si posiziona tra due parti che comunicano per intercettare o modificare i dati"
+  },
+    {
+    "id": 16,
+    "question": "Quale modello di Machine Learning è comunemente usato per compiti di classificazione binaria?",
+    "options": [
+      "Regressione Lineare",
+      "K-Means Clustering",
+      "Support Vector Machine (SVM)",
+      "Principal Component Analysis (PCA)"
+    ],
+    "correctAnswer": "Support Vector Machine (SVM)"
+  },
+  {
+    "id": 17,
+    "question": "In un'architettura a microservizi, quale pattern di comunicazione è spesso utilizzato per l'integrazione asincrona tra servizi?",
+    "options": [
+      "REST API Calls",
+      "RPC (Remote Procedure Call)",
+      "Message Queues (es. RabbitMQ, Kafka)",
+      "Synchronous HTTP Requests"
+    ],
+    "correctAnswer": "Message Queues (es. RabbitMQ, Kafka)"
+  },
+  {
+    "id": 18,
+    "question": "Quale dei seguenti non è un componente fondamentale di una rete definita dal software (SDN)?",
+    "options": [
+      "Piano di Controllo (Control Plane)",
+      "Piano Dati (Data Plane)",
+      "Interfaccia Northbound",
+      "Firewall Hardware Dedicato"
+    ],
+    "correctAnswer": "Firewall Hardware Dedicato"
+  },
+  {
+    "id": 19,
+    "question": "Cosa si intende per 'Eventual Consistency' in un sistema distribuito?",
+    "options": [
+      "Tutte le repliche dei dati sono sempre aggiornate in tempo reale",
+      "Dopo un certo periodo di tempo, tutte le repliche dei dati diventeranno coerenti, a meno che non ci siano nuove modifiche",
+      "Solo un nodo alla volta può modificare un dato",
+      "Le modifiche ai dati vengono applicate solo a un sottoinsieme di repliche"
+    ],
+    "correctAnswer": "Dopo un certo periodo di tempo, tutte le repliche dei dati diventeranno coerenti, a meno che non ci siano nuove modifiche"
+  },
+  {
+    "id": 20,
+    "question": "In AWS, quale servizio offre un'infrastruttura desktop virtuale persistente e scalabile?",
+    "options": [
+      "Amazon EC2",
+      "AWS Lambda",
+      "Amazon WorkSpaces",
+      "Amazon AppStream 2.0"
+    ],
+    "correctAnswer": "Amazon WorkSpaces"
   }
-  // Devi aggiungere qui le tue restanti ~995 domande seguendo lo stesso formato:
-  // ,
-  // {
-  //   "id": 6,
-  //   "question": "La tua sesta domanda?",
-  //   "answer": "La risposta della sesta domanda"
-  // },
-  // ... e così via per arrivare a 1000+ domande
+  // Aggiungi qui le tue restanti ~980 domande difficili nel formato specificato
 ]

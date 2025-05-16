@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Domanda Secca da File</title>
+    <title>Quiz Difficile IT & Cloud</title>
     <style>
         body {
             font-family: sans-serif;
@@ -27,20 +27,22 @@
         }
         #quizArea {
             display: none; /* Nascosto finché le domande non vengono caricate */
+            text-align: left; /* Allinea il testo delle domande e opzioni a sinistra */
         }
         #questionText {
             font-size: 1.1em;
             margin-bottom: 20px;
             min-height: 3em; /* Riserva spazio per la domanda */
         }
-        input[type="text"] {
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            width: 80%;
-            font-size: 1em;
-            text-align: center;
+        #optionsArea {
+            margin-bottom: 20px;
+        }
+        .option {
+            display: block; /* Ogni opzione su una nuova linea */
+            margin-bottom: 10px;
+        }
+        .option input[type="radio"] {
+            margin-right: 10px;
         }
         button {
             padding: 10px 20px;
@@ -50,15 +52,31 @@
             border-radius: 5px;
             font-size: 1em;
             cursor: pointer;
+            margin-top: 10px; /* Aggiungi spazio sopra il pulsante */
         }
         button:hover {
             background: #0056b3;
+        }
+         #newQuestionButton {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: #6c757d; /* Colore grigio per differenziare */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            display: none; /* Inizialmente nascosto */
+        }
+        #newQuestionButton:hover {
+            background: #5a6268;
         }
         #resultMessage {
             margin-top: 20px;
             font-size: 1.2em;
             font-weight: bold;
             min-height: 1.5em;
+            text-align: center; /* Centra il messaggio di risultato */
         }
         .win {
             color: green;
@@ -70,14 +88,16 @@
 </head>
 <body>
 
-    <h1>La Domanda per Vincere</h1>
+    <h1>Quiz Difficile IT & Cloud</h1>
 
     <div id="loadingMessage">Caricamento domande...</div>
 
     <div id="quizArea">
         <p id="questionText">Domanda verrà caricata qui...</p>
-        <input type="text" id="userAnswer" placeholder="Scrivi la tua risposta qui">
-        <button onclick="checkAnswer()">Invia Risposta</button>
+        <div id="optionsArea">
+            </div>
+        <button id="submitAnswerButton" onclick="checkAnswer()">Invia Risposta</button>
+        <button id="newQuestionButton" onclick="displayRandomQuestion()">Nuova Domanda</button>
     </div>
 
     <div id="resultMessage"></div>
@@ -110,21 +130,53 @@
             }
         }
 
-        // Funzione per selezionare e visualizzare una domanda casuale
+        // Funzione per selezionare e visualizzare una domanda casuale con opzioni
         function displayRandomQuestion() {
             if (allQuestions.length === 0) {
                 document.getElementById('questionText').textContent = 'Nessuna domanda disponibile.';
+                document.getElementById('optionsArea').innerHTML = ''; // Pulisce le opzioni
+                document.getElementById('submitAnswerButton').style.display = 'none'; // Nasconde il pulsante Invia
+                document.getElementById('newQuestionButton').style.display = 'none'; // Nasconde il pulsante Nuova Domanda
                 return;
             }
             const randomIndex = Math.floor(Math.random() * allQuestions.length);
             currentQuestion = allQuestions[randomIndex];
+
             document.getElementById('questionText').textContent = currentQuestion.question;
-            document.getElementById('userAnswer').value = ''; // Pulisce il campo input
+
+            const optionsArea = document.getElementById('optionsArea');
+            optionsArea.innerHTML = ''; // Pulisce le opzioni precedenti
+
+            // Crea e visualizza le opzioni
+            currentQuestion.options.forEach((option, index) => {
+                const optionDiv = document.createElement('div');
+                optionDiv.className = 'option';
+
+                const radioInput = document.createElement('input');
+                radioInput.type = 'radio';
+                radioInput.name = 'questionOption'; // Stesso nome per raggruppare i radio button
+                radioInput.id = 'option' + index; // ID univoco per ogni opzione
+                radioInput.value = option; // Il valore del radio button è il testo dell'opzione
+
+                const label = document.createElement('label');
+                label.htmlFor = 'option' + index;
+                label.textContent = option;
+
+                optionDiv.appendChild(radioInput);
+                optionDiv.appendChild(label);
+                optionsArea.appendChild(optionDiv);
+            });
+
             document.getElementById('resultMessage').textContent = ''; // Pulisce il messaggio precedente
             document.getElementById('resultMessage').className = ''; // Rimuove classi colore
+
+            // Mostra e abilita i pulsanti
+            document.getElementById('submitAnswerButton').style.display = 'inline-block';
+            document.getElementById('submitAnswerButton').disabled = false;
+            document.getElementById('newQuestionButton').style.display = 'none';
         }
 
-        // Funzione per controllare la risposta dell'utente
+        // Funzione per controllare la risposta dell'utente (risposta multipla)
         function checkAnswer() {
             if (!currentQuestion) {
                 document.getElementById('resultMessage').textContent = "Errore: Nessuna domanda caricata.";
@@ -132,35 +184,52 @@
                 return;
             }
 
-            const userAnswerInput = document.getElementById('userAnswer');
+            const options = document.querySelectorAll('input[name="questionOption"]');
+            let selectedAnswer = null;
+
+            // Trova l'opzione selezionata dall'utente
+            options.forEach(option => {
+                if (option.checked) {
+                    selectedAnswer = option.value;
+                }
+            });
+
             const resultMessageDiv = document.getElementById('resultMessage');
+            const submitButton = document.getElementById('submitAnswerButton');
+            const newQuestionButton = document.getElementById('newQuestionButton');
 
-            // Pulisci e normalizza la risposta dell'utente e la risposta corretta
-            const userAnswer = userAnswerInput.value.trim().toLowerCase();
-            const correctAnswer = currentQuestion.answer.trim().toLowerCase();
+            if (selectedAnswer === null) {
+                 resultMessageDiv.textContent = "Seleziona un'opzione prima di inviare.";
+                 resultMessageDiv.className = 'lose'; // Potresti usare una classe diversa o nessun colore per questo stato
+                 return; // Esci dalla funzione se nessuna opzione è selezionata
+            }
 
-            if (userAnswer === correctAnswer) {
+
+            // Normalizza (opzionale, dipende se le risposte nel JSON sono già uniformi)
+            const normalizedSelectedAnswer = selectedAnswer.trim().toLowerCase();
+            const normalizedCorrectAnswer = currentQuestion.correctAnswer.trim().toLowerCase();
+
+            if (normalizedSelectedAnswer === normalizedCorrectAnswer) {
                 resultMessageDiv.textContent = "Complimenti! Risposta Esatta! HAI VINTO!";
                 resultMessageDiv.className = 'win'; // Applica classe per colore verde
-                // Opzionale: disabilita il pulsante o il campo input dopo aver vinto
-                // userAnswerInput.disabled = true;
-                // document.querySelector('button').disabled = true;
+                // Disabilita i pulsanti di opzione e il pulsante Invia dopo la vittoria
+                options.forEach(option => option.disabled = true);
+                submitButton.disabled = true;
+                submitButton.style.display = 'none'; // Nasconde Invia Risposta
+                newQuestionButton.style.display = 'inline-block'; // Mostra il pulsante Nuova Domanda
             } else {
-                resultMessageDiv.textContent = "Mi dispiace, risposta errata. Riprova!";
+                resultMessageDiv.textContent = "Mi dispiace, risposta errata. La risposta corretta era: " + currentQuestion.correctAnswer;
                 resultMessageDiv.className = 'lose'; // Applica classe per colore rosso
-                 // Opzionale: svuota il campo input per un nuovo tentativo
-                 // userAnswerInput.value = '';
+                 // Disabilita i pulsanti di opzione e il pulsante Invia dopo un errore
+                options.forEach(option => option.disabled = true);
+                submitButton.disabled = true;
+                submitButton.style.display = 'none'; // Nasconde Invia Risposta
+                newQuestionButton.style.display = 'inline-block'; // Mostra Nuova Domanda
             }
         }
 
         // Carica le domande all'avvio della pagina
         loadQuestions();
-
-        // Opzionale: Aggiungi la possibilità di ottenere una nuova domanda casuale dopo un errore
-        // Aggiungi un pulsante "Nuova Domanda" nell'HTML dentro #quizArea
-        // <button onclick="displayRandomQuestion()">Nuova Domanda</button>
-        // E rimuovi l'opzione di svuotare l'input field nel caso di risposta errata se vuoi che l'utente ci riprovi sulla stessa domanda.
-        // Se vuoi che l'utente riprovi *solo* con una nuova domanda dopo aver sbagliato, gestisci la visibilità del pulsante "Invia Risposta" e "Nuova Domanda".
 
     </script>
 
