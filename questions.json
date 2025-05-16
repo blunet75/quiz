@@ -1338,3 +1338,865 @@
       "AWS Fargate",
       "Amazon EKS",
       "Amazon Lightsail"
+    ],
+    "correctAnswer": "Amazon EKS"
+  },
+  {
+    "id": 123,
+    "question": "Quale servizio Azure è un servizio gestito di Kubernetes?",
+    "options": [
+      "Azure Virtual Machines",
+      "Azure Container Instances",
+      "Azure Kubernetes Service (AKS)",
+      "Azure App Services"
+    ],
+    "correctAnswer": "Azure Kubernetes Service (AKS)"
+  },
+  {
+    "id": 124,
+    "question": "Cosa si intende per 'CDN' (Content Delivery Network)?",
+    "options": [
+      "Una rete per la gestione dei database",
+      "Una rete di server distribuiti geograficamente per fornire contenuti web rapidamente",
+      "Un servizio per l'elaborazione di big data",
+      "Un servizio per la gestione delle identità"
+    ],
+    "correctAnswer": "Una rete di server distribuiti geograficamente per fornire contenuti web rapidamente"
+  },
+  {
+    "id": 125,
+    "question": "In GCP, quale servizio è un servizio di CDN per distribuire contenuti con bassa latenza?",
+    "options": [
+      "Cloud Load Balancing",
+      "Cloud Storage",
+      "Cloud CDN",
+      "Cloud Interconnect"
+    ],
+    "correctAnswer": "Cloud CDN"
+  },
+  {
+    "id": 126,
+    "question": "Quale termine descrive la capacità di un sistema di continuare a funzionare in caso di guasto di uno o più componenti?",
+    "options": [
+      "Scalabilità",
+      "Elasticità",
+      "Alta Disponibilità",
+      "Performance"
+    ],
+    "correctAnswer": "Alta Disponibilità"
+  },
+  {
+    "id": 127,
+    "question": "In AWS, quale servizio fornisce un servizio di repository privato per immagini Docker e Open Container Initiative (OCI)?",
+    "options": [
+      "Amazon S3",
+      "Amazon ECR",
+      "Amazon ECS",
+      "AWS CodeArtifact"
+    ],
+    "correctAnswer": "Amazon ECR"
+  },
+  {
+    "id": 128,
+    "question": "Quale servizio Azure è un servizio di repository privato per immagini Docker e Open Container Initiative (OCI)?",
+    "options": [
+      "Azure Container Instances",
+      "Azure Kubernetes Service",
+      "Azure Container Registry",
+      "Azure Artifacts"
+    ],
+    "correctAnswer": "Azure Container Registry"
+  },
+  {
+    "id": 129,
+    "question": "Cosa si intende per 'Serverless Framework'?",
+    "options": [
+      "Una piattaforma per l'esecuzione di server fisici",
+      "Uno strumento per lo sviluppo e il deployment di applicazioni serverless",
+      "Un framework per lo sviluppo di applicazioni monolitiche",
+      "Uno strumento per il monitoring dei server"
+    ],
+    "correctAnswer": "Uno strumento per lo sviluppo e il deployment di applicazioni serverless"
+  },
+  {
+    "id": 130,
+    "question": "In GCP, quale servizio è una piattaforma per la gestione del ciclo di vita del software, inclusa CI/CD?",
+    "options": [
+      "Cloud Build",
+      "Cloud Deploy",
+      "Cloud Source Repositories",
+      "Google Cloud DevOps"
+    ],
+    "correctAnswer": "Cloud Build"
+  },
+  {
+    "id": 131,
+    "question": "Quale termine descrive la pratica di utilizzare l'automazione per creare e configurare server e ambienti IT?",
+    "options": [
+      "Monitoring",
+      "Configuration Management",
+      "Orchestration",
+      "Provisioning"
+    ],
+    "correctAnswer": "Configuration Management"
+  },
+  {
+    "id": 132,
+    "question": "In AWS, quale servizio è uno strumento di configuration management che utilizza playbook scritti in YAML?",
+    "options": [
+      "AWS OpsWorks",
+      "AWS Systems Manager",
+      "Ansible (esterno, ma spesso usato con AWS)",
+      "Chef"
+    ],
+    "correctAnswer": "Ansible (esterno, ma spesso usato con AWS)"
+  },
+  {
+    "id": 133,
+    "question": "Quale strumento Azure è uno strumento di configuration management basato su script PowerShell?",
+    "options": [
+      "Azure DevOps",
+      "Azure Automation State Configuration (basato su PowerShell DSC)",
+      "Azure CLI",
+      "Azure Resource Manager templates"
+    ],
+    "correctAnswer": "Azure Automation State Configuration (basato su PowerShell DSC)"
+  },
+  {
+    "id": 134,
+    "question": "Cosa si intende per 'Observability' in un sistema cloud?",
+    "options": [
+      "La capacità di monitorare l'utilizzo delle risorse",
+      "La capacità di capire lo stato interno di un sistema dall'esterno, tramite logging, metriche e tracing",
+      "La capacità di rendere un sistema altamente disponibile",
+      "La capacità di scalare un sistema automaticamente"
+    ],
+    "correctAnswer": "La capacità di capire lo stato interno di un sistema dall'esterno, tramite logging, metriche e tracing"
+  },
+  {
+    "id": 135,
+    "question": "In GCP, quale servizio è una suite di strumenti per l'observability, inclusi monitoring, logging e tracing?",
+    "options": [
+      "Cloud Identity",
+      "Cloud Security Command Center",
+      "Operations (precedentemente Stackdriver)",
+      "Cloud Audit Logs"
+    ],
+    "correctAnswer": "Operations (precedentemente Stackdriver)"
+  },
+  {
+    "id": 136,
+    "question": "Quale termine descrive il processo di garantire che un sistema mantenga un certo livello di servizio, spesso definito da SLA e SLO?",
+    "options": [
+      "Scalability Engineering",
+      "Cost Management",
+      "Site Reliability Engineering (SRE)",
+      "Cloud Architecture"
+    ],
+    "correctAnswer": "Site Reliability Engineering (SRE)"
+  },
+  {
+    "id": 137,
+    "question": "In AWS, quale servizio fornisce un servizio di orchestrazione dei flussi di lavoro visivo per le applicazioni distribuite?",
+    "options": [
+      "Amazon SQS",
+      "AWS Lambda",
+      "AWS Step Functions",
+      "Amazon SWF"
+    ],
+    "correctAnswer": "AWS Step Functions"
+  },
+  {
+    "id": 138,
+    "question": "Quale servizio Azure è utilizzato per creare flussi di lavoro automatizzati che integrano app, dati, servizi e sistemi?",
+    "options": [
+      "Azure Functions",
+      "Azure Logic Apps",
+      "Azure Data Factory",
+      "Azure Event Grid"
+    ],
+    "correctAnswer": "Azure Logic Apps"
+  },
+  {
+    "id": 139,
+    "question": "Cosa si intende per 'Serverless' in un contesto più ampio (non solo compute)?",
+    "options": [
+      "L'assenza di server fisici",
+      "Un modello in cui il provider cloud gestisce completamente l'infrastruttura, liberando il cliente dalla gestione dei server",
+      "L'utilizzo esclusivo di container",
+      "Un'architettura senza stato"
+    ],
+    "correctAnswer": "Un modello in cui il provider cloud gestisce completamente l'infrastruttura, liberando il cliente dalla gestione dei server"
+  },
+  {
+    "id": 140,
+    "question": "In GCP, quale servizio è una piattaforma serverless completamente gestita per l'esecuzione di codice in risposta a eventi?",
+    "options": [
+      "App Engine",
+      "Cloud Run",
+      "Cloud Functions",
+      "Compute Engine"
+    ],
+    "correctAnswer": "Cloud Functions"
+  },
+    {
+    "id": 141,
+    "question": "Quale termine descrive il processo di ripristino dei sistemi e dei dati dopo un'interruzione maggiore?",
+    "options": [
+      "Backup",
+      "High Availability",
+      "Disaster Recovery",
+      "Business Continuity"
+    ],
+    "correctAnswer": "Disaster Recovery"
+  },
+  {
+    "id": 142,
+    "question": "In AWS, quale servizio è un servizio di backup centralizzato per vari servizi AWS?",
+    "options": [
+      "Amazon S3",
+      "AWS Backup",
+      "AWS Storage Gateway",
+      "AWS DataSync"
+    ],
+    "correctAnswer": "AWS Backup"
+  },
+  {
+    "id": 143,
+    "question": "Quale servizio Azure è utilizzato per gestire i backup delle macchine virtuali, dei database e di altri carichi di lavoro?",
+    "options": [
+      "Azure Site Recovery",
+      "Azure Backup",
+      "Azure Blob Storage",
+      "Azure Data Factory"
+    ],
+    "correctAnswer": "Azure Backup"
+  },
+  {
+    "id": 144,
+    "question": "Cosa si intende per 'Recovery Point Objective' (RPO) nel Disaster Recovery?",
+    "options": [
+      "Il tempo massimo per ripristinare i sistemi",
+      "La quantità massima di dati che si è disposti a perdere in caso di disastro",
+      "Il costo del piano di Disaster Recovery",
+      "La frequenza dei backup"
+    ],
+    "correctAnswer": "La quantità massima di dati che si è disposti a perdere in caso di disastro"
+  },
+  {
+    "id": 145,
+    "question": "Cosa si intende per 'Recovery Time Objective' (RTO) nel Disaster Recovery?",
+    "options": [
+      "Il tempo massimo accettabile per il ripristino delle operazioni dopo un disastro",
+      "La quantità massima di dati che si è disposti a perdere",
+      "Il costo del downtime",
+      "La durata di un esercizio di DR"
+    ],
+    "correctAnswer": "Il tempo massimo accettabile per il ripristino delle operazioni dopo un disastro"
+  },
+  {
+    "id": 146,
+    "question": "In GCP, quale servizio è utilizzato per il Disaster Recovery fornendo replica e failover di macchine virtuali?",
+    "options": [
+      "Cloud Storage",
+      "Persistent Disk snapshots",
+      "Compute Engine instance templates",
+      "Google Cloud Disaster Recovery Service (non un servizio unico, coinvolge più componenti)"
+    ],
+    "correctAnswer": "Google Cloud Disaster Recovery Service (non un servizio unico, coinvolge più componenti)"
+  },
+  {
+    "id": 147,
+    "question": "Quale termine descrive la capacità di un'organizzazione di continuare le operazioni aziendali durante e dopo un'interruzione?",
+    "options": [
+      "Disaster Recovery",
+      "High Availability",
+      "Scalability",
+      "Business Continuity"
+    ],
+    "correctAnswer": "Business Continuity"
+  },
+  {
+    "id": 148,
+    "question": "In AWS, quale servizio fornisce un servizio di storage per archiviazione a lungo termine e a basso costo?",
+    "options": [
+      "Amazon S3",
+      "Amazon EFS",
+      "Amazon Glacier",
+      "Amazon EBS"
+    ],
+    "correctAnswer": "Amazon Glacier"
+  },
+  {
+    "id": 149,
+    "question": "Quale servizio Azure è utilizzato per l'archiviazione di dati a lungo termine e a basso costo?",
+    "options": [
+      "Azure Blob Storage (Cool tier)",
+      "Azure Blob Storage (Archive tier)",
+      "Azure Files",
+      "Azure Disk Storage"
+    ],
+    "correctAnswer": "Azure Blob Storage (Archive tier)"
+  },
+  {
+    "id": 150,
+    "question": "Cosa si intende per 'Data Residency' nel cloud?",
+    "options": [
+      "La velocità di accesso ai dati",
+      "La posizione geografica in cui i dati vengono archiviati e processati",
+      "Il formato in cui i dati vengono archiviati",
+      "La sicurezza dei dati in transito"
+    ],
+    "correctAnswer": "La posizione geografica in cui i dati vengono archiviati e processati"
+  },
+  {
+    "id": 151,
+    "question": "In GCP, quale servizio è un servizio di database NoSQL per carichi di lavoro operazionali e analitici su larga scala?",
+    "options": [
+      "Cloud SQL",
+      "Firestore",
+      "BigQuery",
+      "Cloud Bigtable"
+    ],
+    "correctAnswer": "Cloud Bigtable"
+  },
+  {
+    "id": 152,
+    "question": "Quale termine descrive la capacità di un sistema cloud di aggiungere o rimuovere automaticamente risorse in base alle metriche di utilizzo?",
+    "options": [
+      "Scalabilità Manuale",
+      "Elasticità",
+      "High Availability",
+      "Resilienza"
+    ],
+    "correctAnswer": "Elasticità"
+  },
+  {
+    "id": 153,
+    "question": "In AWS, quale servizio fornisce un servizio di code di messaggi standard e FIFO?",
+    "options": [
+      "Amazon SNS",
+      "Amazon SQS",
+      "Amazon MQ",
+      "AWS Step Functions"
+    ],
+    "correctAnswer": "Amazon SQS"
+  },
+  {
+    "id": 154,
+    "question": "Quale servizio Azure è utilizzato per inviare notifiche push a varie piattaforme mobile?",
+    "options": [
+      "Azure Service Bus",
+      "Azure Event Grid",
+      "Azure Notification Hubs",
+      "Azure Logic Apps"
+    ],
+    "correctAnswer": "Azure Notification Hubs"
+  },
+  {
+    "id": 155,
+    "question": "Cosa si intende per 'Decoupling' nell'architettura cloud?",
+    "options": [
+      "Rendere i componenti di un'applicazione strettamente dipendenti tra loro",
+      "Progettare i componenti di un'applicazione in modo che siano il più possibile indipendenti",
+      "Utilizzare un singolo server per ospitare più componenti",
+      "Implementare tutte le funzionalità in un unico blocco di codice"
+    ],
+    "correctAnswer": "Progettare i componenti di un'applicazione in modo che siano il più possibile indipendenti"
+  },
+  {
+    "id": 156,
+    "question": "In GCP, quale servizio è un servizio di messaggistica pub/sub asincrono, scalabile a livello globale?",
+    "options": [
+      "Cloud Tasks",
+      "Cloud Pub/Sub",
+      "Cloud Scheduler",
+      "Cloud Dataflow"
+    ],
+    "correctAnswer": "Cloud Pub/Sub"
+  },
+  {
+    "id": 157,
+    "question": "Quale termine descrive un metodo di autenticazione che richiede due diverse forme di verifica dell'identità?",
+    "options": [
+      "Single Sign-On (SSO)",
+      "Multi-Factor Authentication (MFA)",
+      "Password Authentication",
+      "Biometric Authentication"
+    ],
+    "correctAnswer": "Multi-Factor Authentication (MFA)"
+  },
+  {
+    "id": 158,
+    "question": "In AWS, quale servizio fornisce un servizio di logging per le azioni eseguite dagli utenti, ruoli o servizi AWS?",
+    "options": [
+      "Amazon CloudWatch",
+      "AWS Config",
+      "AWS CloudTrail",
+      "AWS Trusted Advisor"
+    ],
+    "correctAnswer": "AWS CloudTrail"
+  },
+  {
+    "id": 159,
+    "question": "Quale servizio Azure registra gli eventi a livello di sottoscrizione, incluse le operazioni sui servizi Azure?",
+    "options": [
+      "Azure Monitor Logs",
+      "Azure Activity Logs",
+      "Azure Diagnostic Settings",
+      "Azure Security Center"
+    ],
+    "correctAnswer": "Azure Activity Logs"
+  },
+  {
+    "id": 160,
+    "question": "Cosa si intende per 'Infrastructure as Code' (IaC)?",
+    "options": [
+      "Utilizzare il codice per monitorare l'infrastruttura",
+      "Gestire l'infrastruttura fisica con il codice",
+      "Gestire e fornire l'infrastruttura tramite codice e non manualmente",
+      "Eseguire codice su un server dedicato"
+    ],
+    "correctAnswer": "Gestire e fornire l'infrastruttura tramite codice e non manualmente"
+  },
+  {
+    "id": 161,
+    "question": "In GCP, quale servizio è uno strumento open source per l'IaC che supporta vari provider cloud?",
+    "options": [
+      "Cloud Deployment Manager",
+      "Cloud Build",
+      "Terraform (esterno, ma comunemente usato)",
+      "Cloud Functions"
+    ],
+    "correctAnswer": "Terraform (esterno, ma comunemente usato)"
+  },
+  {
+    "id": 162,
+    "question": "Quale termine descrive il processo di implementazione di una nuova versione di un'applicazione gradualmente, reindirizzando una piccola percentuale di traffico alla nuova versione?",
+    "options": [
+      "Big Bang Deployment",
+      "Rolling Update",
+      "Blue/Green Deployment",
+      "Canary Release"
+    ],
+    "correctAnswer": "Canary Release"
+  },
+  {
+    "id": 163,
+    "question": "In AWS, quale servizio è una piattaforma di sviluppo completamente gestita per l'hosting di applicazioni web?",
+    "options": [
+      "Amazon EC2",
+      "AWS Lambda",
+      "AWS Elastic Beanstalk",
+      "AWS Fargate"
+    ],
+    "correctAnswer": "AWS Elastic Beanstalk"
+  },
+  {
+    "id": 164,
+    "question": "Quale servizio Azure è una piattaforma PaaS per l'hosting di applicazioni web, API e backend mobile?",
+    "options": [
+      "Azure Virtual Machines",
+      "Azure Kubernetes Service",
+      "Azure App Services",
+      "Azure Container Instances"
+    ],
+    "correctAnswer": "Azure App Services"
+  },
+  {
+    "id": 165,
+    "question": "Cosa si intende per 'Stateless' in un contesto di applicazioni?",
+    "options": [
+      "Lo stato della sessione viene memorizzato sul server",
+      "Lo stato della sessione viene memorizzato sul client",
+      "Non viene memorizzato alcuno stato della sessione tra le richieste",
+      "Lo stato viene memorizzato in un database centralizzato"
+    ],
+    "correctAnswer": "Non viene memorizzato alcuno stato della sessione tra le richieste"
+  },
+  {
+    "id": 166,
+    "question": "In GCP, quale servizio è un servizio di autenticazione e autorizzazione per gestire l'accesso alle risorse Google Cloud?",
+    "options": [
+      "Cloud Audit Logs",
+      "Cloud Identity",
+      "Cloud Security Command Center",
+      "VPC Service Controls"
+    ],
+    "correctAnswer": "Cloud Identity"
+  },
+  {
+    "id": 167,
+    "question": "Quale termine descrive un attacco informatico in cui un aggressore intercetta e potenzialmente modifica la comunicazione tra due parti?",
+    "options": [
+      "Denial of Service (DoS)",
+      "SQL Injection",
+      "Cross-Site Scripting (XSS)",
+      "Man-in-the-Middle (MITM)"
+    ],
+    "correctAnswer": "Man-in-the-Middle (MITM)"
+  },
+  {
+    "id": 168,
+    "question": "In AWS, quale servizio fornisce un servizio di data warehousing cloud scalabile?",
+    "options": [
+      "Amazon RDS",
+      "Amazon DynamoDB",
+      "Amazon Redshift",
+      "Amazon Aurora"
+    ],
+    "correctAnswer": "Amazon Redshift"
+  },
+  {
+    "id": 169,
+    "question": "Quale servizio Azure è un servizio di data warehouse cloud elastico?",
+    "options": [
+      "Azure SQL Database",
+      "Azure Database for MySQL",
+      "Azure Cosmos DB",
+      "Azure Synapse Analytics"
+    ],
+    "correctAnswer": "Azure Synapse Analytics"
+  },
+  {
+    "id": 170,
+    "question": "Cosa si intende per 'Data Loss Prevention' (DLP) nel cloud?",
+    "options": [
+      "Proteggere i dati da accessi non autorizzati",
+      "Prevenire l'eliminazione accidentale dei dati",
+      "Prevenire l'esfiltrazione di dati sensibili dall'ambiente cloud",
+      "Garantire l'integrità dei dati"
+    ],
+    "correctAnswer": "Prevenire l'esfiltrazione di dati sensibili dall'ambiente cloud"
+  },
+  {
+    "id": 171,
+    "question": "In GCP, quale servizio è un servizio di sicurezza che aiuta a identificare le minacce e le vulnerabilità nelle risorse Google Cloud?",
+    "options": [
+      "Cloud Identity",
+      "Cloud Security Command Center",
+      "Cloud Armor",
+      "VPC Service Controls"
+    ],
+    "correctAnswer": "Cloud Security Command Center"
+  },
+  {
+    "id": 172,
+    "question": "Quale termine descrive un ambiente cloud che combina risorse on-premise con risorse cloud pubbliche?",
+    "options": [
+      "Cloud Pubblico",
+      "Cloud Privato",
+      "Cloud Ibrido",
+      "Multi-cloud"
+    ],
+    "correctAnswer": "Cloud Ibrido"
+  },
+  {
+    "id": 173,
+    "question": "In AWS, quale servizio è un servizio di compute che consente di eseguire codice su server gestiti dal cliente ma nel data center AWS?",
+    "options": [
+      "Amazon EC2",
+      "AWS Outposts",
+      "AWS Wavelength",
+      "AWS Local Zones"
+    ],
+    "correctAnswer": "AWS Outposts"
+  },
+  {
+    "id": 174,
+    "question": "Quale servizio Azure è un'estensione di Azure nel data center del cliente, fornendo servizi Azure on-premise?",
+    "options": [
+      "Azure Stack Hub",
+      "Azure Arc",
+      "Azure Edge Zones",
+      "Azure Private Link"
+    ],
+    "correctAnswer": "Azure Stack Hub"
+  },
+  {
+    "id": 175,
+    "question": "Cosa si intende per 'Cost Management' nel cloud?",
+    "options": [
+      "Garantire la sicurezza dei dati sensibili",
+      "Implementare strategie per ottimizzare la spesa cloud",
+      "Monitorare le prestazioni delle applicazioni",
+      "Gestire le identità degli utenti"
+    ],
+    "correctAnswer": "Implementare strategie per ottimizzare la spesa cloud"
+  },
+  {
+    "id": 176,
+    "question": "In GCP, quale servizio fornisce visibilità e controllo sulla spesa cloud?",
+    "options": [
+      "Cloud Billing Reports",
+      "Cloud Asset Inventory",
+      "Cloud Cost Management",
+      "Pricing Calculator"
+    ],
+    "correctAnswer": "Cloud Billing Reports"
+  },
+  {
+    "id": 177,
+    "question": "Quale servizio AWS è un servizio che fornisce raccomandazioni personalizzate per ottimizzare i costi, le prestazioni e la sicurezza?",
+    "options": [
+      "Amazon CloudWatch",
+      "AWS Config",
+      "AWS CloudTrail",
+      "AWS Trusted Advisor"
+    ],
+    "correctAnswer": "AWS Trusted Advisor"
+  },
+  {
+    "id": 178,
+    "question": "Quale servizio Azure è utilizzato per ottenere raccomandazioni personalizzate per ottimizzare l'affidabilità, la sicurezza, le prestazioni, l'eccellenza operativa e i costi?",
+    "options": [
+      "Azure Security Center",
+      "Azure Sentinel",
+      "Azure Advisor",
+      "Azure Policy"
+    ],
+    "correctAnswer": "Azure Advisor"
+  },
+  {
+    "id": 179,
+    "question": "Cosa si intende per 'Resource Group' in Azure?",
+    "options": [
+      "Una zona geografica in cui vengono distribuite le risorse Azure",
+      "Un contenitore logico per raggruppare le risorse Azure correlate",
+      "Un servizio di database gestito",
+      "Una rete virtuale isolata"
+    ],
+    "correctAnswer": "Un contenitore logico per raggruppare le risorse Azure correlate"
+  },
+  {
+    "id": 180,
+    "question": "In GCP, quale concetto è un contenitore per progetti e risorse, fornendo isolamento e organizzazione?",
+    "options": [
+      "Folder",
+      "Organization",
+      "Project",
+      "Resource Group"
+    ],
+    "correctAnswer": "Project"
+  },
+  {
+    "id": 181,
+    "question": "Quale termine descrive la replica dei dati in più posizioni geografiche per migliorare la durabilità e la disponibilità in caso di disastro regionale?",
+    "options": [
+      "Local Redundancy",
+      "Zone Redundancy",
+      "Geo-redundancy",
+      "Backup"
+    ],
+    "correctAnswer": "Geo-redundancy"
+  },
+  {
+    "id": 182,
+    "question": "In AWS, quale servizio fornisce un servizio di storage oggetti con durabilità elevata e scalabilità illimitata?",
+    "options": [
+      "Amazon EBS",
+      "Amazon EFS",
+      "Amazon S3",
+      "Amazon Glacier"
+    ],
+    "correctAnswer": "Amazon S3"
+  },
+  {
+    "id": 183,
+    "question": "Quale servizio Azure è un servizio di storage oggetti scalabile per dati non strutturati?",
+    "options": [
+      "Azure Files",
+      "Azure Disk Storage",
+      "Azure Blob Storage",
+      "Azure Data Lake Storage"
+    ],
+    "correctAnswer": "Azure Blob Storage"
+  },
+  {
+    "id": 184,
+    "question": "Cosa si intende per 'Archive Storage' nel cloud?",
+    "options": [
+      "Storage per dati ad accesso frequente",
+      "Storage ottimizzato per carichi di lavoro transazionali",
+      "Storage a basso costo per dati a cui si accede raramente e con tempi di recupero flessibili",
+      "Storage per backup a breve termine"
+    ],
+    "correctAnswer": "Storage a basso costo per dati a cui si accede raramente e con tempi di recupero flessibili"
+  },
+  {
+    "id": 185,
+    "question": "In GCP, quale classe di storage è adatta per dati a cui si accede raramente e richiede bassi costi di archiviazione?",
+    "options": [
+      "Standard Storage",
+      "Nearline Storage",
+      "Coldline Storage",
+      "Archive Storage"
+    ],
+    "correctAnswer": "Coldline Storage"
+  },
+  {
+    "id": 186,
+    "question": "Quale termine descrive la capacità di un sistema di gestire un aumento del numero di richieste o utenti aggiungendo più risorse?",
+    "options": [
+      "Resilienza",
+      "Disponibilità",
+      "Scalabilità Orizzontale",
+      "Scalabilità Verticale"
+    ],
+    "correctAnswer": "Scalabilità Orizzontale"
+  },
+  {
+    "id": 187,
+    "question": "In AWS, quale servizio è un servizio di analisi interattiva per dati in Amazon S3, senza la necessità di caricare i dati?",
+    "options": [
+      "Amazon Redshift",
+      "Amazon EMR",
+      "Amazon Athena",
+      "Amazon Kinesis"
+    ],
+    "correctAnswer": "Amazon Athena"
+  },
+  {
+    "id": 188,
+    "question": "Quale servizio Azure è un servizio di analisi interattiva serverless che può interrogare dati in Azure Data Lake Storage o Blob Storage?",
+    "options": [
+      "Azure Synapse Analytics",
+      "Azure Data Factory",
+      "Azure Databricks",
+      "Azure Data Explorer"
+    ],
+    "correctAnswer": "Azure Synapse Analytics"
+  },
+  {
+    "id": 189,
+    "question": "Cosa si intende per 'ETL' (Extract, Transform, Load)?",
+    "options": [
+      "Un modello di deployment cloud",
+      "Un processo per l'integrazione dei dati da varie fonti in un data warehouse o data lake",
+      "Un tipo di attacco informatico",
+      "Uno strumento di monitoring delle performance"
+    ],
+    "correctAnswer": "Un processo per l'integrazione dei dati da varie fonti in un data warehouse o data lake"
+  },
+  {
+    "id": 190,
+    "question": "In GCP, quale servizio è un servizio ETL e ELT basato su cloud, senza server e scalabile?",
+    "options": [
+      "Cloud Dataflow",
+      "Cloud Dataprep",
+      "Cloud Data Fusion",
+      "BigQuery"
+    ],
+    "correctAnswer": "Cloud Data Fusion"
+  },
+  {
+    "id": 191,
+    "question": "Quale termine descrive l'automazione del processo di esecuzione, scaling e gestione di applicazioni containerizzate?",
+    "options": [
+      "Containerization",
+      "Orchestration",
+      "Configuration Management",
+      "Continuous Integration"
+    ],
+    "correctAnswer": "Orchestration"
+  },
+  {
+    "id": 192,
+    "question": "In AWS, quale servizio è un servizio di orchestrazione di container che supporta Docker?",
+    "options": [
+      "Amazon EKS",
+      "AWS Fargate",
+      "Amazon ECS",
+      "Amazon Lightsail"
+    ],
+    "correctAnswer": "Amazon ECS"
+  },
+  {
+    "id": 193,
+    "question": "Quale servizio Azure è un servizio di orchestrazione di container basato su Kubernetes?",
+    "options": [
+      "Azure Virtual Machines",
+      "Azure Container Instances",
+      "Azure Kubernetes Service (AKS)",
+      "Azure App Services"
+    ],
+    "correctAnswer": "Azure Kubernetes Service (AKS)"
+  },
+  {
+    "id": 194,
+    "question": "Cosa si intende per 'Microservizi'?",
+    "options": [
+      "Applicazioni che vengono eseguite su microcontrollori",
+      "Un'architettura in cui un'applicazione è composta da piccoli servizi indipendenti e autonomi",
+      "Servizi cloud con risorse minime",
+      "L'utilizzo di funzioni serverless di piccole dimensioni"
+    ],
+    "correctAnswer": "Un'architettura in cui un'applicazione è composta da piccoli servizi indipendenti e autonomi"
+  },
+  {
+    "id": 195,
+    "question": "Quale dei seguenti è un beneficio chiave dell'architettura a microservizi?",
+    "options": [
+      "Deployment monolitico più semplice",
+      "Maggiore complessità nella gestione",
+      "Scalabilità indipendente dei singoli servizi",
+      "Condivisione stretta delle basi di codice"
+    ],
+    "correctAnswer": "Scalabilità indipendente dei singoli servizi"
+  },
+  {
+    "id": 196,
+    "question": "In GCP, quale servizio è un servizio di registro container privato completamente gestito?",
+    "options": [
+      "Cloud Storage",
+      "Container Registry",
+      "Artifact Registry",
+      "Cloud Build"
+    ],
+    "correctAnswer": "Container Registry"
+  },
+  {
+    "id": 197,
+    "question": "Quale termine descrive un ambiente cloud in cui i provider offrono l'hardware, il software e l'infrastruttura di supporto, e i clienti pagano solo per ciò che usano?",
+    "options": [
+      "On-Premise",
+      "Cloud Privato",
+      "Colocation",
+      "Cloud Pubblico"
+    ],
+    "correctAnswer": "Cloud Pubblico"
+  },
+  {
+    "id": 198,
+    "question": "In AWS, quale servizio fornisce un servizio di repository privato per pacchetti software (es. npm, Maven, PyPI)?",
+    "options": [
+      "Amazon ECR",
+      "AWS CodeCommit",
+      "AWS CodeBuild",
+      "AWS CodeArtifact"
+    ],
+    "correctAnswer": "AWS CodeArtifact"
+  },
+  {
+    "id": 199,
+    "question": "Quale servizio Azure è un servizio per la gestione di feed di pacchetti software (Maven, npm, NuGet, ecc.)?",
+    "options": [
+      "Azure Repos",
+      "Azure Pipelines",
+      "Azure Artifacts",
+      "Azure Container Registry"
+    ],
+    "correctAnswer": "Azure Artifacts"
+  },
+  {
+    "id": 200,
+    "question": "Cosa si intende per 'ChatOps'?",
+    "options": [
+      "L'utilizzo di chatbot per rispondere alle domande dei clienti",
+      "L'integrazione di strumenti, persone e processi in un flusso di lavoro collaborativo in una piattaforma di chat",
+      "Lo sviluppo di applicazioni di chat",
+      "La gestione dei server tramite comandi di chat"
+    ],
+    "correctAnswer": "L'integrazione di strumenti, persone e processi in un flusso di lavoro collaborativo in una piattaforma di chat"
+  }
+]
