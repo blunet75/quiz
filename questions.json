@@ -1,1002 +1,1340 @@
 [
   {
     "id": 1,
-    "question": "Cosa significa l'acronimo TCP/IP?",
-    "answer": "Transmission Control Protocol/Internet Protocol"
+    "question": "Quale servizio AWS è più adatto per l'hosting di un sito web statico ad alta disponibilità e a basso costo?",
+    "options": [
+      "Amazon EC2",
+      "AWS Lambda",
+      "Amazon S3",
+      "Amazon RDS"
+    ],
+    "correctAnswer": "Amazon S3"
   },
   {
     "id": 2,
-    "question": "Qual è lo scopo principale di un firewall?",
-    "answer": "Monitorare e controllare il traffico di rete"
+    "question": "In Azure, quale risorsa rappresenta una rete virtuale isolata all'interno del cloud Azure?",
+    "options": [
+      "Resource Group",
+      "Virtual Network (VNet)",
+      "Subnet",
+      "Network Security Group (NSG)"
+    ],
+    "correctAnswer": "Virtual Network (VNet)"
   },
   {
     "id": 3,
-    "question": "Cosa si intende per 'phishing' in sicurezza informatica?",
-    "answer": "Tentativo fraudolento di ottenere informazioni sensibili spacciandosi per un'entità fidata"
+    "question": "Quale modello di servizio cloud fornisce agli utenti il controllo sull'infrastruttura sottostante (networking, storage, server virtuali)?",
+    "options": [
+      "SaaS (Software as a Service)",
+      "PaaS (Platform as a Service)",
+      "IaaS (Infrastructure as a Service)",
+      "FaaS (Function as a Service)"
+    ],
+    "correctAnswer": "IaaS (Infrastructure as a Service)"
   },
   {
     "id": 4,
-    "question": "Quale linguaggio di programmazione è spesso usato per lo sviluppo web lato client?",
-    "answer": "JavaScript"
+    "question": "In Google Cloud Platform (GCP), quale servizio è un servizio di calcolo serverless che esegue il codice in risposta agli eventi?",
+    "options": [
+      "Compute Engine",
+      "Kubernetes Engine",
+      "Cloud Functions",
+      "App Engine"
+    ],
+    "correctAnswer": "Cloud Functions"
   },
   {
     "id": 5,
-    "question": "Cosa rappresenta l'acronimo SQL?",
-    "answer": "Structured Query Language"
+    "question": "Quale dei seguenti è un vantaggio chiave dell'elasticità del cloud?",
+    "options": [
+      "Riduzione dei costi hardware iniziali",
+      "Capacità di scalare automaticamente le risorse in tempo reale in base alla domanda",
+      "Maggiore controllo sull'infrastruttura fisica",
+      "Eliminazione della necessità di gestire i sistemi operativi"
+    ],
+    "correctAnswer": "Capacità di scalare automaticamente le risorse in tempo reale in base alla domanda"
   },
   {
     "id": 6,
-    "question": "Qual è il ruolo di un router in una rete?",
-    "answer": "Smistare i pacchetti di dati tra diverse reti"
+    "question": "Cosa si intende per 'Regione' in un contesto cloud (es. AWS, Azure, GCP)?",
+    "options": [
+      "Un singolo data center",
+      "Un insieme di data center isolati geograficamente all'interno di un'area geografica più ampia",
+      "Una zona di disponibilità all'interno di un data center",
+      "Un gruppo di server che ospitano un singolo servizio"
+    ],
+    "correctAnswer": "Un insieme di data center isolati geograficamente all'interno di un'area geografica più ampia"
   },
   {
     "id": 7,
-    "question": "Cosa si intende per 'crittografia end-to-end'?",
-    "answer": "Solo i mittenti e i destinatari previsti possono leggere i messaggi"
+    "question": "Quale pratica di sicurezza cloud si occupa di garantire che solo gli utenti autorizzati abbiano accesso a risorse specifiche?",
+    "options": [
+      "Monitoraggio",
+      "Logging",
+      "Identity and Access Management (IAM)",
+      "Crittografia dei dati"
+    ],
+    "correctAnswer": "Identity and Access Management (IAM)"
   },
   {
     "id": 8,
-    "question": "Qual è un esempio di sistema operativo open source?",
-    "answer": "Linux"
+    "question": "In AWS, quale servizio è progettato per fornire un data warehouse scalabile e completamente gestito?",
+    "options": [
+      "Amazon RDS",
+      "Amazon DynamoDB",
+      "Amazon Redshift",
+      "Amazon S3"
+    ],
+    "correctAnswer": "Amazon Redshift"
   },
   {
     "id": 9,
-    "question": "Cosa indica l'acronimo API?",
-    "answer": "Application Programming Interface"
+    "question": "Quale servizio Azure è un servizio di database NoSQL veloce e completamente gestito per lo sviluppo di app moderne?",
+    "options": [
+      "Azure SQL Database",
+      "Azure Database for MySQL",
+      "Azure Cosmos DB",
+      "Azure Data Explorer"
+    ],
+    "correctAnswer": "Azure Cosmos DB"
   },
   {
     "id": 10,
-    "question": "Qual è la funzione di un database?",
-    "answer": "Archiviare, gestire e recuperare dati"
+    "question": "Cosa si intende per 'VPC' (Virtual Private Cloud) in AWS?",
+    "options": [
+      "Un servizio di database gestito",
+      "Una rete virtuale isolata all'interno del cloud AWS",
+      "Un servizio di storage oggetti",
+      "Un servizio di bilanciamento del carico"
+    ],
+    "correctAnswer": "Una rete virtuale isolata all'interno del cloud AWS"
   },
-    {
+  {
     "id": 11,
-    "question": "Cosa si intende per 'Cloud Computing'?",
-    "answer": "Fornitura di risorse informatiche (server, storage, database, software) via Internet"
+    "question": "Quale servizio GCP è un sistema di archiviazione oggetti unificato, scalabile a livello globale e durevole?",
+    "options": [
+      "Compute Engine",
+      "Cloud Storage",
+      "Bigtable",
+      "Cloud SQL"
+    ],
+    "correctAnswer": "Cloud Storage"
   },
   {
     "id": 12,
-    "question": "Quali sono i tre principali modelli di servizio del cloud computing?",
-    "answer": "IaaS, PaaS, SaaS"
+    "question": "Quale modello di responsabilità condivisa nel cloud descrive le responsabilità del provider cloud per la sicurezza del cloud?",
+    "options": [
+      "Sicurezza *nel* cloud",
+      "Sicurezza *del* cloud",
+      "Sicurezza *attraverso* il cloud",
+      "Sicurezza *con* il cloud"
+    ],
+    "correctAnswer": "Sicurezza *del* cloud"
   },
   {
     "id": 13,
-    "question": "Cosa sta per IaaS nel cloud computing?",
-    "answer": "Infrastructure as a Service"
+    "question": "In AWS, quale servizio viene utilizzato per distribuire automaticamente il traffico in arrivo tra più destinazioni, come istanze Amazon EC2?",
+    "options": [
+      "Amazon Route 53",
+      "AWS Auto Scaling",
+      "Elastic Load Balancing (ELB)",
+      "Amazon VPC"
+    ],
+    "correctAnswer": "Elastic Load Balancing (ELB)"
   },
   {
     "id": 14,
-    "question": "Cosa sta per PaaS nel cloud computing?",
-    "answer": "Platform as a Service"
+    "question": "Quale strumento Azure è utilizzato per automatizzare il deployment e la gestione delle risorse Azure come codice?",
+    "options": [
+      "Azure CLI",
+      "Azure PowerShell",
+      "Azure Resource Manager (ARM) templates",
+      "Azure DevOps"
+    ],
+    "correctAnswer": "Azure Resource Manager (ARM) templates"
   },
   {
     "id": 15,
-    "question": "Cosa sta per SaaS nel cloud computing?",
-    "answer": "Software as a Service"
+    "question": "Cosa si intende per 'scalabilità verticale' (scale up) nel cloud?",
+    "options": [
+      "Aggiungere più istanze di una risorsa",
+      "Aumentare la capacità di una singola istanza di una risorsa (es. aumentare CPU/RAM)",
+      "Distribuire il traffico su più regioni geografiche",
+      "Ridurre il numero di istanze di una risorsa"
+    ],
+    "correctAnswer": "Aumentare la capacità di una singola istanza di una risorsa (es. aumentare CPU/RAM)"
   },
   {
     "id": 16,
-    "question": "Qual è un esempio di servizio IaaS?",
-    "answer": "Amazon EC2 (Elastic Compute Cloud)"
+    "question": "Quale servizio GCP fornisce un registro Docker privato e gestito?",
+    "options": [
+      "Cloud Storage",
+      "Artifact Registry",
+      "Container Registry",
+      "Cloud Build"
+    ],
+    "correctAnswer": "Container Registry"
   },
   {
     "id": 17,
-    "question": "Qual è un esempio di servizio PaaS?",
-    "answer": "Google App Engine"
+    "question": "Quale termine descrive il modello di pagamento in cui paghi solo per le risorse cloud che utilizzi effettivamente?",
+    "options": [
+      "Flat rate",
+      "Subscription-based",
+      "Pay-as-you-go",
+      "Reserved instances"
+    ],
+    "correctAnswer": "Pay-as-you-go"
   },
   {
     "id": 18,
-    "question": "Qual è un esempio di servizio SaaS?",
-    "answer": "Google Workspace (precedentemente G Suite) o Microsoft 365"
+    "question": "In AWS, quale servizio è un servizio di database NoSQL basato su chiave-valore e documenti, completamente gestito e serverless?",
+    "options": [
+      "Amazon RDS",
+      "Amazon Aurora",
+      "Amazon ElastiCache",
+      "Amazon DynamoDB"
+    ],
+    "correctAnswer": "Amazon DynamoDB"
   },
   {
     "id": 19,
-    "question": "Cosa si intende per 'scalabilità' nel cloud?",
-    "answer": "La capacità di aumentare o diminuire le risorse in base alla domanda"
+    "question": "Quale strumento Azure è utilizzato per monitorare le prestazioni e la disponibilità delle applicazioni web?",
+    "options": [
+      "Azure Activity Logs",
+      "Azure Monitor",
+      "Azure Security Center",
+      "Azure Advisor"
+    ],
+    "correctAnswer": "Azure Monitor"
   },
   {
     "id": 20,
-    "question": "Cosa si intende per 'elasticità' nel cloud?",
-    "answer": "La capacità di scalare automaticamente le risorse in tempo reale"
+    "question": "Cosa si intende per 'Fault Tolerance' nel cloud?",
+    "options": [
+      "La capacità di un sistema di scalare in base alla domanda",
+      "La capacità di un sistema di resistere a guasti di singoli componenti e continuare a funzionare",
+      "La capacità di un sistema di elaborare grandi volumi di dati",
+      "La capacità di un sistema di proteggere i dati sensibili"
+    ],
+    "correctAnswer": "La capacità di un sistema di resistere a guasti di singoli componenti e continuare a funzionare"
   },
-    {
+  {
     "id": 21,
-    "question": "Qual è un vantaggio del cloud computing in termini di costi?",
-    "answer": "Pagamento in base all'utilizzo (pay-as-you-go)"
+    "question": "In GCP, quale servizio offre un servizio di caching in-memory completamente gestito e scalabile?",
+    "options": [
+      "Cloud Storage",
+      "BigQuery",
+      "Memorystore",
+      "Cloud SQL"
+    ],
+    "correctAnswer": "Memorystore"
   },
   {
     "id": 22,
-    "question": "Cosa si intende per 'cloud pubblico'?",
-    "answer": "Risorse di cloud fornite da un provider esterno e condivise tra più utenti"
+    "question": "Quale dei seguenti non è un vantaggio della migrazione al cloud?",
+    "options": [
+      "Costi operativi ridotti",
+      "Maggiore agilità e innovazione",
+      "Controllo completo sull'infrastruttura hardware fisica",
+      "Scalabilità on-demand"
+    ],
+    "correctAnswer": "Controllo completo sull'infrastruttura hardware fisica"
   },
   {
     "id": 23,
-    "question": "Cosa si intende per 'cloud privato'?",
-    "answer": "Risorse di cloud utilizzate esclusivamente da una singola organizzazione"
+    "question": "In AWS, quale servizio è un servizio di messaggistica in coda completamente gestito che consente la decoupling dei componenti del sistema?",
+    "options": [
+      "Amazon SNS",
+      "Amazon SQS",
+      "AWS Step Functions",
+      "Amazon MQ"
+    ],
+    "correctAnswer": "Amazon SQS"
   },
   {
     "id": 24,
-    "question": "Cosa si intende per 'cloud ibrido'?",
-    "answer": "Combinazione di cloud pubblico e cloud privato"
+    "question": "Quale servizio Azure è utilizzato per la gestione centralizzata delle identità e degli accessi per le risorse Azure e le app cloud?",
+    "options": [
+      "Azure Policy",
+      "Azure Security Center",
+      "Azure Active Directory (AAD)",
+      "Azure Key Vault"
+    ],
+    "correctAnswer": "Azure Active Directory (AAD)"
   },
   {
     "id": 25,
-    "question": "Cosa si intende per 'multi-cloud'?",
-    "answer": "Utilizzo di servizi di cloud da più provider diversi"
+    "question": "Cosa si intende per 'container orchestration'?",
+    "options": [
+      "Il processo di creazione di immagini container",
+      "La gestione automatizzata del deployment, dello scaling e del networking dei container",
+      "L'esecuzione di un singolo container",
+      "Lo storage di immagini container in un registro"
+    ],
+    "correctAnswer": "La gestione automatizzata del deployment, dello scaling e del networking dei container"
   },
   {
     "id": 26,
-    "question": "Qual è un provider leader nel mercato del cloud pubblico?",
-    "answer": "Amazon Web Services (AWS), Microsoft Azure, Google Cloud Platform (GCP)"
+    "question": "In GCP, quale servizio è una piattaforma gestita per l'esecuzione di container su larga scala?",
+    "options": [
+      "Compute Engine",
+      "App Engine",
+      "Cloud Run",
+      "Google Kubernetes Engine (GKE)"
+    ],
+    "correctAnswer": "Google Kubernetes Engine (GKE)"
   },
   {
     "id": 27,
-    "question": "Cosa sono i 'container' nel contesto IT?",
-    "answer": "Unità standard di software che impacchettano codice e tutte le sue dipendenze"
+    "question": "Quale approccio di migrazione al cloud comporta la spostamento di un'applicazione esistente nel cloud con modifiche minime?",
+    "options": [
+      "Re-platforming",
+      "Re-architecting",
+      "Rehosting (Lift and Shift)",
+      "Repurchasing"
+    ],
+    "correctAnswer": "Rehosting (Lift and Shift)"
   },
   {
     "id": 28,
-    "question": "Qual è una piattaforma popolare per la gestione dei container?",
-    "answer": "Kubernetes o Docker Swarm"
+    "question": "In AWS, quale servizio è un servizio di database relazionale compatibile con MySQL e PostgreSQL, progettato per il cloud?",
+    "options": [
+      "Amazon RDS",
+      "Amazon Redshift",
+      "Amazon Aurora",
+      "Amazon DynamoDB"
+    ],
+    "correctAnswer": "Amazon Aurora"
   },
   {
     "id": 29,
-    "question": "Cosa si intende per 'serverless computing'?",
-    "answer": "Un modello di esecuzione in cui il provider di cloud gestisce l'infrastruttura sottostante e alloca risorse in base all'esecuzione del codice"
+    "question": "Quale servizio Azure è un servizio di gestione delle chiavi e dei segreti basato su cloud?",
+    "options": [
+      "Azure Active Directory",
+      "Azure Security Center",
+      "Azure Key Vault",
+      "Azure Information Protection"
+    ],
+    "correctAnswer": "Azure Key Vault"
   },
   {
     "id": 30,
-    "question": "Qual è un esempio di servizio serverless?",
-    "answer": "AWS Lambda, Azure Functions, Google Cloud Functions"
+    "question": "Cosa si intende per 'Shared Responsibility Model' nel cloud?",
+    "options": [
+      "Il provider cloud è responsabile di tutta la sicurezza",
+      "Il cliente cloud è responsabile di tutta la sicurezza",
+      "La responsabilità della sicurezza è divisa tra il provider cloud e il cliente, a seconda del modello di servizio",
+      "La responsabilità della sicurezza ricade esclusivamente su terze parti"
+    ],
+    "correctAnswer": "La responsabilità della sicurezza è divisa tra il provider cloud e il cliente, a seconda del modello di servizio"
   },
-    {
+  {
     "id": 31,
-    "question": "Cosa si intende per 'DevOps'?",
-    "answer": "Un insieme di pratiche che combina sviluppo software (Dev) e operazioni IT (Ops)"
+    "question": "In GCP, quale servizio è un servizio di database relazionale completamente gestito per MySQL, PostgreSQL e SQL Server?",
+    "options": [
+      "BigQuery",
+      "Cloud Spanner",
+      "Cloud SQL",
+      "Firestore"
+    ],
+    "correctAnswer": "Cloud SQL"
   },
   {
     "id": 32,
-    "question": "Qual è lo scopo principale di DevOps?",
-    "answer": "Accelerare i processi di sviluppo e distribuzione software in modo affidabile"
+    "question": "Quale pratica DevOps si concentra sull'integrazione frequente del codice in un repository condiviso?",
+    "options": [
+      "Continuous Deployment",
+      "Continuous Monitoring",
+      "Continuous Integration",
+      "Infrastructure as Code"
+    ],
+    "correctAnswer": "Continuous Integration"
   },
   {
     "id": 33,
-    "question": "Cosa si intende per 'CI/CD'?",
-    "answer": "Continuous Integration/Continuous Deployment (o Delivery)"
+    "question": "In AWS, quale servizio fornisce la capacità di eseguire codice in risposta a eventi senza provisioning o gestione di server?",
+    "options": [
+      "Amazon EC2",
+      "AWS Elastic Beanstalk",
+      "AWS Lambda",
+      "AWS Fargate"
+    ],
+    "correctAnswer": "AWS Lambda"
   },
   {
     "id": 34,
-    "question": "Qual è uno strumento comune per la Continuous Integration?",
-    "answer": "Jenkins, GitLab CI, GitHub Actions"
+    "question": "Quale strumento Azure è utilizzato per automatizzare i flussi di lavoro e le attività tra servizi?",
+    "options": [
+      "Azure Functions",
+      "Azure Logic Apps",
+      "Azure Data Factory",
+      "Azure Pipelines"
+    ],
+    "correctAnswer": "Azure Logic Apps"
   },
   {
     "id": 35,
-    "question": "Cosa si intende per 'IaC' nel cloud computing?",
-    "answer": "Infrastructure as Code"
+    "question": "Cosa si intende per 'Infrastructure as Code' (IaC)?",
+    "options": [
+      "Gestire l'infrastruttura fisica con il codice",
+      "Gestire e fornire l'infrastruttura cloud tramite codice e non manualmente",
+      "Eseguire codice su un server dedicato",
+      "Utilizzare il codice per monitorare l'infrastruttura"
+    ],
+    "correctAnswer": "Gestire e fornire l'infrastruttura cloud tramite codice e non manualmente"
   },
   {
     "id": 36,
-    "question": "Qual è uno strumento popolare per l'IaC?",
-    "answer": "Terraform, AWS CloudFormation, Ansible"
+    "question": "In GCP, quale servizio è una piattaforma di integrazione continua e continuous delivery completamente gestita?",
+    "options": [
+      "Cloud Build",
+      "Cloud Deploy",
+      "Cloud Source Repositories",
+      "Cloud Pipelines"
+    ],
+    "correctAnswer": "Cloud Build"
   },
   {
     "id": 37,
-    "question": "Cosa si intende per 'monitoraggio' nel cloud?",
-    "answer": "Raccogliere e analizzare dati sulle prestazioni e l'utilizzo delle risorse cloud"
+    "question": "Quale termine descrive la capacità di un sistema di continuare a funzionare anche in presenza di guasti?",
+    "options": [
+      "Scalabilità",
+      "Elasticità",
+      "Resilienza",
+      "Agilità"
+    ],
+    "correctAnswer": "Resilienza"
   },
   {
     "id": 38,
-    "question": "Qual è un aspetto importante della sicurezza nel cloud?",
-    "answer": "Gestione delle identità e degli accessi (IAM)"
+    "question": "In AWS, quale servizio fornisce un servizio di bilanciamento del carico che opera a livello di applicazione (HTTP/HTTPS)?",
+    "options": [
+      "Classic Load Balancer",
+      "Network Load Balancer",
+      "Application Load Balancer",
+      "Gateway Load Balancer"
+    ],
+    "correctAnswer": "Application Load Balancer"
   },
   {
     "id": 39,
-    "question": "Cosa si intende per 'resilienza' nel cloud?",
-    "answer": "La capacità di un sistema di riprendersi da guasti e continuare a funzionare"
+    "question": "Quale servizio Azure è un servizio di cache dei contenuti (CDN) per fornire contenuti web agli utenti a livello globale con bassa latenza?",
+    "options": [
+      "Azure Front Door",
+      "Azure Application Gateway",
+      "Azure CDN",
+      "Azure Traffic Manager"
+    ],
+    "correctAnswer": "Azure CDN"
   },
   {
     "id": 40,
-    "question": "Cosa si intende per 'backup e disaster recovery' nel cloud?",
-    "answer": "Strategie per salvare i dati e ripristinare i sistemi dopo un evento disastroso"
+    "question": "Cosa si intende per 'geo-redundancy' nello storage cloud?",
+    "options": [
+      "Archiviare dati in una singola regione con più copie",
+      "Archiviare dati in più zone di disponibilità all'interno di una regione",
+      "Archiviare dati in due o più regioni geograficamente distinte",
+      "Archiviare dati su dispositivi fisici separati all'interno dello stesso data center"
+    ],
+    "correctAnswer": "Archiviare dati in due o più regioni geograficamente distinte"
   },
-    {
+  {
     "id": 41,
-    "question": "Cosa si intende per 'migrazione al cloud'?",
-    "answer": "Il processo di spostamento di dati, applicazioni e carichi di lavoro verso un'infrastruttura cloud"
+    "question": "In GCP, quale servizio è un servizio di streaming e messaggistica in tempo reale, scalabile a livello globale?",
+    "options": [
+      "Cloud Tasks",
+      "Cloud Pub/Sub",
+      "Cloud Scheduler",
+      "Cloud Dataflow"
+    ],
+    "correctAnswer": "Cloud Pub/Sub"
   },
   {
     "id": 42,
-    "question": "Qual è un modello di migrazione al cloud comune?",
-    "answer": "Lift and Shift (Rehosting)"
+    "question": "Quale pratica DevOps si concentra sull'automazione del processo di rilascio del software in produzione?",
+    "options": [
+      "Continuous Integration",
+      "Continuous Delivery",
+      "Continuous Planning",
+      "Continuous Testing"
+    ],
+    "correctAnswer": "Continuous Delivery"
   },
   {
     "id": 43,
-    "question": "Cosa si intende per 'ottimizzazione dei costi' nel cloud?",
-    "answer": "Strategie per ridurre le spese relative all'utilizzo delle risorse cloud"
+    "question": "In AWS, quale servizio è un servizio di directory gestito per integrare directory on-premise con servizi AWS?",
+    "options": [
+      "AWS IAM",
+      "AWS Cognito",
+      "AWS Directory Service",
+      "AWS Organizations"
+    ],
+    "correctAnswer": "AWS Directory Service"
   },
   {
     "id": 44,
-    "question": "Qual è un servizio di storage oggetti nel cloud?",
-    "answer": "Amazon S3 (Simple Storage Service), Azure Blob Storage, Google Cloud Storage"
+    "question": "Quale servizio Azure è utilizzato per proteggere le chiavi crittografiche e altri segreti utilizzati dalle applicazioni e dai servizi cloud?",
+    "options": [
+      "Azure Security Center",
+      "Azure Sentinel",
+      "Azure Key Vault",
+      "Azure Information Protection"
+    ],
+    "correctAnswer": "Azure Key Vault"
   },
   {
     "id": 45,
-    "question": "Cosa si intende per 'rete virtuale' nel cloud?",
-    "answer": "Una rete logica isolata all'interno del cloud"
+    "question": "Cosa si intende per 'serverless computing'?",
+    "options": [
+      "Eseguire applicazioni su server fisici dedicati",
+      "Eseguire codice senza dover gestire l'infrastruttura sottostante",
+      "Utilizzare macchine virtuali con configurazione minima",
+      "Eseguire container su un cluster gestito"
+    ],
+    "correctAnswer": "Eseguire codice senza dover gestire l'infrastruttura sottostante"
   },
   {
     "id": 46,
-    "question": "Qual è un servizio di database gestito nel cloud?",
-    "answer": "Amazon RDS (Relational Database Service), Azure SQL Database, Google Cloud SQL"
+    "question": "In GCP, quale servizio è un servizio completamente gestito per l'esecuzione di carichi di lavoro batch?",
+    "options": [
+      "Cloud Functions",
+      "Cloud Run",
+      "Batch",
+      "App Engine"
+    ],
+    "correctAnswer": "Batch"
   },
   {
     "id": 47,
-    "question": "Cosa si intende per 'edge computing'?",
-    "answer": "Elaborazione dei dati più vicino alla fonte di generazione dei dati anziché in un data center centralizzato"
+    "question": "Quale termine descrive un ambiente cloud composto da risorse provenienti da più provider cloud diversi?",
+    "options": [
+      "Cloud Ibrido",
+      "Cloud Privato",
+      "Cloud Pubblico",
+      "Multi-cloud"
+    ],
+    "correctAnswer": "Multi-cloud"
   },
   {
     "id": 48,
-    "question": "Qual è un caso d'uso comune per l'edge computing?",
-    "answer": "Dispositivi IoT (Internet of Things)"
+    "question": "In AWS, quale servizio fornisce un servizio di analisi dei log e monitoraggio per le applicazioni e l'infrastruttura?",
+    "options": [
+      "Amazon S3",
+      "Amazon CloudWatch",
+      "AWS CloudTrail",
+      "AWS Config"
+    ],
+    "correctAnswer": "Amazon CloudWatch"
   },
   {
     "id": 49,
-    "question": "Cosa si intende per 'machine learning as a service' (MLaaS)?",
-    "answer": "Servizi cloud che forniscono strumenti e modelli pre-addestrati per sviluppare e distribuire applicazioni di machine learning"
+    "question": "Quale servizio Azure è utilizzato per fornire un'area di lavoro collaborativa per i team di sviluppo che include pipeline CI/CD, board Agile e repository Git?",
+    "options": [
+      "Azure Repos",
+      "Azure Pipelines",
+      "Azure Boards",
+      "Azure DevOps"
+    ],
+    "correctAnswer": "Azure DevOps"
   },
   {
     "id": 50,
-    "question": "Qual è un esempio di servizio MLaaS?",
-    "answer": "Amazon SageMaker, Azure Machine Learning, Google AI Platform"
+    "question": "Cosa si intende per 'Container Registry'?",
+    "options": [
+      "Un servizio per l'esecuzione di container",
+      "Un repository per l'archiviazione e la gestione di immagini container",
+      "Uno strumento per la creazione di container",
+      "Una piattaforma per l'orchestrazione di container"
+    ],
+    "correctAnswer": "Un repository per l'archiviazione e la gestione di immagini container"
   },
-    {
+  {
     "id": 51,
-    "question": "Cosa si intende per 'big data'?",
-    "answer": "Grandi volumi di dati che richiedono tecniche e tecnologie specifiche per essere elaborati e analizzati"
+    "question": "In GCP, quale servizio è un servizio di repository Git privato gestito?",
+    "options": [
+      "Cloud Build",
+      "Cloud Source Repositories",
+      "Artifact Registry",
+      "Cloud Functions"
+    ],
+    "correctAnswer": "Cloud Source Repositories"
   },
   {
     "id": 52,
-    "question": "Qual è un servizio cloud per l'elaborazione di big data?",
-    "answer": "Amazon EMR (Elastic MapReduce), Azure HDInsight, Google Cloud Dataproc"
+    "question": "Quale modello di pricing cloud prevede uno sconto significativo in cambio di un impegno sull'utilizzo delle risorse per un periodo di tempo (es. 1 o 3 anni)?",
+    "options": [
+      "On-Demand",
+      "Spot Instances",
+      "Reserved Instances (o Committed Use Discounts)",
+      "Pay-as-you-go"
+    ],
+    "correctAnswer": "Reserved Instances (o Committed Use Discounts)"
   },
   {
     "id": 53,
-    "question": "Cosa si intende per 'data lake' nel cloud?",
-    "answer": "Un repository centralizzato per archiviare dati strutturati e non strutturati su larga scala"
+    "question": "In AWS, quale servizio è un servizio di notifica pub/sub completamente gestito?",
+    "options": [
+      "Amazon SQS",
+      "Amazon SNS",
+      "Amazon MQ",
+      "AWS Step Functions"
+    ],
+    "correctAnswer": "Amazon SNS"
   },
   {
     "id": 54,
-    "question": "Qual è un servizio cloud per la gestione dei data lake?",
-    "answer": "AWS Lake Formation, Azure Data Lake Storage, Google Cloud Storage"
+    "question": "Quale servizio Azure è utilizzato per gestire centralmente le policy per imporre standard e valutare la conformità delle risorse Azure?",
+    "options": [
+      "Azure Security Center",
+      "Azure Policy",
+      "Azure Blueprints",
+      "Azure Advisor"
+    ],
+    "correctAnswer": "Azure Policy"
   },
   {
     "id": 55,
-    "question": "Cosa si intende per 'API Gateway' nel cloud?",
-    "answer": "Un punto di ingresso singolo per gestire le chiamate API ai servizi backend"
+    "question": "Cosa si intende per 'API Gateway' nel contesto dei microservizi cloud?",
+    "options": [
+      "Un servizio di database per le API",
+      "Un punto di ingresso singolo per gestire le richieste dei client ai servizi backend",
+      "Uno strumento per monitorare le API",
+      "Un servizio per la creazione di API"
+    ],
+    "correctAnswer": "Un punto di ingresso singolo per gestire le richieste dei client ai servizi backend"
   },
   {
     "id": 56,
-    "question": "Qual è un servizio cloud di API Gateway?",
-    "answer": "Amazon API Gateway, Azure API Management, Google Cloud API Gateway"
+    "question": "In GCP, quale servizio è un gateway gestito per le API?",
+    "options": [
+      "Cloud Endpoints",
+      "API Gateway",
+      "Apigee",
+      "Cloud Functions"
+    ],
+    "correctAnswer": "API Gateway"
   },
   {
     "id": 57,
-    "question": "Cosa si intende per 'load balancing' nel cloud?",
-    "answer": "Distribuzione del traffico di rete su più server per migliorare le prestazioni e la disponibilità"
+    "question": "Quale termine descrive la capacità di un sistema di gestire un aumento del carico di lavoro aggiungendo o rimuovendo risorse?",
+    "options": [
+      "Resilienza",
+      "Disponibilità",
+      "Scalabilità",
+      "Sicurezza"
+    ],
+    "correctAnswer": "Scalabilità"
   },
   {
     "id": 58,
-    "question": "Qual è un servizio cloud di load balancing?",
-    "answer": "Elastic Load Balancing (AWS), Azure Load Balancer, Google Cloud Load Balancing"
+    "question": "In AWS, quale servizio è un servizio DNS (Domain Name System) web scalabile e altamente disponibile?",
+    "options": [
+      "Amazon CloudFront",
+      "Amazon Route 53",
+      "AWS Direct Connect",
+      "Amazon VPC"
+    ],
+    "correctAnswer": "Amazon Route 53"
   },
   {
     "id": 59,
-    "question": "Cosa si intende per 'Virtual Private Cloud' (VPC)?",
-    "answer": "Una sezione isolata di un cloud pubblico dedicata a un singolo utente o organizzazione"
+    "question": "Quale servizio Azure è utilizzato per creare e gestire reti private virtuali (VPN) per connettere reti on-premise ad Azure?",
+    "options": [
+      "Azure ExpressRoute",
+      "Azure VPN Gateway",
+      "Azure Virtual Network",
+      "Azure Network Security Group"
+    ],
+    "correctAnswer": "Azure VPN Gateway"
   },
   {
     "id": 60,
-    "question": "Qual è un servizio cloud per la creazione di VPC?",
-    "answer": "Amazon VPC, Azure Virtual Network, Google Cloud Virtual Private Cloud"
+    "question": "Cosa si intende per 'Data Lake' nel cloud?",
+    "options": [
+      "Un database relazionale per big data",
+      "Un repository centralizzato per archiviare dati strutturati e non strutturati su larga scala",
+      "Un servizio di streaming dati",
+      "Uno strumento per l'analisi dei dati"
+    ],
+    "correctAnswer": "Un repository centralizzato per archiviare dati strutturati e non strutturati su larga scala"
   },
-    {
+  {
     "id": 61,
-    "question": "Cosa si intende per 'Content Delivery Network' (CDN)?",
-    "answer": "Una rete distribuita di server che forniscono contenuti web agli utenti in base alla loro posizione geografica"
+    "question": "In GCP, quale servizio è un servizio di storage scalabile e a basso costo per big data e analisi?",
+    "options": [
+      "BigQuery",
+      "Cloud Storage",
+      "Cloud Bigtable",
+      "Dataproc"
+    ],
+    "correctAnswer": "Cloud Storage"
   },
   {
     "id": 62,
-    "question": "Qual è un servizio cloud di CDN?",
-    "answer": "Amazon CloudFront, Azure CDN, Google Cloud CDN"
+    "question": "Quale termine descrive la pratica di gestire l'infrastruttura cloud e le applicazioni in un modo riproducibile e automatizzato?",
+    "options": [
+      "Cloud Governance",
+      "Cost Management",
+      "DevOps",
+      "Compliance"
+    ],
+    "correctAnswer": "DevOps"
   },
   {
     "id": 63,
-    "question": "Cosa si intende per 'identity and access management' (IAM) nel cloud?",
-    "answer": "Gestione degli utenti e delle loro autorizzazioni per accedere alle risorse cloud"
+    "question": "In AWS, quale servizio è una piattaforma di automazione per la creazione di ambienti AWS coerenti e ripetibili?",
+    "options": [
+      "AWS CloudFormation",
+      "AWS OpsWorks",
+      "AWS Systems Manager",
+      "AWS Elastic Beanstalk"
+    ],
+    "correctAnswer": "AWS CloudFormation"
   },
   {
     "id": 64,
-    "question": "Qual è un servizio cloud di IAM?",
-    "answer": "AWS IAM, Azure Active Directory, Google Cloud IAM"
+    "question": "Quale strumento Azure è utilizzato per il monitoring e l'analisi della sicurezza su larga scala, che include la raccolta dati da varie fonti?",
+    "options": [
+      "Azure Security Center",
+      "Azure Key Vault",
+      "Azure Sentinel",
+      "Azure Firewall"
+    ],
+    "correctAnswer": "Azure Sentinel"
   },
   {
     "id": 65,
-    "question": "Cosa si intende per 'monitoraggio delle prestazioni' nel cloud?",
-    "answer": "Tracciare e analizzare le metriche per valutare l'efficienza e la reattività delle applicazioni cloud"
+    "question": "Cosa si intende per 'Service Level Agreement' (SLA) in un contesto cloud?",
+    "options": [
+      "Un accordo interno sul livello di servizio",
+      "Un contratto tra il provider cloud e il cliente che definisce il livello di servizio garantito",
+      "Un obiettivo di performance per un'applicazione cloud",
+      "Uno strumento per monitorare la disponibilità dei servizi"
+    ],
+    "correctAnswer": "Un contratto tra il provider cloud e il cliente che definisce il livello di servizio garantito"
   },
   {
     "id": 66,
-    "question": "Qual è un servizio cloud per il monitoraggio delle prestazioni?",
-    "answer": "Amazon CloudWatch, Azure Monitor, Google Cloud Monitoring"
+    "question": "In GCP, quale servizio è una piattaforma di sviluppo completamente gestita per la creazione di applicazioni web e mobile scalabili?",
+    "options": [
+      "Compute Engine",
+      "Google Kubernetes Engine",
+      "Cloud Run",
+      "App Engine"
+    ],
+    "correctAnswer": "App Engine"
   },
   {
     "id": 67,
-    "question": "Cosa si intende per 'logging' nel cloud?",
-    "answer": "Registrazione degli eventi e delle attività che si verificano nelle risorse cloud"
+    "question": "Quale termine descrive il processo di ottimizzazione dell'utilizzo delle risorse cloud per ridurre i costi?",
+    "options": [
+      "Scalabilità",
+      "Elasticità",
+      "Cost Optimization",
+      "Disaster Recovery"
+    ],
+    "correctAnswer": "Cost Optimization"
   },
   {
     "id": 68,
-    "question": "Qual è un servizio cloud di logging?",
-    "answer": "Amazon CloudTrail, Azure Activity Logs, Google Cloud Logging"
+    "question": "In AWS, quale servizio fornisce un servizio di notifica push per applicazioni mobile e distribuite?",
+    "options": [
+      "Amazon SQS",
+      "Amazon SNS",
+      "Amazon SES",
+      "AWS Pinpoint"
+    ],
+    "correctAnswer": "Amazon SNS"
   },
   {
     "id": 69,
-    "question": "Cosa si intende per 'automazione' nel cloud?",
-    "answer": "Utilizzo di strumenti e script per eseguire attività ripetitive nell'ambiente cloud"
+    "question": "Quale servizio Azure è utilizzato per creare e gestire macchine virtuali Linux e Windows?",
+    "options": [
+      "Azure App Services",
+      "Azure Functions",
+      "Azure Kubernetes Service (AKS)",
+      "Azure Virtual Machines"
+    ],
+    "correctAnswer": "Azure Virtual Machines"
   },
   {
     "id": 70,
-    "question": "Qual è un vantaggio dell'automazione nel cloud?",
-    "answer": "Riduzione degli errori manuali e accelerazione dei processi"
+    "question": "Cosa si intende per 'Hybrid Cloud'?",
+    "options": [
+      "L'utilizzo di un singolo cloud provider",
+      "Una combinazione di cloud pubblico e cloud privato",
+      "L'utilizzo di più cloud provider pubblici",
+      "L'esecuzione di applicazioni solo on-premise"
+    ],
+    "correctAnswer": "Una combinazione di cloud pubblico e cloud privato"
   },
-    {
+  {
     "id": 71,
-    "question": "Cosa si intende per 'orchestration' nel cloud?",
-    "answer": "Automazione del coordinamento di più servizi e componenti cloud per eseguire un'attività complessa"
+    "question": "In GCP, quale servizio è una piattaforma managed per eseguire container su un ambiente serverless?",
+    "options": [
+      "Google Kubernetes Engine",
+      "Compute Engine",
+      "Cloud Run",
+      "App Engine"
+    ],
+    "correctAnswer": "Cloud Run"
   },
   {
     "id": 72,
-    "question": "Qual è uno strumento popolare per l'orchestration di container?",
-    "answer": "Kubernetes"
+    "question": "Quale pratica di sicurezza cloud si occupa di registrare e monitorare le attività eseguite sulle risorse cloud?",
+    "options": [
+      "Encryption",
+      "Vulnerability Scanning",
+      "Audit Logging and Monitoring",
+      "Penetration Testing"
+    ],
+    "correctAnswer": "Audit Logging and Monitoring"
   },
   {
     "id": 73,
-    "question": "Cosa si intende per 'microservizi'?",
-    "answer": "Un'architettura software in cui le applicazioni sono composte da piccoli servizi indipendenti"
+    "question": "In AWS, quale servizio fornisce un servizio di directory gestito compatibile con Microsoft Active Directory?",
+    "options": [
+      "AWS IAM Identity Center",
+      "AWS Directory Service for Microsoft Active Directory",
+      "AWS Cognito",
+      "AWS Organizations"
+    ],
+    "correctAnswer": "AWS Directory Service for Microsoft Active Directory"
   },
   {
     "id": 74,
-    "question": "Qual è un vantaggio dell'architettura a microservizi?",
-    "answer": "Maggiore scalabilità, resilienza e flessibilità"
+    "question": "Quale servizio Azure è un servizio di repository Git privato gestito?",
+    "options": [
+      "Azure Pipelines",
+      "Azure Boards",
+      "Azure Repos",
+      "Azure Artifacts"
+    ],
+    "correctAnswer": "Azure Repos"
   },
   {
     "id": 75,
-    "question": "Cosa si intende per 'API-first' approach?",
-    "answer": "Progettare le applicazioni partendo dalla definizione delle loro API"
+    "question": "Cosa si intende per 'Load Balancing' nel cloud?",
+    "options": [
+      "Archiviare dati su più dispositivi di storage",
+      "Distribuire il traffico di rete in arrivo su più server o risorse",
+      "Replicare le macchine virtuali in diverse regioni",
+      "Applicare patch di sicurezza ai server"
+    ],
+    "correctAnswer": "Distribuire il traffico di rete in arrivo su più server o risorse"
   },
   {
     "id": 76,
-    "question": "Qual è un protocollo comune per le API web?",
-    "answer": "HTTP/HTTPS"
+    "question": "In GCP, quale servizio è un servizio di bilanciamento del carico globale, regionale e interno per distribuire il traffico?",
+    "options": [
+      "Cloud CDN",
+      "Cloud Armor",
+      "Cloud Load Balancing",
+      "Cloud DNS"
+    ],
+    "correctAnswer": "Cloud Load Balancing"
   },
   {
     "id": 77,
-    "question": "Cosa si intende per 'GraphQL'?",
-    "answer": "Un linguaggio di query per le API e un runtime per l'esecuzione di quelle query con i dati esistenti"
+    "question": "Quale termine descrive il processo di spostamento di applicazioni e dati da un ambiente on-premise o da un altro cloud al cloud?",
+    "options": [
+      "Scalabilità",
+      "Modernizzazione",
+      "Migrazione al Cloud",
+      "Virtualizzazione"
+    ],
+    "correctAnswer": "Migrazione al Cloud"
   },
   {
     "id": 78,
-    "question": "Cosa si intende per 'monitoring sintetico' nel cloud?",
-    "answer": "Simulare il comportamento degli utenti per testare la disponibilità e le prestazioni delle applicazioni"
+    "question": "In AWS, quale servizio fornisce una connessione di rete dedicata da on-premise ad AWS?",
+    "options": [
+      "AWS VPN",
+      "AWS Direct Connect",
+      "Amazon Connect",
+      "AWS Transit Gateway"
+    ],
+    "correctAnswer": "AWS Direct Connect"
   },
   {
     "id": 79,
-    "question": "Cosa si intende per 'monitoring reale dell'utente' (RUM)?",
-    "answer": "Raccogliere dati sulle interazioni reali degli utenti con le applicazioni"
+    "question": "Quale servizio Azure è un servizio di connettività di rete privata dedicata da on-premise ad Azure?",
+    "options": [
+      "Azure VPN Gateway",
+      "Azure Virtual Network",
+      "Azure ExpressRoute",
+      "Azure Network Watcher"
+    ],
+    "correctAnswer": "Azure ExpressRoute"
   },
   {
     "id": 80,
-    "question": "Qual è lo scopo del 'capacity planning' nel cloud?",
-    "answer": "Pianificare le risorse cloud necessarie per soddisfare la domanda futura"
+    "question": "Cosa si intende per 'Edge Computing' in relazione al cloud?",
+    "options": [
+      "L'utilizzo di servizi cloud solo in regioni geografiche specifiche",
+      "L'elaborazione dei dati più vicino alla fonte di generazione dei dati anziché in un data center centrale",
+      "L'utilizzo di istanze cloud di dimensioni ridotte",
+      "La gestione centralizzata di dispositivi remoti"
+    ],
+    "correctAnswer": "L'elaborazione dei dati più vicino alla fonte di generazione dei dati anziché in un data center centrale"
   },
     {
     "id": 81,
-    "question": "Cosa si intende per 'cost allocation tags' nel cloud?",
-    "answer": "Etichette utilizzate per organizzare le risorse cloud e tenere traccia dei costi per diversi progetti o team"
+    "question": "In GCP, quale servizio è un servizio gestito per l'elaborazione di flussi di dati su larga scala?",
+    "options": [
+      "Cloud Pub/Sub",
+      "Cloud Storage",
+      "Cloud Dataflow",
+      "BigQuery"
+    ],
+    "correctAnswer": "Cloud Dataflow"
   },
   {
     "id": 82,
-    "question": "Qual è un servizio cloud per l'analisi dei costi?",
-    "answer": "AWS Cost Explorer, Azure Cost Management, Google Cloud Cost Management"
+    "question": "Quale termine descrive la capacità di un sistema di gestire e recuperare da un guasto hardware o software?",
+    "options": [
+      "Scalabilità",
+      "Disponibilità",
+      "Durabilità",
+      "Resilienza"
+    ],
+    "correctAnswer": "Resilienza"
   },
   {
     "id": 83,
-    "question": "Cosa si intende per 'Reserved Instances' (RI) o 'Committed Use Discounts' nel cloud?",
-    "answer": "Opzioni di acquisto che offrono sconti significativi in cambio di un impegno sull'utilizzo delle risorse per un periodo di tempo"
+    "question": "In AWS, quale servizio fornisce un servizio di monitoring delle prestazioni e della salute delle applicazioni e dei servizi?",
+    "options": [
+      "AWS CloudTrail",
+      "Amazon CloudWatch",
+      "AWS Config",
+      "AWS X-Ray"
+    ],
+    "correctAnswer": "Amazon CloudWatch"
   },
   {
     "id": 84,
-    "question": "Cosa si intende per 'spot instances' nel cloud?",
-    "answer": "Istanze virtuali non utilizzate che vengono offerte a prezzi notevolmente ridotti"
+    "question": "Quale servizio Azure è utilizzato per il monitoring, l'analisi e la gestione delle risorse Azure e on-premise?",
+    "options": [
+      "Azure Security Center",
+      "Azure Cost Management",
+      "Azure Advisor",
+      "Azure Monitor"
+    ],
+    "correctAnswer": "Azure Monitor"
   },
   {
     "id": 85,
-    "question": "Qual è un caso d'uso ideale per le spot instances?",
-    "answer": "Carichi di lavoro flessibili e non critici che possono tollerare interruzioni"
+    "question": "Cosa si intende per 'Compliance' nel contesto cloud?",
+    "options": [
+      "Garantire l'alta disponibilità dei servizi",
+      "Rispettare le normative e gli standard di settore (es. GDPR, HIPAA)",
+      "Ottimizzare i costi del cloud",
+      "Proteggere i dati da accessi non autorizzati"
+    ],
+    "correctAnswer": "Rispettare le normative e gli standard di settore (es. GDPR, HIPAA)"
   },
   {
     "id": 86,
-    "question": "Cosa si intende per 'cloud security posture management' (CSPM)?",
-    "answer": "Strumenti che aiutano a identificare e correggere i rischi di sicurezza nell'ambiente cloud"
+    "question": "In GCP, quale servizio è uno strumento per l'analisi dei costi e la gestione della spesa cloud?",
+    "options": [
+      "Cloud Billing Reports",
+      "Cloud Asset Inventory",
+      "Cloud Cost Management",
+      "Pricing Calculator"
+    ],
+    "correctAnswer": "Cloud Billing Reports"
   },
   {
     "id": 87,
-    "question": "Cosa si intende per 'cloud access security broker' (CASB)?",
-    "answer": "Software che si trova tra gli utenti e i servizi cloud per applicare le policy di sicurezza"
+    "question": "Quale servizio AWS è una piattaforma per la gestione centralizzata delle policy per account AWS multipli?",
+    "options": [
+      "AWS IAM",
+      "AWS Single Sign-On",
+      "AWS Organizations",
+      "AWS Systems Manager"
+    ],
+    "correctAnswer": "AWS Organizations"
   },
   {
     "id": 88,
-    "question": "Cosa si intende per 'Data Loss Prevention' (DLP) nel cloud?",
-    "answer": "Strategie e strumenti per prevenire l'esfiltrazione di dati sensibili dal cloud"
+    "question": "Quale servizio Azure è utilizzato per creare una rete privata virtuale (VNet) in Azure?",
+    "options": [
+      "Azure ExpressRoute",
+      "Azure VPN Gateway",
+      "Azure Virtual Network",
+      "Azure Load Balancer"
+    ],
+    "correctAnswer": "Azure Virtual Network"
   },
   {
     "id": 89,
-    "question": "Qual è un aspetto importante della conformità normativa nel cloud?",
-    "answer": "Rispettare standard come GDPR, HIPAA, PCI DSS, ecc."
+    "question": "Cosa si intende per 'Cost Allocation Tags' nei provider cloud?",
+    "options": [
+      "Etichette per identificare le risorse danneggiate",
+      "Etichette utilizzate per organizzare le risorse cloud e tenere traccia dei costi per diversi progetti o team",
+      "Etichette per monitorare le prestazioni delle risorse",
+      "Etichette per applicare policy di sicurezza"
+    ],
+    "correctAnswer": "Etichette utilizzate per organizzare le risorse cloud e tenere traccia dei costi per diversi progetti o team"
   },
   {
     "id": 90,
-    "question": "Cosa si intende per 'audit trail' nel cloud?",
-    "answer": "Registrazione cronologica di tutte le attività eseguite sulle risorse cloud per scopi di sicurezza e conformità"
+    "question": "In GCP, quale servizio è un servizio di sicurezza che aiuta a proteggere le applicazioni web da attacchi DDoS e altre minacce?",
+    "options": [
+      "Cloud Identity",
+      "Cloud Security Command Center",
+      "Cloud Armor",
+      "VPC Service Controls"
+    ],
+    "correctAnswer": "Cloud Armor"
   },
-    {
+  {
     "id": 91,
-    "question": "Cosa si intende per 'Software Defined Networking' (SDN)?",
-    "answer": "Un approccio alla gestione di rete che consente il controllo centralizzato tramite software"
+    "question": "Quale termine descrive il processo di automazione della creazione e gestione dell'infrastruttura cloud?",
+    "options": [
+      "Monitoring",
+      "Configuration Management",
+      "Provisioning Automation",
+      "Orchestration"
+    ],
+    "correctAnswer": "Provisioning Automation"
   },
   {
     "id": 92,
-    "question": "Cosa si intende per 'Network Functions Virtualization' (NFV)?",
-    "answer": "Virtualizzazione delle funzioni di rete tradizionali (come router, firewall, ecc.) come software"
+    "question": "In AWS, quale servizio fornisce un servizio di database relazionale compatibile con SQL Server, Oracle e MySQL, completamente gestito?",
+    "options": [
+      "Amazon Aurora",
+      "Amazon Redshift",
+      "Amazon RDS",
+      "Amazon DynamoDB"
+    ],
+    "correctAnswer": "Amazon RDS"
   },
   {
     "id": 93,
-    "question": "Cosa si intende per 'VPN' nel contesto di rete?",
-    "answer": "Virtual Private Network - una connessione sicura su una rete pubblica"
+    "question": "Quale servizio Azure è un servizio di database relazionale gestito compatibile con SQL Server?",
+    "options": [
+      "Azure Cosmos DB",
+      "Azure Database for MySQL",
+      "Azure SQL Database",
+      "Azure Synapse Analytics"
+    ],
+    "correctAnswer": "Azure SQL Database"
   },
   {
     "id": 94,
-    "question": "Qual è un protocollo comune per le VPN?",
-    "answer": "IPsec o OpenVPN"
+    "question": "Cosa si intende per 'Stateless Application' in un ambiente cloud?",
+    "options": [
+      "Un'applicazione che memorizza lo stato della sessione sul server",
+      "Un'applicazione che non memorizza lo stato della sessione tra le richieste",
+      "Un'applicazione che utilizza un database per memorizzare lo stato",
+      "Un'applicazione che richiede un bilanciamento del carico persistente"
+    ],
+    "correctAnswer": "Un'applicazione che non memorizza lo stato della sessione tra le richieste"
   },
   {
     "id": 95,
-    "question": "Cosa si intende per 'Subnet' in una rete?",
-    "answer": "Una suddivisione logica di una rete IP"
+    "question": "In GCP, quale servizio è un database distribuito su scala globale, fortemente coerente e progettato per carichi di lavoro mission-critical?",
+    "options": [
+      "Cloud SQL",
+      "BigQuery",
+      "Firestore",
+      "Cloud Spanner"
+    ],
+    "correctAnswer": "Cloud Spanner"
   },
   {
     "id": 96,
-    "question": "Cosa si intende per 'Gateway' in una rete?",
-    "answer": "Un dispositivo che consente a una rete di comunicare con un'altra rete"
+    "question": "Quale termine descrive la fornitura di servizi cloud basati su un'infrastruttura di proprietà e gestita da una singola organizzazione?",
+    "options": [
+      "Cloud Pubblico",
+      "Cloud Ibrido",
+      "Cloud Privato",
+      "Multi-cloud"
+    ],
+    "correctAnswer": "Cloud Privato"
   },
   {
     "id": 97,
-    "question": "Cosa si intende per 'DNS'?",
-    "answer": "Domain Name System - sistema per tradurre nomi di dominio in indirizzi IP"
+    "question": "In AWS, quale servizio è un servizio di compute engine che esegue container senza la necessità di gestire server o cluster?",
+    "options": [
+      "Amazon EC2",
+      "AWS Lambda",
+      "AWS Fargate",
+      "Amazon ECS"
+    ],
+    "correctAnswer": "AWS Fargate"
   },
   {
     "id": 98,
-    "question": "Qual è la porta standard per il traffico HTTP?",
-    "answer": "80"
+    "question": "Quale servizio Azure è una piattaforma gestita per l'hosting di applicazioni web, API REST e backend mobile?",
+    "options": [
+      "Azure Virtual Machines",
+      "Azure Kubernetes Service",
+      "Azure Functions",
+      "Azure App Services"
+    ],
+    "correctAnswer": "Azure App Services"
   },
   {
     "id": 99,
-    "question": "Qual è la porta standard per il traffico HTTPS?",
-    "answer": "443"
+    "question": "Cosa si intende per 'Auto Scaling' nel cloud?",
+    "options": [
+      "Regolare manualmente il numero di risorse in base al carico",
+      "Aumentare o diminuire automaticamente il numero di risorse in base a metriche definite",
+      "Aumentare la capacità di una singola istanza",
+      "Distribuire il traffico tra diverse regioni"
+    ],
+    "correctAnswer": "Aumentare o diminuire automaticamente il numero di risorse in base a metriche definite"
   },
   {
     "id": 100,
-    "question": "Cosa si intende per 'Load Balancer'?",
-    "answer": "Un dispositivo o software che distribuisce il traffico di rete tra più server"
+    "question": "In GCP, quale servizio è un servizio di monitoring, logging e performance management per applicazioni e infrastruttura?",
+    "options": [
+      "Cloud Trace",
+      "Cloud Logging",
+      "Cloud Monitoring",
+      "Cloud Audit Logs"
+    ],
+    "correctAnswer": "Cloud Monitoring"
   },
-    {
+  {
     "id": 101,
-    "question": "Cosa si intende per 'caching'?",
-    "answer": "Memorizzazione temporanea di dati per un accesso più rapido in futuro"
+    "question": "Quale termine descrive la capacità di un sistema di riprendersi da un guasto e tornare a uno stato operativo?",
+    "options": [
+      "High Availability",
+      "Scalability",
+      "Elasticity",
+      "Disaster Recovery"
+    ],
+    "correctAnswer": "Disaster Recovery"
   },
   {
     "id": 102,
-    "question": "Qual è un esempio di database NoSQL?",
-    "answer": "MongoDB, Cassandra, DynamoDB"
+    "question": "In AWS, quale servizio fornisce un servizio di archiviazione a blocchi (block storage) persistente per le istanze EC2?",
+    "options": [
+      "Amazon S3",
+      "Amazon EFS",
+      "Amazon EBS",
+      "Amazon Glacier"
+    ],
+    "correctAnswer": "Amazon EBS"
   },
   {
     "id": 103,
-    "question": "Cosa si intende per 'data warehousing'?",
-    "answer": "Archiviazione centralizzata di grandi quantità di dati provenienti da fonti diverse per l'analisi"
+    "question": "Quale servizio Azure è un servizio di archiviazione file gestito che può essere montato su macchine virtuali on-premise o in Azure?",
+    "options": [
+      "Azure Blob Storage",
+      "Azure Files",
+      "Azure Disk Storage",
+      "Azure Data Lake Storage"
+    ],
+    "correctAnswer": "Azure Files"
   },
   {
     "id": 104,
-    "question": "Qual è un servizio cloud di data warehousing?",
-    "answer": "Amazon Redshift, Azure Synapse Analytics, Google BigQuery"
+    "question": "Cosa si intende per 'Zone di Disponibilità' (Availability Zones) in un provider cloud?",
+    "options": [
+      "Singoli data center isolati all'interno di una Regione",
+      "Regioni geografiche separate",
+      "Gruppi di server all'interno di un singolo data center",
+      "Network perimetrali per la distribuzione dei contenuti"
+    ],
+    "correctAnswer": "Singoli data center isolati all'interno di una Regione"
   },
   {
     "id": 105,
-    "question": "Cosa si intende per 'ETL'?",
-    "answer": "Extract, Transform, Load - processo di integrazione dati"
+    "question": "In GCP, quale servizio è un servizio di database NoSQL a documenti e a chiave-valore, scalabile a livello globale?",
+    "options": [
+      "Cloud SQL",
+      "Bigtable",
+      "Firestore",
+      "BigQuery"
+    ],
+    "correctAnswer": "Firestore"
   },
   {
     "id": 106,
-    "question": "Cosa si intende per 'data streaming'?",
-    "answer": "Elaborazione di flussi continui di dati in tempo reale"
+    "question": "Quale termine descrive la pratica di utilizzare strumenti e tecniche per identificare e correggere i rischi di sicurezza nell'ambiente cloud?",
+    "options": [
+      "Threat Intelligence",
+      "Security Hardening",
+      "Cloud Security Posture Management (CSPM)",
+      "Incident Response"
+    ],
+    "correctAnswer": "Cloud Security Posture Management (CSPM)"
   },
   {
     "id": 107,
-    "question": "Qual è un servizio cloud per il data streaming?",
-    "answer": "Amazon Kinesis, Azure Event Hubs, Google Cloud Pub/Sub"
+    "question": "In AWS, quale servizio fornisce un servizio di gestione delle configurazioni che aiuta a mantenere la conformità delle risorse AWS?",
+    "options": [
+      "AWS CloudTrail",
+      "Amazon CloudWatch",
+      "AWS Config",
+      "AWS Systems Manager"
+    ],
+    "correctAnswer": "AWS Config"
   },
   {
     "id": 108,
-    "question": "Cosa si intende per 'Internet delle cose' (IoT)?",
-    "answer": "Rete di oggetti fisici 'intelligenti' connessi a Internet"
+    "question": "Quale servizio Azure è un servizio di sicurezza che fornisce raccomandazioni per migliorare la postura di sicurezza delle risorse Azure?",
+    "options": [
+      "Azure Sentinel",
+      "Azure Security Center",
+      "Azure Advisor",
+      "Azure Policy"
+    ],
+    "correctAnswer": "Azure Security Center"
   },
   {
     "id": 109,
-    "question": "Qual è un servizio cloud per la gestione dei dispositivi IoT?",
-    "answer": "AWS IoT Core, Azure IoT Hub, Google Cloud IoT Core"
+    "question": "Cosa si intende per 'Blue/Green Deployment'?",
+    "options": [
+      "Aggiornare un'applicazione gradualmente in un'unica versione",
+      "Implementare una nuova versione di un'applicazione in un ambiente separato ('verde') e poi reindirizzare il traffico da quello vecchio ('blu') al nuovo",
+      "Utilizzare container per il deployment",
+      "Distribuire un'applicazione su più regioni cloud"
+    ],
+    "correctAnswer": "Implementare una nuova versione di un'applicazione in un ambiente separato ('verde') e poi reindirizzare il traffico da quello vecchio ('blu') al nuovo"
   },
   {
     "id": 110,
-    "question": "Cosa si intende per 'Intelligenza Artificiale' (AI)?",
-    "answer": "Simulazione dei processi di intelligenza umana da parte delle macchine"
+    "question": "In GCP, quale servizio è un servizio di osservabilità che fornisce insight sulla latenza e sulle prestazioni delle richieste delle applicazioni?",
+    "options": [
+      "Cloud Monitoring",
+      "Cloud Logging",
+      "Cloud Trace",
+      "Cloud Profiler"
+    ],
+    "correctAnswer": "Cloud Trace"
   },
-    {
+  {
     "id": 111,
-    "question": "Cosa si intende per 'Machine Learning' (ML)?",
-    "answer": "Sottocampo dell'AI che consente ai sistemi di 'imparare' dai dati senza essere esplicitamente programmati"
+    "question": "Quale termine descrive la capacità di un sistema cloud di gestire picchi di carico improvvisi aumentando automaticamente le risorse?",
+    "options": [
+      "Scalabilità Verticale",
+      "Scalabilità Orizzontale",
+      "Resilienza",
+      "Elasticità"
+    ],
+    "correctAnswer": "Elasticità"
   },
   {
     "id": 112,
-    "question": "Qual è un servizio cloud per il Machine Learning?",
-    "answer": "Amazon SageMaker, Azure Machine Learning, Google AI Platform"
+    "question": "In AWS, quale servizio fornisce un servizio di desktop virtuale gestito?",
+    "options": [
+      "Amazon EC2",
+      "Amazon Lightsail",
+      "Amazon WorkSpaces",
+      "Amazon AppStream 2.0"
+    ],
+    "correctAnswer": "Amazon WorkSpaces"
   },
   {
     "id": 113,
-    "question": "Cosa si intende per 'Deep Learning'?",
-    "answer": "Un sottocampo del Machine Learning che utilizza reti neurali artificiali con molti strati"
+    "question": "Quale servizio Azure è utilizzato per fornire un servizio di desktop virtuale basato su cloud?",
+    "options": [
+      "Azure Virtual Machines",
+      "Azure App Services",
+      "Azure Virtual Desktop",
+      "Azure Container Instances"
+    ],
+    "correctAnswer": "Azure Virtual Desktop"
   },
   {
     "id": 114,
-    "question": "Cosa si intende per 'Natural Language Processing' (NLP)?",
-    "answer": "Campo dell'AI che si occupa dell'interazione tra computer e linguaggio umano"
+    "question": "Cosa si intende per 'Infrastructure as a Service' (IaaS)?",
+    "options": [
+      "Fornire software on-demand via internet",
+      "Fornire una piattaforma per lo sviluppo e il deployment di applicazioni",
+      "Fornire accesso a risorse informatiche fondamentali come server, storage e networking",
+      "Fornire funzioni di codice in risposta a eventi"
+    ],
+    "correctAnswer": "Fornire accesso a risorse informatiche fondamentali come server, storage e networking"
   },
   {
     "id": 115,
-    "question": "Qual è un servizio cloud di NLP?",
-    "answer": "Amazon Comprehend, Azure Text Analytics, Google Cloud Natural Language AI"
+    "question": "In GCP, quale servizio è un servizio di storage oggetti scalabile e a basso costo?",
+    "options": [
+      "BigQuery",
+      "Cloud SQL",
+      "Cloud Storage",
+      "Cloud Bigtable"
+    ],
+    "correctAnswer": "Cloud Storage"
   },
   {
     "id": 116,
-    "question": "Cosa si intende per 'Computer Vision'?",
-    "answer": "Campo dell'AI che consente ai computer di 'vedere' e interpretare immagini e video"
+    "question": "Quale termine descrive un ambiente cloud in cui le applicazioni vengono eseguite su server condivisi tra più clienti?",
+    "options": [
+      "Cloud Privato",
+      "Cloud Ibrido",
+      "Multi-cloud",
+      "Cloud Pubblico"
+    ],
+    "correctAnswer": "Cloud Pubblico"
   },
   {
     "id": 117,
-    "question": "Qual è un servizio cloud di Computer Vision?",
-    "answer": "Amazon Rekognition, Azure Computer Vision, Google Cloud Vision AI"
+    "question": "In AWS, quale servizio fornisce un servizio di streaming video live e on-demand gestito?",
+    "options": [
+      "Amazon S3",
+      "AWS Elemental MediaLive",
+      "Amazon CloudFront",
+      "AWS Fargate"
+    ],
+    "correctAnswer": "AWS Elemental MediaLive"
   },
   {
     "id": 118,
-    "question": "Cosa si intende per 'blockchain'?",
-    "answer": "Registro digitale distribuito e immutabile di transazioni"
+    "question": "Quale servizio Azure è utilizzato per l'analisi dei dati e la creazione di dashboard interattive?",
+    "options": [
+      "Azure Data Factory",
+      "Azure Databricks",
+      "Power BI",
+      "Azure Synapse Analytics"
+    ],
+    "correctAnswer": "Power BI"
   },
   {
     "id": 119,
-    "question": "Qual è una criptovaluta basata su blockchain?",
-    "answer": "Bitcoin o Ethereum"
+    "question": "Cosa si intende per 'Directory Service' nel cloud?",
+    "options": [
+      "Un servizio per l'archiviazione di file",
+      "Un servizio per la gestione centralizzata degli utenti, dei gruppi e delle risorse",
+      "Un servizio per il monitoring dei server",
+      "Un servizio per la distribuzione dei contenuti"
+    ],
+    "correctAnswer": "Un servizio per la gestione centralizzata degli utenti, dei gruppi e delle risorse"
   },
   {
     "id": 120,
-    "question": "Cosa si intende per 'smart contract'?",
-    "answer": "Contratti auto-eseguibili con i termini dell'accordo direttamente scritti nel codice"
+    "question": "In GCP, quale servizio è un servizio di data warehouse serverless e scalabile?",
+    "options": [
+      "Cloud SQL",
+      "Firestore",
+      "BigQuery",
+      "Cloud Bigtable"
+    ],
+    "correctAnswer": "BigQuery"
   },
-   {
+  {
     "id": 121,
-    "question": "Cosa si intende per 'Cybersecurity'?",
-    "answer": "Protezione di sistemi, reti e programmi da attacchi digitali"
+    "question": "Quale termine descrive un'applicazione che è costruita come una collezione di piccoli servizi autonomi e indipendenti?",
+    "options": [
+      "Monolithic Application",
+      "Tiered Application",
+      "Microservices Application",
+      "Serverless Application"
+    ],
+    "correctAnswer": "Microservices Application"
   },
   {
     "id": 122,
-    "question": "Qual è un tipo comune di attacco informatico?",
-    "answer": "Malware, Phishing, DDoS, Ransomware"
-  },
-  {
-    "id": 123,
-    "question": "Cosa si intende per 'Malware'?",
-    "answer": "Software dannoso progettato per danneggiare o sfruttare sistemi informatici"
-  },
-  {
-    "id": 124,
-    "question": "Cosa si intende per 'Ransomware'?",
-    "answer": "Malware che cripta i file della vittima e richiede un riscatto per ripristinarli"
-  },
-  {
-    "id": 125,
-    "question": "Cosa si intende per 'Distributed Denial of Service' (DDoS)?",
-    "answer": "Attacco che sovraccarica un server o una rete con traffico per renderli non disponibili"
-  },
-  {
-    "id": 126,
-    "question": "Qual è un metodo per proteggersi dagli attacchi DDoS?",
-    "answer": "Utilizzare servizi di mitigazione DDoS"
-  },
-  {
-    "id": 127,
-    "question": "Cosa si intende per 'VPN' (Virtual Private Network)?",
-    "answer": "Rete privata virtuale che crea una connessione sicura su una rete pubblica"
-  },
-  {
-    "id": 128,
-    "question": "Qual è lo scopo di una VPN?",
-    "answer": "Crittografare il traffico internet e nascondere l'indirizzo IP"
-  },
-  {
-    "id": 129,
-    "question": "Cosa si intende per 'autenticazione a due fattori' (2FA)?",
-    "answer": "Un metodo di sicurezza che richiede due diverse forme di identificazione per accedere a un account"
-  },
-  {
-    "id": 130,
-    "question": "Qual è un esempio di secondo fattore nell'autenticazione 2FA?",
-    "answer": "Un codice inviato via SMS, un'app di autenticazione, un'impronta digitale"
-  },
-    {
-    "id": 131,
-    "question": "Cosa si intende per 'encryption'?",
-    "answer": "Processo di conversione dei dati in un codice per impedirne l'accesso non autorizzato"
-  },
-  {
-    "id": 132,
-    "question": "Cosa si intende per 'decryption'?",
-    "answer": "Processo di conversione dei dati crittografati nel loro formato originale"
-  },
-  {
-    "id": 133,
-    "question": "Qual è la differenza tra crittografia simmetrica e asimmetrica?",
-    "answer": "Simmetrica usa una singola chiave per crittografia e decrittografia, asimmetrica usa una coppia di chiavi (pubblica e privata)"
-  },
-  {
-    "id": 134,
-    "question": "Cosa si intende per 'certificato digitale'?",
-    "answer": "Un file elettronico utilizzato per verificare l'identità di un utente o server"
-  },
-  {
-    "id": 135,
-    "question": "Qual è lo scopo principale di un certificato digitale?",
-    "answer": "Garantire l'autenticità e l'integrità delle comunicazioni online"
-  },
-  {
-    "id": 136,
-    "question": "Cosa si intende per 'firewall'?",
-    "answer": "Un sistema di sicurezza che controlla il traffico di rete in entrata e in uscita"
-  },
-  {
-    "id": 137,
-    "question": "Qual è la differenza tra un firewall basato su host e un firewall di rete?",
-    "answer": "Basato su host protegge un singolo dispositivo, di rete protegge un'intera rete"
-  },
-  {
-    "id": 138,
-    "question": "Cosa si intende per 'Intrusion Detection System' (IDS)?",
-    "answer": "Un sistema che monitora il traffico di rete per attività sospette"
-  },
-  {
-    "id": 139,
-    "question": "Cosa si intende per 'Intrusion Prevention System' (IPS)?",
-    "answer": "Un sistema che non solo rileva ma cerca anche di bloccare le intrusioni"
-  },
-  {
-    "id": 140,
-    "question": "Cosa si intende per 'vulnerability assessment'?",
-    "answer": "Processo di identificazione delle debolezze di sicurezza in un sistema o rete"
-  },
-    {
-    "id": 141,
-    "question": "Cosa si intende per 'penetration testing' (pen test)?",
-    "answer": "Simulazione di un attacco informatico per valutare l'efficacia delle misure di sicurezza"
-  },
-  {
-    "id": 142,
-    "question": "Qual è l'obiettivo di un pen test?",
-    "answer": "Trovare vulnerabilità che un attaccante reale potrebbe sfruttare"
-  },
-  {
-    "id": 143,
-    "question": "Cosa si intende per 'social engineering' in cybersecurity?",
-    "answer": "Manipolazione psicologica delle persone per indurle a compiere azioni o divulgare informazioni riservate"
-  },
-  {
-    "id": 144,
-    "question": "Qual è un esempio di attacco di social engineering?",
-    "answer": "Phishing, Pretexting, Baiting"
-  },
-  {
-    "id": 145,
-    "question": "Cosa si intende per 'malware analysis'?",
-    "answer": "Studio e comprensione del comportamento di un malware"
-  },
-  {
-    "id": 146,
-    "question": "Cosa si intende per 'reverse engineering' di software dannoso?",
-    "answer": "Analizzare il codice di un malware per capirne il funzionamento"
-  },
-  {
-    "id": 147,
-    "question": "Cosa si intende per 'Threat Intelligence'?",
-    "answer": "Raccolta e analisi di informazioni sulle minacce informatiche per anticipare gli attacchi"
-  },
-  {
-    "id": 148,
-    "question": "Qual è un esempio di minaccia persistente avanzata (APT)?",
-    "answer": "Attacchi mirati e a lungo termine spesso supportati da stati nazionali"
-  },
-  {
-    "id": 149,
-    "question": "Cosa si intende per 'incident response'?",
-    "answer": "Processo di gestione e contenimento di un incidente di sicurezza informatica"
-  },
-  {
-    "id": 150,
-    "question": "Qual è una fase chiave dell'incident response?",
-    "answer": "Preparazione, Identificazione, Contenimento, Eradicazione, Ripristino, Lezioni apprese"
-  },
-   {
-    "id": 151,
-    "question": "Cosa si intende per 'Cloud Formation' in AWS?",
-    "answer": "Un servizio per modellare e automatizzare la creazione di risorse AWS"
-  },
-  {
-    "id": 152,
-    "question": "Cosa si intende per 'Terraform'?",
-    "answer": "Uno strumento open source per l'Infrastructure as Code (IaC) che supporta multi-cloud"
-  },
-  {
-    "id": 153,
-    "question": "Qual è lo scopo di 'Kubernetes'?",
-    "answer": "Automatizzare il deployment, lo scaling e la gestione di applicazioni containerizzate"
-  },
-  {
-    "id": 154,
-    "question": "Cosa si intende per 'Docker'?",
-    "answer": "Una piattaforma per sviluppatori e sysadmin per costruire, eseguire e distribuire applicazioni con i container"
-  },
-  {
-    "id": 155,
-    "question": "Cosa si intende per 'Serverless' in AWS?",
-    "answer": "Un modello di sviluppo che consente di eseguire codice senza provisioning o gestione di server (es. AWS Lambda)"
-  },
-  {
-    "id": 156,
-    "question": "Cosa si intende per 'Blob Storage' in Azure?",
-    "answer": "Servizio di storage oggetti scalabile per dati non strutturati"
-  },
-  {
-    "id": 157,
-    "question": "Cosa si intende per 'Virtual Machine Scale Sets' in Azure?",
-    "answer": "Gruppi di macchine virtuali identiche e con bilanciamento del carico per gestire carichi di lavoro su larga scala"
-  },
-  {
-    "id": 158,
-    "question": "Cosa si intende per 'Google Compute Engine' (GCE)?",
-    "answer": "Il servizio IaaS di Google Cloud per l'esecuzione di macchine virtuali"
-  },
-  {
-    "id": 159,
-    "question": "Cosa si intende per 'Google Kubernetes Engine' (GKE)?",
-    "answer": "Il servizio gestito di Kubernetes su Google Cloud"
-  },
-  {
-    "id": 160,
-    "question": "Cosa si intende per 'BigQuery' in Google Cloud?",
-    "answer": "Un data warehouse serverless completamente gestito e scalabile"
-  },
-    {
-    "id": 161,
-    "question": "Qual è la differenza tra un database relazionale e un database NoSQL?",
-    "answer": "Relazionale usa tabelle con schemi fissi, NoSQL usa modelli flessibili (documenti, chiavi-valore, ecc.)"
-  },
-  {
-    "id": 162,
-    "question": "Cosa si intende per 'Microservices Architecture'?",
-    "answer": "Un'architettura in cui un'applicazione è costruita come una collezione di piccoli servizi autonomi"
-  },
-  {
-    "id": 163,
-    "question": "Qual è un vantaggio dei microservizi?",
-    "answer": "Sviluppo e deployment indipendenti, scalabilità per singolo servizio"
-  },
-  {
-    "id": 164,
-    "question": "Cosa si intende per 'API Gateway'?",
-    "answer": "Punto di ingresso singolo per gestire le richieste dei client ai microservizi backend"
-  },
-  {
-    "id": 165,
-    "question": "Cosa si intende per 'Service Mesh'?",
-    "answer": "Uno strato di infrastruttura dedicato per gestire la comunicazione tra microservizi"
-  },
-  {
-    "id": 166,
-    "question": "Qual è un esempio di Service Mesh?",
-    "answer": "Istio o Linkerd"
-  },
-  {
-    "id": 167,
-    "question": "Cosa si intende per 'Infrastructure as Code' (IaC)?",
-    "answer": "Gestione e provisioning dell'infrastruttura tramite codice anziché processi manuali"
-  },
-  {
-    "id": 168,
-    "question": "Qual è un vantaggio dell'IaC?",
-    "answer": "Coerenza, ripetibilità e riduzione degli errori"
-  },
-  {
-    "id": 169,
-    "question": "Cosa si intende per 'Configuration Management'?",
-    "answer": "Mantenere i sistemi software, l'hardware e la documentazione in uno stato coerente"
-  },
-  {
-    "id": 170,
-    "question": "Qual è uno strumento popolare per la Configuration Management?",
-    "answer": "Ansible, Chef, Puppet"
-  },
-    {
-    "id": 171,
-    "question": "Cosa si intende per 'Continuous Integration' (CI)?",
-    "answer": "Pratica di integrare frequentemente il codice degli sviluppatori in un repository condiviso"
-  },
-  {
-    "id": 172,
-    "question": "Cosa si intende per 'Continuous Deployment' (CD)?",
-    "answer": "Pratica di rilasciare automaticamente ogni modifica di codice che supera i test in produzione"
-  },
-  {
-    "id": 173,
-    "question": "Qual è un beneficio della CI/CD?",
-    "answer": "Cicli di rilascio più rapidi e affidabili"
-  },
-  {
-    "id": 174,
-    "question": "Cosa si intende per 'Monitoring' nel contesto DevOps?",
-    "answer": "Raccolta e analisi continua di dati per valutare le prestazioni e la salute dei sistemi"
-  },
-  {
-    "id": 175,
-    "question": "Cosa si intende per 'Logging' nel contesto DevOps?",
-    "answer": "Registrazione sistematica degli eventi generati dalle applicazioni e dall'infrastruttura"
-  },
-  {
-    "id": 176,
-    "question": "Cosa si intende per 'Alerting' nel contesto DevOps?",
-    "answer": "Invio di notifiche quando si verificano eventi o condizioni che richiedono attenzione"
-  },
-  {
-    "id": 177,
-    "question": "Cosa si intende per 'Site Reliability Engineering' (SRE)?",
-    "answer": "Una disciplina che applica aspetti dell'informatica ai problemi di ingegneria operativa"
-  },
-  {
-    "id": 178,
-    "question": "Qual è l'obiettivo principale dell'SRE?",
-    "answer": "Garantire l'affidabilità, la scalabilità e l'efficienza dei sistemi software"
-  },
-  {
-    "id": 179,
-    "question": "Cosa si intende per 'Service Level Objective' (SLO)?",
-    "answer": "Un obiettivo misurabile per il livello di servizio fornito da un sistema"
-  },
-  {
-    "id": 180,
-    "question": "Cosa si intende per 'Service Level Agreement' (SLA)?",
-    "answer": "Un contratto tra un fornitore di servizi e un cliente che definisce il livello di servizio promesso"
-  },
-   {
-    "id": 181,
-    "question": "Cosa si intende per 'datacenter'?",
-    "answer": "Una struttura fisica utilizzata per ospitare sistemi informatici e apparecchiature correlate"
-  },
-  {
-    "id": 182,
-    "question": "Qual è una sfida dei datacenter on-premise rispetto al cloud?",
-    "answer": "Costi iniziali elevati, manutenzione, scalabilità limitata"
-  },
-  {
-    "id": 183,
-    "question": "Cosa si intende per 'virtualizzazione'?",
-    "answer": "Creazione di una versione virtuale di una risorsa informatica (es. server, storage, rete)"
-  },
-  {
-    "id": 184,
-    "question": "Qual è un vantaggio della virtualizzazione?",
-    "answer": "Migliore utilizzo delle risorse hardware, isolamento, flessibilità"
-  },
-  {
-    "id": 185,
-    "question": "Cosa si intende per 'hypervisor'?",
-    "answer": "Software che crea e gestisce macchine virtuali"
-  },
-  {
-    "id": 186,
-    "question": "Qual è la differenza tra un hypervisor Type 1 e Type 2?",
-    "answer": "Type 1 gira direttamente sull'hardware fisico, Type 2 gira su un sistema operativo host"
-  },
-  {
-    "id": 187,
-    "question": "Cosa si intende per 'storage area network' (SAN)?",
-    "answer": "Una rete dedicata che fornisce accesso a livello di blocco a dispositivi di archiviazione"
-  },
-  {
-    "id": 188,
-    "question": "Cosa si intende per 'network attached storage' (NAS)?",
-    "answer": "Un dispositivo di archiviazione collegato a una rete che fornisce accesso a livello di file"
-  },
-  {
-    "id": 189,
-    "question": "Qual è la differenza principale tra SAN e NAS?",
-    "answer": "SAN fornisce accesso a blocchi (più veloce per database), NAS fornisce accesso a file (più semplice per condivisione file)"
-  },
-  {
-    "id": 190,
-    "question": "Cosa si intende per 'backup'?",
-    "answer": "Copia dei dati per ripristinarli in caso di perdita o danneggiamento"
-  },
-    {
-    "id": 191,
-    "question": "Cosa si intende per 'disaster recovery' (DR)?",
-    "answer": "Processo di ripristino delle operazioni IT dopo un evento disastroso"
-  },
-  {
-    "id": 192,
-    "question": "Qual è l'obiettivo principale del disaster recovery?",
-    "answer": "Minimizzare i tempi di inattività e la perdita di dati"
-  },
-  {
-    "id": 193,
-    "question": "Cosa si intende per 'Recovery Point Objective' (RPO)?",
-    "answer": "La massima quantità di dati che un'azienda è disposta a perdere in caso di disastro"
-  },
-  {
-    "id": 194,
-    "question": "Cosa si intende per 'Recovery Time Objective' (RTO)?",
-    "answer": "Il tempo massimo accettabile per il ripristino delle operazioni aziendali dopo un disastro"
-  },
-  {
-    "id": 195,
-    "question": "Cosa si intende per 'Business Continuity'?",
-    "answer": "La capacità di un'organizzazione di continuare a funzionare durante e dopo un'interruzione"
-  },
-  {
-    "id": 196,
-    "question": "Qual è la relazione tra Disaster Recovery e Business Continuity?",
-    "answer": "DR è una parte della più ampia strategia di Business Continuity"
-  },
-  {
-    "id": 197,
-    "question": "Cosa si intende per 'networking'?",
-    "answer": "La connessione di dispositivi e sistemi informatici per consentire la comunicazione e la condivisione di risorse"
-  },
-  {
-    "id": 198,
-    "question": "Qual è la differenza tra LAN e WAN?",
-    "answer": "LAN copre un'area geografica limitata (es. ufficio), WAN copre un'area geografica più ampia (es. città, paesi)"
-  },
-  {
-    "id": 199,
-    "question": "Cosa si intende per 'protocollo di rete'?",
-    "answer": "Un insieme di regole che governano la comunicazione tra dispositivi di rete"
-  },
-  {
-    "id": 200,
-    "question": "Qual è un esempio di protocollo di rete comune?",
-    "answer": "HTTP, FTP, SMTP, DNS"
-  }
-]
+    "question": "In AWS, quale servizio fornisce un servizio gestito di Kubernetes?",
+    "options": [
+      "Amazon ECS",
+      "AWS Fargate",
+      "Amazon EKS",
+      "Amazon Lightsail"
