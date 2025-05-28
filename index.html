@@ -11,23 +11,33 @@
             margin: 50px auto;
             max-width: 600px;
             text-align: center;
-            background-color: #f4f4f4;
+            /* Rimuovi i background precedenti per evitare sovrapposizioni */
+            /* background-color: #f4f4f4; */
+            /* background: #fff; */ 
+            background-image: url('background.jpeg'); /* Aggiungi questa riga per l'immagine di sfondo */
+            background-size: cover; /* Assicura che l'immagine copra l'intera area */
+            background-position: center; /* Centra l'immagine di sfondo */
+            background-repeat: no-repeat; /* Evita la ripetizione dell'immagine */
+            background-attachment: fixed; /* Mantiene l'immagine fissa durante lo scroll */
+
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            background: #fff;
         }
         h1 {
             color: #333;
         }
         #loadingMessage {
-             font-style: italic;
-             color: #555;
-             margin-bottom: 20px;
+            font-style: italic;
+            color: #555;
+            margin-bottom: 20px;
         }
         #quizArea {
             display: none; /* Nascosto finché le domande non vengono caricate */
             text-align: left; /* Allinea il testo delle domande e opzioni a sinistra */
+            background-color: rgba(255, 255, 255, 0.8); /* Aggiungi uno sfondo semi-trasparente per migliorare la leggibilità del contenuto */
+            padding: 20px;
+            border-radius: 8px;
         }
         #questionText {
             font-size: 1.1em;
@@ -57,7 +67,7 @@
         button:hover {
             background: #0056b3;
         }
-         #newQuestionButton {
+        #newQuestionButton {
             margin-top: 10px;
             padding: 10px 20px;
             background: #6c757d; /* Colore grigio per differenziare */
@@ -199,9 +209,9 @@
             const newQuestionButton = document.getElementById('newQuestionButton');
 
             if (selectedAnswer === null) {
-                 resultMessageDiv.textContent = "Seleziona un'opzione prima di inviare.";
-                 resultMessageDiv.className = 'lose'; // Potresti usare una classe diversa o nessun colore per questo stato
-                 return; // Esci dalla funzione se nessuna opzione è selezionata
+                resultMessageDiv.textContent = "Seleziona un'opzione prima di inviare.";
+                resultMessageDiv.className = 'lose'; // Potresti usare una classe diversa o nessun colore per questo stato
+                return; // Esci dalla funzione se nessuna opzione è selezionata
             }
 
 
@@ -220,7 +230,7 @@
             } else {
                 resultMessageDiv.textContent = "Mi dispiace, risposta errata. La risposta corretta era: " + currentQuestion.correctAnswer;
                 resultMessageDiv.className = 'lose'; // Applica classe per colore rosso
-                 // Disabilita i pulsanti di opzione e il pulsante Invia dopo un errore
+                // Disabilita i pulsanti di opzione e il pulsante Invia dopo un errore
                 options.forEach(option => option.disabled = true);
                 submitButton.disabled = true;
                 submitButton.style.display = 'none'; // Nasconde Invia Risposta
