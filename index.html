@@ -94,7 +94,7 @@
 </head>
 <body>
 
-    <h1>Rispondi correttamente al almeno 6 domande su 10 per vincere un premio</h1>
+    <h1>Rispondi correttamente ad almeno 6 domande su 10 per vincere un premio</h1>
 
     <div id="loadingMessage">Caricamento domande...</div>
 
@@ -158,25 +158,45 @@
             const questionsBelow200 = allQuestions.filter(q => q.id <= 200);
             const questionsAbove200 = allQuestions.filter(q => q.id > 200);
 
-            // Seleziona 9 domande da quelle con ID <= 200
-            shuffleArray(questionsBelow200);
-            const selectedBelow200 = questionsBelow200.slice(0, 9);
-            gameQuestions.push(...selectedBelow200);
-
-            // Seleziona 1 domanda da quelle con ID > 200
+            let questionAbove200 = null;
             if (questionsAbove200.length > 0) {
                 const randomIndexAbove200 = Math.floor(Math.random() * questionsAbove200.length);
-                gameQuestions.push(questionsAbove200[randomIndexAbove200]);
+                questionAbove200 = questionsAbove200[randomIndexAbove200];
+            }
+
+            // Seleziona 9 domande da quelle con ID <= 200
+            // Selezioniamo il numero necessario di domande per arrivare a 9, dato che una sarà dal gruppo > 200
+            const numQuestionsBelow200Needed = 9;
+            shuffleArray(questionsBelow200);
+            const selectedBelow200 = questionsBelow200.slice(0, numQuestionsBelow200Needed);
+            gameQuestions.push(...selectedBelow200);
+
+            // Aggiungi la domanda con ID > 200 alla fine, se disponibile
+            if (questionAbove200) {
+                gameQuestions.push(questionAbove200);
             } else {
-                // Fallback se non ci sono domande oltre l'id 200, aggiungi un'altra sotto 200
-                if (questionsBelow200.length > 9) {
-                    gameQuestions.push(questionsBelow200[9]);
+                // Fallback: se non ci sono domande con ID > 200, aggiungi un'altra domanda casuale sotto i 200
+                // Questo assicura che ci siano sempre 10 domande totali (se disponibili)
+                if (questionsBelow200.length > numQuestionsBelow200Needed) {
+                    gameQuestions.push(questionsBelow200[numQuestionsBelow200Needed]);
                 }
             }
 
-            shuffleArray(gameQuestions); // Mescola le 10 domande finali
+            // Shuffle solo le prime 9 domande per mantenere l'ultima domanda (quella > 200) nella sua posizione
+            // Se gameQuestions.length è inferiore a 10 a causa della mancanza di domande, mescola tutto
+            if (gameQuestions.length === 10) {
+                const firstNineQuestions = gameQuestions.slice(0, 9);
+                const lastQuestion = gameQuestions[9];
+                shuffleArray(firstNineQuestions);
+                gameQuestions = [...firstNineQuestions, lastQuestion];
+            } else {
+                // Se non ci sono 10 domande (ad es. non abbastanza domande < 200), mescola tutto
+                shuffleArray(gameQuestions);
+            }
+
 
             document.getElementById('restartGameButton').style.display = 'none'; // Nasconde il pulsante Ricomincia
+            document.getElementById('quizArea').style.display = 'block'; // Assicurati che l'area del quiz sia visibile
             displayNextQuestion();
         }
 
