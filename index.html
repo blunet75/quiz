@@ -11,15 +11,11 @@
             margin: 50px auto;
             max-width: 600px;
             text-align: center;
-            /* Rimuovi i background precedenti per evitare sovrapposizioni */
-            /* background-color: #f4f4f4; */
-            /* background: #fff; */ 
-            background-image: url('background.jpg'); /* Aggiungi questa riga per l'immagine di sfondo */
-            background-size: cover; /* Assicura che l'immagine copra l'intera area */
-            background-position: center; /* Centra l'immagine di sfondo */
-            background-repeat: no-repeat; /* Evita la ripetizione dell'immagine */
-            background-attachment: fixed; /* Mantiene l'immagine fissa durante lo scroll */
-
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -67,7 +63,7 @@
         button:hover {
             background: #471C79;
         }
-        #newQuestionButton {
+        #newQuestionButton, #restartGameButton {
             margin-top: 10px;
             padding: 10px 20px;
             background: #6c757d; /* Colore grigio per differenziare */
@@ -78,7 +74,7 @@
             cursor: pointer;
             display: none; /* Inizialmente nascosto */
         }
-        #newQuestionButton:hover {
+        #newQuestionButton:hover, #restartGameButton:hover {
             background: #5a6268;
         }
         #resultMessage {
@@ -105,18 +101,22 @@
     <div id="quizArea">
         <p id="questionText">Domanda verrà caricata qui...</p>
         <div id="optionsArea">
-            </div>
+        </div>
         <button id="submitAnswerButton" onclick="checkAnswer()">Invia Risposta</button>
-        <button id="newQuestionButton" onclick="displayRandomQuestion()">Nuova Domanda</button>
+        <button id="newQuestionButton" onclick="displayNextQuestion()">Prossima Domanda</button>
     </div>
 
     <div id="resultMessage"></div>
+    <button id="restartGameButton" onclick="resetGame()">Ricomincia Partita</button>
 
     <script>
         // AREA PER IL CODICE JAVASCRIPT
 
         let allQuestions = []; // Array per memorizzare tutte le domande caricate
-        let currentQuestion = null; // Oggetto per memorizzare la domanda corrente mostrata
+        let gameQuestions = []; // Array per le 10 domande della partita corrente
+        let currentQuestionIndex = 0; // Indice della domanda corrente in gameQuestions
+        let score = 0; // Punteggio del giocatore
+        let questionsAskedCount = 0; // Contatore delle domande poste nella partita corrente
 
         // Funzione per caricare le domande dal file JSON
         async function loadQuestions() {
@@ -130,7 +130,7 @@
                 if (allQuestions.length > 0) {
                     document.getElementById('loadingMessage').style.display = 'none'; // Nasconde il messaggio di caricamento
                     document.getElementById('quizArea').style.display = 'block'; // Mostra l'area quiz
-                    displayRandomQuestion(); // Mostra la prima domanda casuale
+                    prepareGameQuestions(); // Prepara e mostra le prime domande della partita
                 } else {
                     document.getElementById('loadingMessage').textContent = 'Errore: Nessuna domanda trovata nel file.';
                 }
@@ -140,17 +140,54 @@
             }
         }
 
-        // Funzione per selezionare e visualizzare una domanda casuale con opzioni
-        function displayRandomQuestion() {
-            if (allQuestions.length === 0) {
-                document.getElementById('questionText').textContent = 'Nessuna domanda disponibile.';
-                document.getElementById('optionsArea').innerHTML = ''; // Pulisce le opzioni
-                document.getElementById('submitAnswerButton').style.display = 'none'; // Nasconde il pulsante Invia
-                document.getElementById('newQuestionButton').style.display = 'none'; // Nasconde il pulsante Nuova Domanda
+        // Funzione per mescolare un array (algoritmo Fisher-Yates)
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+
+        // Funzione per preparare le 10 domande per la partita
+        function prepareGameQuestions() {
+            gameQuestions = [];
+            score = 0;
+            questionsAskedCount = 0;
+            currentQuestionIndex = 0;
+
+            const questionsBelow200 = allQuestions.filter(q => q.id <= 200);
+            const questionsAbove200 = allQuestions.filter(q => q.id > 200);
+
+            // Seleziona 9 domande da quelle con ID <= 200
+            shuffleArray(questionsBelow200);
+            const selectedBelow200 = questionsBelow200.slice(0, 9);
+            gameQuestions.push(...selectedBelow200);
+
+            // Seleziona 1 domanda da quelle con ID > 200
+            if (questionsAbove200.length > 0) {
+                const randomIndexAbove200 = Math.floor(Math.random() * questionsAbove200.length);
+                gameQuestions.push(questionsAbove200[randomIndexAbove200]);
+            } else {
+                // Fallback se non ci sono domande oltre l'id 200, aggiungi un'altra sotto 200
+                if (questionsBelow200.length > 9) {
+                    gameQuestions.push(questionsBelow200[9]);
+                }
+            }
+
+            shuffleArray(gameQuestions); // Mescola le 10 domande finali
+
+            document.getElementById('restartGameButton').style.display = 'none'; // Nasconde il pulsante Ricomincia
+            displayNextQuestion();
+        }
+
+        // Funzione per visualizzare la prossima domanda del gioco
+        function displayNextQuestion() {
+            if (questionsAskedCount >= 10) {
+                endGame();
                 return;
             }
-            const randomIndex = Math.floor(Math.random() * allQuestions.length);
-            currentQuestion = allQuestions[randomIndex];
+
+            const currentQuestion = gameQuestions[currentQuestionIndex];
 
             document.getElementById('questionText').textContent = currentQuestion.question;
 
@@ -180,14 +217,18 @@
             document.getElementById('resultMessage').textContent = ''; // Pulisce il messaggio precedente
             document.getElementById('resultMessage').className = ''; // Rimuove classi colore
 
-            // Mostra e abilita i pulsanti
+            // Abilita le opzioni
+            document.querySelectorAll('input[name="questionOption"]').forEach(option => option.disabled = false);
+
+            // Mostra e abilita il pulsante Invia, nasconde Prossima Domanda
             document.getElementById('submitAnswerButton').style.display = 'inline-block';
             document.getElementById('submitAnswerButton').disabled = false;
             document.getElementById('newQuestionButton').style.display = 'none';
         }
 
-        // Funzione per controllare la risposta dell'utente (risposta multipla)
+        // Funzione per controllare la risposta dell'utente
         function checkAnswer() {
+            const currentQuestion = gameQuestions[currentQuestionIndex];
             if (!currentQuestion) {
                 document.getElementById('resultMessage').textContent = "Errore: Nessuna domanda caricata.";
                 document.getElementById('resultMessage').className = 'lose';
@@ -210,32 +251,63 @@
 
             if (selectedAnswer === null) {
                 resultMessageDiv.textContent = "Seleziona un'opzione prima di inviare.";
-                resultMessageDiv.className = 'lose'; // Potresti usare una classe diversa o nessun colore per questo stato
-                return; // Esci dalla funzione se nessuna opzione è selezionata
+                resultMessageDiv.className = 'lose';
+                return;
             }
 
-
-            // Normalizza (opzionale, dipende se le risposte nel JSON sono già uniformi)
             const normalizedSelectedAnswer = selectedAnswer.trim().toLowerCase();
             const normalizedCorrectAnswer = currentQuestion.correctAnswer.trim().toLowerCase();
 
             if (normalizedSelectedAnswer === normalizedCorrectAnswer) {
-                resultMessageDiv.textContent = "Complimenti! Risposta Esatta! HAI VINTO!";
-                resultMessageDiv.className = 'win'; // Applica classe per colore verde
-                // Disabilita i pulsanti di opzione e il pulsante Invia dopo la vittoria
-                options.forEach(option => option.disabled = true);
-                submitButton.disabled = true;
-                submitButton.style.display = 'none'; // Nasconde Invia Risposta
-                newQuestionButton.style.display = 'inline-block'; // Mostra il pulsante Nuova Domanda
+                resultMessageDiv.textContent = "Corretto! Risposta Esatta!";
+                resultMessageDiv.className = 'win';
+                score++; // Incrementa il punteggio
             } else {
-                resultMessageDiv.textContent = "Mi dispiace, risposta errata. La risposta corretta era: " + currentQuestion.correctAnswer;
-                resultMessageDiv.className = 'lose'; // Applica classe per colore rosso
-                // Disabilita i pulsanti di opzione e il pulsante Invia dopo un errore
-                options.forEach(option => option.disabled = true);
-                submitButton.disabled = true;
-                submitButton.style.display = 'none'; // Nasconde Invia Risposta
-                newQuestionButton.style.display = 'inline-block'; // Mostra Nuova Domanda
+                resultMessageDiv.textContent = "Sbagliato. La risposta corretta era: " + currentQuestion.correctAnswer;
+                resultMessageDiv.className = 'lose';
             }
+
+            // Disabilita le opzioni e il pulsante Invia
+            options.forEach(option => option.disabled = true);
+            submitButton.disabled = true;
+            submitButton.style.display = 'none';
+
+            questionsAskedCount++;
+            currentQuestionIndex++;
+
+            if (questionsAskedCount < 10) {
+                newQuestionButton.style.display = 'inline-block'; // Mostra il pulsante Prossima Domanda
+            } else {
+                endGame(); // Se abbiamo risposto a 10 domande, termina il gioco
+            }
+        }
+
+        // Funzione per terminare il gioco e mostrare il risultato finale
+        function endGame() {
+            const percentage = (score / 10) * 100;
+            const resultMessageDiv = document.getElementById('resultMessage');
+            resultMessageDiv.textContent = `Hai risposto correttamente a ${score} domande su 10. (${percentage.toFixed(0)}%)`;
+
+            if (percentage >= 60) {
+                resultMessageDiv.textContent += " Complimenti hai vinto!";
+                resultMessageDiv.className = 'win';
+            } else {
+                resultMessageDiv.textContent += " Puoi fare di meglio la prossima volta.";
+                resultMessageDiv.className = 'lose';
+            }
+
+            document.getElementById('submitAnswerButton').style.display = 'none';
+            document.getElementById('newQuestionButton').style.display = 'none';
+            document.getElementById('restartGameButton').style.display = 'inline-block'; // Mostra il pulsante Ricomincia
+            document.getElementById('quizArea').style.display = 'none'; // Nasconde l'area del quiz
+        }
+
+        // Funzione per ricominciare il gioco
+        function resetGame() {
+            document.getElementById('quizArea').style.display = 'block'; // Mostra l'area del quiz
+            document.getElementById('resultMessage').textContent = ''; // Pulisce il messaggio
+            document.getElementById('resultMessage').className = ''; // Pulisce la classe di colore
+            prepareGameQuestions(); // Prepara nuove domande per la partita
         }
 
         // Carica le domande all'avvio della pagina
