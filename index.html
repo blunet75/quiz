@@ -8,51 +8,66 @@
         body {
             font-family: sans-serif;
             line-height: 1.6;
-            margin: 50px auto;
-            max-width: 600px;
+            margin: 0; /* Rimuove i margini predefiniti del body */
+            padding: 0; /* Rimuove i padding predefiniti del body */
             text-align: center;
             background-image: url('background.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             background-attachment: fixed;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            min-height: 100vh; /* Assicura che il body occupi almeno l'altezza della viewport */
         }
+
+        /* Stile per il contenitore generale del gioco (titolo, quiz, messaggi) */
+        #game-wrapper {
+            margin: 150px auto; /* Sposta l'intero blocco in basso e lo centra orizzontalmente */
+            max-width: 600px; /* Larghezza massima dell'intero blocco del quiz */
+            padding: 20px; /* Padding interno di questo blocco */
+            border-radius: 8px; /* Bordi arrotondati di questo blocco */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombra di questo blocco */
+            background-color: rgba(255, 255, 255, 0.8); /* Lo sfondo semi-trasparente va qui */
+            text-align: center; /* Centra il testo all'interno del contenitore, incluso h1 */
+        }
+
         h1 {
             color: #333;
+            margin-bottom: 20px; /* Spazio tra il titolo e il contenuto del quiz */
         }
+
         #loadingMessage {
             font-style: italic;
             color: #555;
             margin-bottom: 20px;
+            text-align: center; /* Centra il messaggio di caricamento */
         }
+
         #quizArea {
-            display: none; /* Nascosto finché le domande non vengono caricate */
+            display: none; /* Rimane nascosto finché le domande non vengono caricate */
             text-align: left; /* Allinea il testo delle domande e opzioni a sinistra */
-            background-color: rgba(255, 255, 255, 0.8); /* Aggiungi uno sfondo semi-trasparente per migliorare la leggibilità del contenuto */
-            padding: 20px;
-            border-radius: 8px;
-            margin: 150px auto 20px auto; /* Aumenta il margine superiore, centra orizzontalmente, margine inferiore */
-            max-width: 600px; /* Assicurati che abbia una larghezza massima per il centraggio */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sposta qui la shadow se vuoi che sia sul box principale */
+            /* Tutte le proprietà di background, padding, border-radius, box-shadow, margin, max-width
+               che prima erano qui o sul body, ora sono state spostate su #game-wrapper */
         }
+
         #questionText {
             font-size: 1.1em;
             margin-bottom: 20px;
             min-height: 3em; /* Riserva spazio per la domanda */
         }
+
         #optionsArea {
             margin-bottom: 20px;
         }
+
         .option {
             display: block; /* Ogni opzione su una nuova linea */
             margin-bottom: 10px;
         }
+
         .option input[type="radio"] {
             margin-right: 10px;
         }
+
         button {
             padding: 10px 20px;
             background: #5F249F;
@@ -63,9 +78,11 @@
             cursor: pointer;
             margin-top: 10px; /* Aggiungi spazio sopra il pulsante */
         }
+
         button:hover {
             background: #471C79;
         }
+
         #newQuestionButton, #restartGameButton {
             margin-top: 10px;
             padding: 10px 20px;
@@ -77,9 +94,11 @@
             cursor: pointer;
             display: none; /* Inizialmente nascosto */
         }
+
         #newQuestionButton:hover, #restartGameButton:hover {
             background: #5a6268;
         }
+
         #resultMessage {
             margin-top: 20px;
             font-size: 1.2em;
@@ -87,9 +106,11 @@
             min-height: 1.5em;
             text-align: center; /* Centra il messaggio di risultato */
         }
+
         .win {
             color: green;
         }
+
         .lose {
             color: red;
         }
@@ -97,24 +118,23 @@
 </head>
 <body>
 
-    <h1>Rispondi correttamente ad almeno 6 domande su 10 per vincere un premio</h1>
+    <div id="game-wrapper">
+        <h1>Rispondi correttamente ad almeno 6 domande su 10 per vincere un premio</h1>
 
-    <div id="loadingMessage">Caricamento domande...</div>
+        <div id="loadingMessage">Caricamento domande...</div>
 
-    <div id="quizArea">
-        <p id="questionText">Domanda verrà caricata qui...</p>
-        <div id="optionsArea">
+        <div id="quizArea">
+            <p id="questionText">Domanda verrà caricata qui...</p>
+            <div id="optionsArea">
+            </div>
+            <button id="submitAnswerButton" onclick="checkAnswer()">Invia Risposta</button>
+            <button id="newQuestionButton" onclick="displayNextQuestion()">Prossima Domanda</button>
         </div>
-        <button id="submitAnswerButton" onclick="checkAnswer()">Invia Risposta</button>
-        <button id="newQuestionButton" onclick="displayNextQuestion()">Prossima Domanda</button>
+
+        <div id="resultMessage"></div>
+        <button id="restartGameButton" onclick="resetGame()">Ricomincia Partita</button>
     </div>
-
-    <div id="resultMessage"></div>
-    <button id="restartGameButton" onclick="resetGame()">Ricomincia Partita</button>
-
     <script>
-        // AREA PER IL CODICE JAVASCRIPT
-
         let allQuestions = []; // Array per memorizzare tutte le domande caricate
         let gameQuestions = []; // Array per le 10 domande della partita corrente
         let currentQuestionIndex = 0; // Indice della domanda corrente in gameQuestions
@@ -168,7 +188,6 @@
             }
 
             // Seleziona 9 domande da quelle con ID <= 200
-            // Selezioniamo il numero necessario di domande per arrivare a 9, dato che una sarà dal gruppo > 200
             const numQuestionsBelow200Needed = 9;
             shuffleArray(questionsBelow200);
             const selectedBelow200 = questionsBelow200.slice(0, numQuestionsBelow200Needed);
@@ -178,25 +197,22 @@
             if (questionAbove200) {
                 gameQuestions.push(questionAbove200);
             } else {
-                // Fallback: se non ci sono domande con ID > 200, aggiungi un'altra domanda casuale sotto i 200
-                // Questo assicura che ci siano sempre 10 domande totali (se disponibili)
+                // Fallback: se non ci sono domande oltre l'id 200, aggiungi un'altra sotto 200
                 if (questionsBelow200.length > numQuestionsBelow200Needed) {
                     gameQuestions.push(questionsBelow200[numQuestionsBelow200Needed]);
                 }
             }
 
             // Shuffle solo le prime 9 domande per mantenere l'ultima domanda (quella > 200) nella sua posizione
-            // Se gameQuestions.length è inferiore a 10 a causa della mancanza di domande, mescola tutto
             if (gameQuestions.length === 10) {
                 const firstNineQuestions = gameQuestions.slice(0, 9);
                 const lastQuestion = gameQuestions[9];
                 shuffleArray(firstNineQuestions);
                 gameQuestions = [...firstNineQuestions, lastQuestion];
             } else {
-                // Se non ci sono 10 domande (ad es. non abbastanza domande < 200), mescola tutto
+                // Se non ci sono 10 domande, mescola tutto
                 shuffleArray(gameQuestions);
             }
-
 
             document.getElementById('restartGameButton').style.display = 'none'; // Nasconde il pulsante Ricomincia
             document.getElementById('quizArea').style.display = 'block'; // Assicurati che l'area del quiz sia visibile
@@ -335,7 +351,6 @@
 
         // Carica le domande all'avvio della pagina
         loadQuestions();
-
     </script>
 
 </body>
