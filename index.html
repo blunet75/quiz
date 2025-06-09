@@ -229,7 +229,8 @@
 
             const currentQuestion = gameQuestions[currentQuestionIndex];
 
-            document.getElementById('questionText').textContent = currentQuestion.question;
+            //document.getElementById('questionText').textContent = currentQuestion.question;
+            document.getElementById('questionText').innerHTML = currentQuestion.question;
 
             const optionsArea = document.getElementById('optionsArea');
             optionsArea.innerHTML = ''; // Pulisce le opzioni precedenti
