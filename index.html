@@ -26,7 +26,7 @@
             padding: 20px; /* Padding interno di questo blocco */
             border-radius: 8px; /* Bordi arrotondati di questo blocco */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombra di questo blocco */
-            background-color: rgba(255, 255, 255, 0.8); /* Lo sfondo semi-trasparente va qui */            
+            background-color: rgba(255, 255, 255, 0.8); /* Lo sfondo semi-trasparente va qui */             
         }
 
         h1 {
@@ -47,7 +47,7 @@
             display: none; /* Rimane nascosto finché le domande non vengono caricate */
             text-align: left; /* Allinea il testo delle domande e opzioni a sinistra */
             /* Tutte le proprietà di background, padding, border-radius, box-shadow, margin, max-width
-               che prima erano qui o sul body, ora sono state spostate su #game-wrapper */
+                che prima erano qui o sul body, ora sono state spostate su #game-wrapper */
         }
 
         #questionText {
@@ -318,7 +318,10 @@
             if (questionsAskedCount < 10) {
                 newQuestionButton.style.display = 'inline-block'; // Mostra il pulsante Prossima Domanda
             } else {
-                endGame(); // Se abbiamo risposto a 10 domande, termina il gioco
+                // Ritarda la chiamata a endGame per permettere la visualizzazione del messaggio di risultato
+                setTimeout(() => {
+                    endGame();
+                }, 1500); // Visualizza il messaggio per 1.5 secondi
             }
         }
 
