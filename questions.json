@@ -2201,13 +2201,53 @@
   },
   {
     "id": 201,
-    "question": "Quale è il numero tre?",
+    "question": "Quanti sono i dipendenti in DXC Technology Italia?",
     "options": [
-      "1",
-      "2",
-      "3",
-      "4"
+      "più di 2500",
+      "poco più di 500",
+      "tra 1500 e 2000"
+    ],
+    "correctAnswer": "1"
+  },
+  {
+    "id": 202,
+    "question": "In quali settori implementiamo soluzioni digitali?",
+    "options": [
+      "Banking, Public Sector e Energy&Utilities, Retail, Aereospace",
+      "Manufacturing, Automotive,Telco e Media",
+      "Tutte le risposte sono corrette"      
     ],
     "correctAnswer": "3"
+  },
+  {
+    "id": 203,
+    "question": "DXC è una multinazionale nata dall’unione di: ?",
+    "options": [
+      "CSC e HPE",
+      "HPE e EDS",
+      "CSC e EDS"
+    ],
+    "correctAnswer": "1"
+  },
+  {
+    "id": 204,
+    "question": "Quale è la modalità lavorativa in DXC?",
+    "options": [
+      "Nessuna delle seguenti",
+      "Full remote",
+      "Smart working"
+    ],
+    "correctAnswer": "3"
+  },
+  {
+    "id": 205,
+    "question": "Quali sono le principali certificazioni più conseguite in DXC Italia?",
+    "options": [
+      "Agile, Prince2, DevOps",
+      "Agile, ITIL, Design Thinking",
+      "Agile Scrum, Microsoft Azure, Blockchain"
+    ],
+    "correctAnswer": "2"
   }
+
 ]
