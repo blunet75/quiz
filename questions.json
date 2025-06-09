@@ -2201,7 +2201,7 @@
   },
   {
     "id": 201,
-    "question": "Quanti sono i dipendenti in DXC Technology Italia?",
+    "question": "E ora una domanda su DXC Technology \n Quanti sono i dipendenti in DXC Technology Italia?",
     "options": [
       "più di 2500",
       "poco più di 500",
@@ -2211,7 +2211,7 @@
   },
   {
     "id": 202,
-    "question": "In quali settori implementiamo soluzioni digitali?",
+    "question": "E ora una domanda su DXC Technology \n In quali settori implementiamo soluzioni digitali?",
     "options": [
       "Banking, Public Sector e Energy&Utilities, Retail, Aereospace",
       "Manufacturing, Automotive,Telco e Media",
@@ -2221,7 +2221,7 @@
   },
   {
     "id": 203,
-    "question": "DXC è una multinazionale nata dall’unione di: ?",
+    "question": "E ora una domanda su DXC Technology \n DXC è una multinazionale nata dall’unione di?",
     "options": [
       "CSC e HPE",
       "HPE e EDS",
@@ -2231,7 +2231,7 @@
   },
   {
     "id": 204,
-    "question": "Quale è la modalità lavorativa in DXC?",
+    "question": "E ora una domanda su DXC Technology \n Quale è la modalità lavorativa in DXC?",
     "options": [
       "Nessuna delle seguenti",
       "Full remote",
@@ -2249,5 +2249,4 @@
     ],
     "correctAnswer": "Agile, ITIL, Design Thinking"
   }
-
 ]
