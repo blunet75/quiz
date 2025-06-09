@@ -2207,7 +2207,7 @@
       "poco più di 500",
       "tra 1500 e 2000"
     ],
-    "correctAnswer": "1"
+    "correctAnswer": "più di 2500"
   },
   {
     "id": 202,
@@ -2217,7 +2217,7 @@
       "Manufacturing, Automotive,Telco e Media",
       "Tutte le risposte sono corrette"      
     ],
-    "correctAnswer": "3"
+    "correctAnswer": "Tutte le risposte sono corrette"
   },
   {
     "id": 203,
@@ -2227,7 +2227,7 @@
       "HPE e EDS",
       "CSC e EDS"
     ],
-    "correctAnswer": "1"
+    "correctAnswer": "CSC e HPE"
   },
   {
     "id": 204,
@@ -2237,7 +2237,7 @@
       "Full remote",
       "Smart working"
     ],
-    "correctAnswer": "3"
+    "correctAnswer": "Smart working"
   },
   {
     "id": 205,
@@ -2247,7 +2247,7 @@
       "Agile, ITIL, Design Thinking",
       "Agile Scrum, Microsoft Azure, Blockchain"
     ],
-    "correctAnswer": "2"
+    "correctAnswer": "Agile, ITIL, Design Thinking"
   }
 
 ]
