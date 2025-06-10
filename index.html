@@ -229,7 +229,6 @@
 
             const currentQuestion = gameQuestions[currentQuestionIndex];
 
-            //document.getElementById('questionText').textContent = currentQuestion.question;
             document.getElementById('questionText').innerHTML = currentQuestion.question;
 
             const optionsArea = document.getElementById('optionsArea');
@@ -336,7 +335,7 @@
                 resultMessageDiv.textContent += " Complimenti hai vinto!";
                 resultMessageDiv.className = 'win';
             } else {
-                resultMessageDiv.textContent += " Puoi fare di meglio la prossima volta.";
+                resultMessageDiv.textContent += " Mi dispiace non hai vinto ma puoi ritirare comunque un piccolo gadget.";
                 resultMessageDiv.className = 'lose';
             }
 
