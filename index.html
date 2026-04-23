@@ -26,11 +26,13 @@
             padding: 20px; /* Padding interno di questo blocco */
             border-radius: 8px; /* Bordi arrotondati di questo blocco */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombra di questo blocco */
-            background-color: rgba(255, 255, 255, 0.8); /* Lo sfondo semi-trasparente va qui */             
+            background-color: rgba(255, 255, 255, 0.8); /* Lo sfondo semi-trasparente va qui */
+            border-top: 4px solid;
+            border-image: linear-gradient(to right, #5B7FE8, #8B6AE8, #E8612D) 1;
         }
 
         h1 {
-            color: #333;
+            color: #1A1A2E;
             margin-bottom: 20px; /* Spazio tra il titolo e il contenuto del quiz */
             text-align: left; /* Centra il testo all'interno del contenitore, incluso h1 */
 
@@ -71,7 +73,7 @@
 
         button {
             padding: 10px 20px;
-            background: #5F249F;
+            background: #E8612D;
             color: white;
             border: none;
             border-radius: 5px;
@@ -81,13 +83,13 @@
         }
 
         button:hover {
-            background: #471C79;
+            background: #D4551F;
         }
 
         #newQuestionButton, #restartGameButton {
             margin-top: 10px;
             padding: 10px 20px;
-            background: #6c757d; /* Colore grigio per differenziare */
+            background: #5B7FE8; /* Blu DXC */
             color: white;
             border: none;
             border-radius: 5px;
@@ -97,7 +99,7 @@
         }
 
         #newQuestionButton:hover, #restartGameButton:hover {
-            background: #5a6268;
+            background: #4A6BD0;
         }
 
         #resultMessage {
@@ -109,11 +111,11 @@
         }
 
         .win {
-            color: green;
+            color: #5B7FE8;
         }
 
         .lose {
-            color: red;
+            color: #E8612D;
         }
     </style>
 </head>
