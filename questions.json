@@ -160,7 +160,7 @@
       "Amazon S3",
       "Amazon EFS",
       "Amazon EBS",
-      "Amazon Glacier"
+      "Amazon S3 Glacier"
     ],
     "correctAnswer": "Amazon EBS"
   },
@@ -235,7 +235,7 @@
     "question": "In AWS, quale servizio è una piattaforma per la gestione centralizzata delle policy per account AWS multipli?",
     "options": [
       "AWS IAM",
-      "AWS Single Sign-On",
+      "AWS IAM Identity Center",
       "AWS Organizations",
       "AWS Systems Manager"
     ],
@@ -243,7 +243,7 @@
   },
   {
     "id": 23,
-    "question": "In AWS, quale servizio fornisce un servizio che fornisce raccomandazioni personalizzate per ottimizzare i costi, le prestazioni e la sicurezza?",
+    "question": "In AWS, quale servizio fornisce raccomandazioni personalizzate per ottimizzare i costi, le prestazioni e la sicurezza?",
     "options": [
       "Amazon CloudWatch",
       "AWS Config",
@@ -254,7 +254,7 @@
   },
   {
     "id": 24,
-    "question": "In AWS, quale servizio fornisce un servizio di compute che consente di eseguire codice su server gestiti dal cliente ma nel data center AWS?",
+    "question": "In AWS, quale servizio fornisce infrastruttura e servizi AWS completamente gestiti nel data center on-premise del cliente per un'esperienza cloud ibrida?",
     "options": [
       "Amazon EC2",
       "AWS Outposts",
@@ -269,10 +269,10 @@
     "options": [
       "Amazon S3",
       "Amazon EFS",
-      "Amazon Glacier",
+      "Amazon S3 Glacier",
       "Amazon EBS"
     ],
-    "correctAnswer": "Amazon Glacier"
+    "correctAnswer": "Amazon S3 Glacier"
   },
   {
     "id": 26,
@@ -296,7 +296,7 @@
     ],
     "correctAnswer": "Amazon ECS"
   },
-    {
+  {
     "id": 28,
     "question": "In AWS, quale servizio fornisce un servizio di repository privato per pacchetti software (es. npm, Maven, PyPI)?",
     "options": [
@@ -307,7 +307,7 @@
     ],
     "correctAnswer": "AWS CodeArtifact"
   },
-   {
+  {
     "id": 29,
     "question": "In AWS, quale servizio fornisce un servizio di database relazionale compatibile con SQL Server, Oracle e MySQL, completamente gestito?",
     "options": [
@@ -375,14 +375,14 @@
   },
   {
     "id": 35,
-    "question": "Quale servizio AWS è un servizio di data warehouse serverless che ti permette di interrogare dati direttamente in Amazon S3 usando SQL standard?",
+    "question": "Quale servizio AWS fornisce accesso a modelli di fondazione (foundation models) di AI generativa tramite un'API unificata?",
     "options": [
-      "Amazon Redshift",
-      "Amazon EMR",
-      "Amazon Athena",
-      "Amazon QuickSight"
+      "Amazon SageMaker",
+      "Amazon Bedrock",
+      "Amazon Comprehend",
+      "AWS Lambda"
     ],
-    "correctAnswer": "Amazon Athena"
+    "correctAnswer": "Amazon Bedrock"
   },
   {
     "id": 36,
@@ -397,14 +397,14 @@
   },
   {
     "id": 37,
-    "question": "Quale servizio AWS è un servizio di orchestrazione di container che ti permette di eseguire container su istanze EC2 o AWS Fargate?",
+    "question": "Quale servizio AWS fornisce un modo semplice e completamente gestito per eseguire applicazioni web containerizzate senza gestire infrastruttura?",
     "options": [
-      "Amazon EKS",
-      "AWS Lambda",
       "Amazon ECS",
-      "AWS Batch"
+      "Amazon EKS",
+      "AWS App Runner",
+      "AWS Fargate"
     ],
-    "correctAnswer": "Amazon ECS"
+    "correctAnswer": "AWS App Runner"
   },
   {
     "id": 38,
@@ -419,36 +419,36 @@
   },
   {
     "id": 39,
-    "question": "Quale servizio AWS è un servizio di Configuration Management che ti aiuta a valutare, controllare e valutare la conformità delle tue risorse AWS?",
+    "question": "Quale servizio AWS fornisce un modo automatizzato per configurare e governare un ambiente AWS multi-account sicuro e conforme?",
     "options": [
-      "Amazon CloudWatch",
-      "AWS CloudTrail",
+      "AWS Organizations",
+      "AWS Control Tower",
       "AWS Config",
-      "AWS Systems Manager"
+      "AWS CloudFormation"
     ],
-    "correctAnswer": "AWS Config"
+    "correctAnswer": "AWS Control Tower"
   },
   {
     "id": 40,
-    "question": "In AWS, quale servizio è un servizio di logging e monitoraggio per le tue applicazioni e l'infrastruttura AWS?",
+    "question": "Quale servizio AWS analizza e visualizza i dati di sicurezza per indagare rapidamente sulle potenziali minacce?",
     "options": [
-      "AWS CloudTrail",
-      "Amazon S3",
-      "Amazon CloudWatch",
-      "AWS Config"
+      "Amazon GuardDuty",
+      "Amazon Inspector",
+      "Amazon Detective",
+      "AWS Security Hub"
     ],
-    "correctAnswer": "Amazon CloudWatch"
+    "correctAnswer": "Amazon Detective"
   },
   {
     "id": 41,
-    "question": "Quale servizio AWS è un servizio di audit log che registra le azioni eseguite dagli utenti, ruoli o servizi AWS?",
+    "question": "Quale servizio AWS fornisce un servizio centralizzato e completamente gestito per automatizzare i backup delle risorse AWS?",
     "options": [
-      "Amazon CloudWatch",
-      "AWS Config",
-      "AWS CloudTrail",
-      "AWS Trusted Advisor"
+      "Amazon S3",
+      "AWS Backup",
+      "Amazon EBS Snapshots",
+      "AWS Storage Gateway"
     ],
-    "correctAnswer": "AWS CloudTrail"
+    "correctAnswer": "AWS Backup"
   },
   {
     "id": 42,
@@ -540,25 +540,25 @@
   },
   {
     "id": 50,
-    "question": "In AWS, quale servizio fornisce un servizio di elaborazione dei flussi di dati in tempo reale?",
+    "question": "Quale servizio AWS fornisce un servizio di streaming di eventi completamente gestito e compatibile con Apache Kafka?",
     "options": [
-      "Amazon SQS",
-      "Amazon SNS",
       "Amazon Kinesis",
-      "AWS Batch"
+      "Amazon MSK (Managed Streaming for Apache Kafka)",
+      "Amazon SQS",
+      "Amazon EventBridge"
     ],
-    "correctAnswer": "Amazon Kinesis"
+    "correctAnswer": "Amazon MSK (Managed Streaming for Apache Kafka)"
   },
   {
     "id": 51,
-    "question": "Quale servizio AWS è un servizio di code di messaggi gestito che supporta code standard e FIFO?",
+    "question": "Quale servizio AWS fornisce un servizio gestito per la ricerca, l'analisi e la visualizzazione dei dati in tempo reale?",
     "options": [
-      "Amazon SNS",
-      "Amazon SQS",
-      "Amazon MQ",
-      "AWS Step Functions"
+      "Amazon Athena",
+      "Amazon Redshift",
+      "Amazon OpenSearch Service",
+      "Amazon CloudWatch"
     ],
-    "correctAnswer": "Amazon SQS"
+    "correctAnswer": "Amazon OpenSearch Service"
   },
   {
     "id": 52,
@@ -659,7 +659,7 @@
     ],
     "correctAnswer": "Amazon Translate"
   },
-    {
+  {
     "id": 61,
     "question": "Quale servizio AWS è un servizio di riconoscimento vocale automatico che converte il parlato in testo?",
     "options": [
@@ -694,7 +694,7 @@
   },
   {
     "id": 64,
-    "question": "In AWS, quale servizio è un servizio di database a colonne ampie completamente gestito, ottimizzato per carichi di lavoro heavy read e heavy write?",
+    "question": "In AWS, quale servizio è un servizio di database a colonne ampie completamente gestito, compatibile con Apache Cassandra?",
     "options": [
       "Amazon RDS",
       "Amazon DynamoDB",
@@ -727,9 +727,9 @@
   },
   {
     "id": 67,
-    "question": "Quale servizio AWS è un servizio di database gestito per Microsoft SQL Server?",
+    "question": "In AWS, quale servizio fornisce un modo completamente gestito per eseguire database Microsoft SQL Server nel cloud?",
     "options": [
-      "Amazon Aurora SQL Server-Compatible Edition",
+      "Amazon Aurora",
       "Amazon RDS for SQL Server",
       "Amazon Redshift",
       "Amazon DynamoDB"
@@ -749,14 +749,14 @@
   },
   {
     "id": 69,
-    "question": "Quale servizio AWS è un servizio di directory gestito per l'accesso single sign-on a account e applicazioni AWS?",
+    "question": "Quale servizio AWS è un servizio gestito per l'accesso single sign-on a account e applicazioni AWS?",
     "options": [
       "AWS IAM",
       "AWS Cognito",
       "AWS Directory Service",
-      "AWS IAM Identity Center (successor to AWS Single Sign-On)"
+      "AWS IAM Identity Center"
     ],
-    "correctAnswer": "AWS IAM Identity Center (successor to AWS Single Sign-On)"
+    "correctAnswer": "AWS IAM Identity Center"
   },
   {
     "id": 70,
@@ -765,20 +765,20 @@
       "AWS IAM",
       "AWS Directory Service",
       "AWS Organizations",
-      "AWS Cognito"
+      "Amazon Cognito"
     ],
-    "correctAnswer": "AWS Cognito"
+    "correctAnswer": "Amazon Cognito"
   },
   {
     "id": 71,
-    "question": "Quale servizio AWS è un servizio per la gestione centralizzata degli account AWS?",
+    "question": "Quale framework AWS ti permette di definire l'infrastruttura cloud utilizzando linguaggi di programmazione come TypeScript, Python e Java?",
     "options": [
-      "AWS IAM",
-      "AWS Cognito",
-      "AWS Organizations",
-      "AWS Service Catalog"
+      "AWS CloudFormation",
+      "AWS CDK (Cloud Development Kit)",
+      "AWS SAM",
+      "AWS Elastic Beanstalk"
     ],
-    "correctAnswer": "AWS Organizations"
+    "correctAnswer": "AWS CDK (Cloud Development Kit)"
   },
   {
     "id": 72,
@@ -804,14 +804,14 @@
   },
   {
     "id": 74,
-    "question": "In AWS, quale servizio fornisce un framework per automatizzare attività operative come l'applicazione di patch e l'esecuzione di comandi?",
+    "question": "Quale servizio AWS analizza le configurazioni e l'utilizzo delle risorse per fornire raccomandazioni di ottimizzazione del dimensionamento?",
     "options": [
-      "AWS OpsWorks",
-      "AWS CloudFormation",
-      "AWS Systems Manager",
-      "AWS Service Catalog"
+      "AWS Trusted Advisor",
+      "AWS Cost Explorer",
+      "AWS Compute Optimizer",
+      "Amazon CloudWatch"
     ],
-    "correctAnswer": "AWS Systems Manager"
+    "correctAnswer": "AWS Compute Optimizer"
   },
   {
     "id": 75,
@@ -826,20 +826,20 @@
   },
   {
     "id": 76,
-    "question": "In AWS, quale servizio è un servizio di repository Git privato e gestito?",
+    "question": "Quale servizio AWS fornisce uno spazio di sviluppo unificato per pianificare, sviluppare e distribuire software in modo collaborativo?",
     "options": [
+      "AWS CodePipeline",
       "AWS CodeBuild",
-      "AWS CodeDeploy",
-      "AWS CodeCommit",
-      "AWS CodePipeline"
+      "Amazon CodeCatalyst",
+      "AWS CloudFormation"
     ],
-    "correctAnswer": "AWS CodeCommit"
+    "correctAnswer": "Amazon CodeCatalyst"
   },
   {
     "id": 77,
     "question": "Quale servizio AWS è un servizio di build completamente gestito che compila il codice sorgente, esegue test e produce pacchetti software pronti per il deployment?",
     "options": [
-      "AWS CodeCommit",
+      "Amazon CodeCatalyst",
       "AWS CodeDeploy",
       "AWS CodeBuild",
       "AWS CodePipeline"
@@ -850,7 +850,7 @@
     "id": 78,
     "question": "In AWS, quale servizio è un servizio di deployment completamente gestito che automatizza il deployment di applicazioni su varie risorse di calcolo?",
     "options": [
-      "AWS CodeCommit",
+      "Amazon CodeCatalyst",
       "AWS CodeBuild",
       "AWS CodePipeline",
       "AWS CodeDeploy"
@@ -879,7 +879,7 @@
     ],
     "correctAnswer": "Amazon EFS"
   },
-    {
+  {
     "id": 81,
     "question": "Quale servizio AWS è un servizio di file system gestito per Windows File Server?",
     "options": [
@@ -936,25 +936,25 @@
   },
   {
     "id": 86,
-    "question": "In AWS, quale servizio fornisce un ambiente di sviluppo integrato (IDE) basato su cloud?",
+    "question": "Quale servizio AWS fornisce un ambiente shell basato su browser preconfigurato con AWS CLI e strumenti di sviluppo comuni?",
     "options": [
-      "AWS CodeCommit",
-      "AWS CodeBuild",
-      "AWS Cloud9",
-      "AWS CodeStar"
+      "Amazon EC2",
+      "AWS CloudShell",
+      "AWS Lambda",
+      "Amazon Lightsail"
     ],
-    "correctAnswer": "AWS Cloud9"
+    "correctAnswer": "AWS CloudShell"
   },
   {
     "id": 87,
-    "question": "Quale servizio AWS è un servizio che ti aiuta a configurare rapidamente un intero progetto di sviluppo software in AWS?",
+    "question": "Quale servizio AWS fornisce un assistente AI per lo sviluppo software che offre suggerimenti di codice, debugging e trasformazione del codice?",
     "options": [
-      "AWS CodePipeline",
-      "AWS Cloud9",
-      "AWS CodeStar",
-      "AWS Systems Manager"
+      "Amazon CodeGuru",
+      "Amazon Q Developer",
+      "Amazon SageMaker",
+      "AWS Lambda"
     ],
-    "correctAnswer": "AWS CodeStar"
+    "correctAnswer": "Amazon Q Developer"
   },
   {
     "id": 88,
@@ -991,20 +991,20 @@
   },
   {
     "id": 91,
-    "question": "Quale servizio AWS è un servizio di intelligenza artificiale che estrae testo scritto a mano e stampato da documenti utilizzando il machine learning?",
+    "question": "Quale servizio AWS fornisce un database in-memory durevole e compatibile con Redis e Valkey, progettato per carichi di lavoro con ultra-bassa latenza?",
     "options": [
-      "Amazon Rekognition",
-      "Amazon Comprehend",
-      "Amazon Textract",
-      "Amazon Translate"
+      "Amazon ElastiCache",
+      "Amazon MemoryDB",
+      "Amazon DynamoDB Accelerator (DAX)",
+      "Amazon RDS"
     ],
-    "correctAnswer": "Amazon Textract"
+    "correctAnswer": "Amazon MemoryDB"
   },
   {
     "id": 92,
     "question": "In AWS, quale servizio fornisce un servizio di intelligenza artificiale per analizzare video e trovare persone, oggetti e attività?",
     "options": [
-      "Amazon Comprehend Video",
+      "Amazon Comprehend",
       "Amazon Rekognition Video",
       "Amazon Textract",
       "Amazon Kinesis Video Streams"
@@ -1013,14 +1013,14 @@
   },
   {
     "id": 93,
-    "question": "Quale servizio AWS è un servizio di database in-memory compatibile con Redis e Memcached?",
+    "question": "Quale servizio AWS è un servizio di database in-memory compatibile con Redis, Valkey e Memcached?",
     "options": [
       "Amazon RDS",
-      "Amazon ElastiCache for Redis",
+      "Amazon ElastiCache",
       "Amazon DynamoDB Accelerator (DAX)",
       "Amazon Neptune"
     ],
-    "correctAnswer": "Amazon ElastiCache for Redis"
+    "correctAnswer": "Amazon ElastiCache"
   },
   {
     "id": 94,
@@ -1028,32 +1028,32 @@
     "options": [
       "Amazon DynamoDB",
       "Amazon DocumentDB (with MongoDB compatibility)",
-      "Amazon RDS for MongoDB",
-      "Amazon Keyspaces"
+      "Amazon Keyspaces",
+      "Amazon Neptune"
     ],
     "correctAnswer": "Amazon DocumentDB (with MongoDB compatibility)"
   },
   {
     "id": 95,
-    "question": "Quale servizio AWS è un servizio di database di ledger (libro mastro) trasparente, immutabile e crittograficamente verificabile?",
+    "question": "Quale servizio AWS semplifica la creazione, la protezione e la gestione di un data lake sicuro?",
     "options": [
-      "Amazon RDS",
-      "Amazon Quantum Ledger Database (QLDB)",
-      "Amazon DynamoDB",
-      "Amazon Neptune"
+      "Amazon S3",
+      "AWS Glue",
+      "AWS Lake Formation",
+      "Amazon Athena"
     ],
-    "correctAnswer": "Amazon Quantum Ledger Database (QLDB)"
+    "correctAnswer": "AWS Lake Formation"
   },
   {
     "id": 96,
-    "question": "In AWS, quale servizio fornisce un servizio di database relazionale scalabile per applicazioni web e mobile?",
+    "question": "In AWS, quale servizio fornisce un servizio di database relazionale serverless e scalabile automaticamente per applicazioni con carichi di lavoro variabili?",
     "options": [
       "Amazon Redshift",
-      "Amazon Aurora Serverless",
+      "Amazon Aurora Serverless v2",
       "Amazon RDS",
       "Amazon DynamoDB"
     ],
-    "correctAnswer": "Amazon Aurora Serverless"
+    "correctAnswer": "Amazon Aurora Serverless v2"
   },
   {
     "id": 97,
@@ -1099,9 +1099,9 @@
     ],
     "correctAnswer": "AWS X-Ray"
   },
-   {
+  {
     "id": 101,
-    "question": "Quale servizio AWS è un servizio che ti aiuta a gestire i costi del tuo utilizzo di AWS?",
+    "question": "Quale servizio AWS è un servizio che ti aiuta a gestire e visualizzare i costi del tuo utilizzo di AWS?",
     "options": [
       "Amazon CloudWatch",
       "AWS Config",
@@ -1112,14 +1112,14 @@
   },
   {
     "id": 102,
-    "question": "In AWS, quale strumento ti permette di visualizzare, capire e gestire i costi del tuo utilizzo di AWS nel tempo?",
+    "question": "Quale servizio AWS fornisce un unico punto per monitorare lo stato di avanzamento delle migrazioni di applicazioni verso AWS?",
     "options": [
-      "AWS Config",
-      "AWS CloudTrail",
-      "AWS Budgets",
-      "AWS Cost Explorer"
+      "AWS Application Migration Service",
+      "AWS Migration Hub",
+      "AWS Database Migration Service",
+      "AWS CloudFormation"
     ],
-    "correctAnswer": "AWS Cost Explorer"
+    "correctAnswer": "AWS Migration Hub"
   },
   {
     "id": 103,
@@ -1134,14 +1134,14 @@
   },
   {
     "id": 104,
-    "question": "In AWS, quale servizio è un servizio di sicurezza che ti aiuta a identificare automaticamente i dati sensibili nei tuoi bucket S3?",
+    "question": "Quale servizio AWS fornisce la gestione centralizzata delle regole firewall su più account e risorse AWS?",
     "options": [
-      "Amazon GuardDuty",
-      "Amazon Inspector",
-      "Amazon Macie",
-      "AWS Security Hub"
+      "AWS WAF",
+      "AWS Shield",
+      "AWS Firewall Manager",
+      "AWS Network Firewall"
     ],
-    "correctAnswer": "Amazon Macie"
+    "correctAnswer": "AWS Firewall Manager"
   },
   {
     "id": 105,
@@ -1189,91 +1189,91 @@
   },
   {
     "id": 109,
-    "question": "Quale servizio AWS è un servizio di database chiave-valore e a documenti, completamente gestito e serverless, con bassa latenza e scalabilità elevata?",
+    "question": "Quale classe di storage Amazon S3 fornisce accesso ai dati con latenza in millisecondi a singola cifra per carichi di lavoro ad alte prestazioni?",
     "options": [
-      "Amazon RDS",
-      "Amazon Aurora",
-      "Amazon DynamoDB",
-      "Amazon Redshift"
+      "Amazon S3 Standard",
+      "Amazon S3 Intelligent-Tiering",
+      "Amazon S3 Express One Zone",
+      "Amazon S3 Glacier Instant Retrieval"
     ],
-    "correctAnswer": "Amazon DynamoDB"
+    "correctAnswer": "Amazon S3 Express One Zone"
   },
   {
     "id": 110,
-    "question": "In AWS, quale servizio è un servizio di database relazionale compatibile con MySQL e PostgreSQL, progettato per il cloud con prestazioni elevate?",
+    "question": "Quale servizio AWS facilita la migrazione di database verso AWS con tempi di inattività minimi?",
     "options": [
-      "Amazon RDS",
-      "Amazon Aurora",
-      "Amazon Redshift",
-      "Amazon DynamoDB"
+      "AWS Migration Hub",
+      "AWS Database Migration Service (DMS)",
+      "AWS Application Migration Service",
+      "AWS DataSync"
     ],
-    "correctAnswer": "Amazon Aurora"
+    "correctAnswer": "AWS Database Migration Service (DMS)"
   },
   {
     "id": 111,
-    "question": "Quale servizio AWS è un servizio di database relazionale gestito che supporta vari motori di database commerciali e open-source?",
+    "question": "Quale servizio AWS fornisce un servizio completamente gestito per creare e gestire reti blockchain scalabili?",
     "options": [
-      "Amazon Aurora",
-      "Amazon Redshift",
-      "Amazon RDS",
-      "Amazon DynamoDB"
-    ],
-    "correctAnswer": "Amazon RDS"
-  },
-  {
-    "id": 112,
-    "question": "In AWS, quale servizio è un servizio di data warehouse scalabile e completamente gestito per l'analisi di set di dati di grandi dimensioni?",
-    "options": [
-      "Amazon RDS",
       "Amazon DynamoDB",
-      "Amazon Redshift",
-      "Amazon Aurora"
-    ],
-    "correctAnswer": "Amazon Redshift"
-  },
-  {
-    "id": 113,
-    "question": "Quale servizio AWS è un servizio di database in-memory completamente gestito, compatibile con Redis e Memcached?",
-    "options": [
-      "Amazon RDS",
-      "Amazon DynamoDB",
-      "Amazon ElastiCache",
-      "Amazon Redshift"
-    ],
-    "correctAnswer": "Amazon ElastiCache"
-  },
-  {
-    "id": 114,
-    "question": "In AWS, quale servizio è un servizio di database a grafo scalabile e completamente gestito?",
-    "options": [
-      "Amazon RDS",
-      "Amazon DynamoDB",
+      "Amazon Managed Blockchain",
       "Amazon Neptune",
       "Amazon Redshift"
     ],
-    "correctAnswer": "Amazon Neptune"
+    "correctAnswer": "Amazon Managed Blockchain"
+  },
+  {
+    "id": 112,
+    "question": "Quale servizio AWS fornisce una configurazione serverless per Amazon OpenSearch, senza la necessità di gestire cluster?",
+    "options": [
+      "Amazon Athena",
+      "Amazon Redshift Serverless",
+      "Amazon OpenSearch Serverless",
+      "Amazon CloudWatch Logs"
+    ],
+    "correctAnswer": "Amazon OpenSearch Serverless"
+  },
+  {
+    "id": 113,
+    "question": "Quale servizio AWS fornisce un servizio per archiviare, trasformare e analizzare dati sanitari conformi a FHIR?",
+    "options": [
+      "Amazon RDS",
+      "Amazon HealthLake",
+      "Amazon S3",
+      "AWS Glue"
+    ],
+    "correctAnswer": "Amazon HealthLake"
+  },
+  {
+    "id": 114,
+    "question": "Quale servizio AWS fornisce la gestione automatizzata dell'infrastruttura per il deployment di container e servizi serverless tramite template?",
+    "options": [
+      "AWS CloudFormation",
+      "AWS Proton",
+      "AWS Elastic Beanstalk",
+      "AWS CDK"
+    ],
+    "correctAnswer": "AWS Proton"
   },
   {
     "id": 115,
-    "question": "Quale servizio AWS è un servizio di database time series completamente gestito, progettato per l'archiviazione e l'analisi di dati con timestamp?",
+    "question": "Quale servizio AWS fornisce un servizio di ricerca enterprise intelligente basato su machine learning?",
     "options": [
-      "Amazon RDS",
-      "Amazon DynamoDB",
-      "Amazon Timestream",
-      "Amazon Redshift"
+      "Amazon OpenSearch Service",
+      "Amazon Kendra",
+      "Amazon Athena",
+      "Amazon Bedrock"
     ],
-    "correctAnswer": "Amazon Timestream"
+    "correctAnswer": "Amazon Kendra"
   },
   {
     "id": 116,
-    "question": "In AWS, quale servizio fornisce un servizio di desktop virtuale gestito che ti permette di fornire desktop Windows e Linux agli utenti?",
+    "question": "Quale servizio AWS fornisce un contact center cloud omnicanale completamente gestito?",
     "options": [
-      "Amazon EC2",
-      "Amazon Lightsail",
       "Amazon WorkSpaces",
-      "Amazon AppStream 2.0"
+      "Amazon Connect",
+      "Amazon Chime",
+      "Amazon Pinpoint"
     ],
-    "correctAnswer": "Amazon WorkSpaces"
+    "correctAnswer": "Amazon Connect"
   },
   {
     "id": 117,
@@ -1293,7 +1293,7 @@
       "AWS Lambda",
       "AWS IoT Core",
       "Amazon Kinesis",
-      "AWS Greengrass"
+      "AWS IoT Greengrass"
     ],
     "correctAnswer": "AWS IoT Core"
   },
@@ -1302,24 +1302,24 @@
     "question": "Quale servizio AWS estende la capacità di calcolo e il cloud al network edge, più vicino ai tuoi dati IoT?",
     "options": [
       "AWS IoT Core",
-      "AWS Greengrass",
+      "AWS IoT Greengrass",
       "AWS Outposts",
       "AWS Wavelength"
     ],
-    "correctAnswer": "AWS Greengrass"
+    "correctAnswer": "AWS IoT Greengrass"
   },
   {
     "id": 120,
     "question": "In AWS, quale servizio fornisce un servizio di gestione degli aggiornamenti over-the-air (OTA) per i dispositivi IoT?",
     "options": [
       "AWS IoT Core",
-      "AWS Greengrass",
+      "AWS IoT Greengrass",
       "AWS IoT Device Management",
       "AWS IoT Analytics"
     ],
     "correctAnswer": "AWS IoT Device Management"
   },
-    {
+  {
     "id": 121,
     "question": "Quale servizio AWS è un servizio di analisi per i dati IoT?",
     "options": [
@@ -1337,13 +1337,13 @@
       "AWS IoT Analytics",
       "AWS IoT Events",
       "AWS IoT Core",
-      "AWS Greengrass"
+      "AWS IoT Greengrass"
     ],
     "correctAnswer": "AWS IoT Events"
   },
   {
     "id": 123,
-    "question": "Quale servizio AWS è una piattaforma di sviluppo per applicazioni mobile completamente gestita?",
+    "question": "Quale servizio AWS è una piattaforma di sviluppo per applicazioni web e mobile completamente gestita?",
     "options": [
       "AWS Lambda",
       "AWS Amplify",
@@ -1359,7 +1359,7 @@
       "AWS Lambda",
       "Amazon API Gateway",
       "AWS AppSync",
-      "AWS CloudFront"
+      "Amazon CloudFront"
     ],
     "correctAnswer": "Amazon API Gateway"
   },
@@ -1370,141 +1370,141 @@
       "Amazon API Gateway",
       "AWS AppSync",
       "AWS Lambda",
-      "AWS CloudFront"
+      "Amazon CloudFront"
     ],
     "correctAnswer": "AWS AppSync"
   },
   {
     "id": 126,
-    "question": "In AWS, quale servizio è un servizio di machine learning per la personalizzazione e la raccomandazione?",
+    "question": "Quale servizio AWS fornisce un servizio di comunicazione multicanale per inviare messaggi mirati tramite email, SMS e notifiche push?",
     "options": [
-      "Amazon Forecast",
-      "Amazon Personalize",
-      "Amazon SageMaker",
-      "Amazon Comprehend"
+      "Amazon SNS",
+      "Amazon SES",
+      "Amazon Pinpoint",
+      "Amazon Connect"
     ],
-    "correctAnswer": "Amazon Personalize"
+    "correctAnswer": "Amazon Pinpoint"
   },
   {
     "id": 127,
-    "question": "Quale servizio AWS è un servizio di machine learning per l'analisi e la previsione delle serie temporali?",
+    "question": "Quale servizio AWS fornisce un servizio completamente gestito per Apache Airflow per l'orchestrazione dei flussi di lavoro di dati?",
     "options": [
-      "Amazon Personalize",
-      "Amazon Forecast",
-      "Amazon SageMaker",
-      "Amazon Comprehend"
+      "AWS Step Functions",
+      "Amazon MWAA (Managed Workflows for Apache Airflow)",
+      "AWS Glue Workflows",
+      "Amazon EventBridge"
     ],
-    "correctAnswer": "Amazon Forecast"
+    "correctAnswer": "Amazon MWAA (Managed Workflows for Apache Airflow)"
   },
   {
     "id": 128,
-    "question": "In AWS, quale servizio fornisce un servizio di machine learning per la traduzione automatica?",
+    "question": "Quale servizio AWS fornisce connettività privata tra VPC, servizi AWS e reti on-premise senza esporre il traffico alla rete Internet pubblica?",
     "options": [
-      "Amazon Comprehend",
-      "Amazon Transcribe",
-      "Amazon Translate",
-      "Amazon Polly"
+      "AWS VPN",
+      "AWS Direct Connect",
+      "AWS PrivateLink",
+      "AWS Transit Gateway"
     ],
-    "correctAnswer": "Amazon Translate"
+    "correctAnswer": "AWS PrivateLink"
   },
   {
     "id": 129,
-    "question": "Quale servizio AWS è un servizio di machine learning per il riconoscimento vocale automatico?",
+    "question": "Quale servizio AWS migliora la disponibilità e le prestazioni delle applicazioni utilizzando la rete globale AWS per instradare il traffico verso gli endpoint ottimali?",
     "options": [
-      "Amazon Translate",
-      "Amazon Polly",
-      "Amazon Transcribe",
-      "Amazon Lex"
+      "Amazon CloudFront",
+      "Amazon Route 53",
+      "AWS Global Accelerator",
+      "Elastic Load Balancing"
     ],
-    "correctAnswer": "Amazon Transcribe"
+    "correctAnswer": "AWS Global Accelerator"
   },
   {
     "id": 130,
-    "question": "In AWS, quale servizio fornisce un servizio di machine learning per la sintesi vocale?",
+    "question": "Quale servizio AWS fornisce un servizio scalabile e conveniente per l'invio e la ricezione di email?",
     "options": [
-      "Amazon Transcribe",
-      "Amazon Lex",
-      "Amazon Polly",
-      "Amazon Translate"
+      "Amazon SNS",
+      "Amazon SES (Simple Email Service)",
+      "Amazon Pinpoint",
+      "Amazon Connect"
     ],
-    "correctAnswer": "Amazon Polly"
+    "correctAnswer": "Amazon SES (Simple Email Service)"
   },
-    {
+  {
     "id": 131,
-    "question": "Quale servizio AWS è un servizio di machine learning per costruire interfacce conversazionali?",
+    "question": "Quale servizio AWS fornisce un file system ad alte prestazioni ottimizzato per carichi di lavoro di calcolo intensivo come machine learning e HPC?",
     "options": [
-      "Amazon Polly",
-      "Amazon Transcribe",
-      "Amazon Lex",
-      "Amazon Comprehend"
+      "Amazon EFS",
+      "Amazon FSx for Lustre",
+      "Amazon FSx for Windows File Server",
+      "Amazon S3"
     ],
-    "correctAnswer": "Amazon Lex"
+    "correctAnswer": "Amazon FSx for Lustre"
   },
   {
     "id": 132,
-    "question": "In AWS, quale servizio è un servizio di machine learning per l'analisi del testo?",
+    "question": "Quale servizio AWS fornisce un file system gestito compatibile con NetApp ONTAP per carichi di lavoro enterprise?",
     "options": [
-      "Amazon Rekognition",
-      "Amazon Translate",
-      "Amazon Comprehend",
-      "Amazon Textract"
+      "Amazon EFS",
+      "Amazon FSx for Windows File Server",
+      "Amazon FSx for NetApp ONTAP",
+      "Amazon S3"
     ],
-    "correctAnswer": "Amazon Comprehend"
+    "correctAnswer": "Amazon FSx for NetApp ONTAP"
   },
   {
     "id": 133,
-    "question": "Quale servizio AWS è un servizio di machine learning per l'analisi delle immagini e dei video?",
+    "question": "Quale funzionalità di Amazon S3 ti permette di aggiungere codice personalizzato per elaborare i dati recuperati da S3 prima di restituirli all'applicazione?",
     "options": [
-      "Amazon Comprehend",
-      "Amazon Translate",
-      "Amazon Rekognition",
-      "Amazon Textract"
+      "Amazon S3 Event Notifications",
+      "Amazon S3 Object Lambda",
+      "Amazon S3 Batch Operations",
+      "Amazon S3 Select"
     ],
-    "correctAnswer": "Amazon Rekognition"
+    "correctAnswer": "Amazon S3 Object Lambda"
   },
   {
     "id": 134,
-    "question": "In AWS, quale servizio fornisce un servizio di machine learning per l'estrazione di testo e dati da documenti?",
+    "question": "Quale servizio AWS fornisce accesso on-demand ai report di conformità e sicurezza di AWS e agli accordi selezionati?",
     "options": [
-      "Amazon Rekognition",
-      "Amazon Comprehend",
-      "Amazon Textract",
-      "Amazon Translate"
+      "AWS Config",
+      "AWS Artifact",
+      "AWS Trusted Advisor",
+      "AWS Security Hub"
     ],
-    "correctAnswer": "Amazon Textract"
+    "correctAnswer": "AWS Artifact"
   },
   {
     "id": 135,
-    "question": "Quale servizio AWS è un servizio di machine learning per la previsione dei tassi di abbandono dei clienti?",
+    "question": "Quale servizio AWS è un servizio di Machine Learning che aiuta gli analisti di dati e gli utenti non esperti a creare modelli ML con un'interfaccia visuale no-code?",
     "options": [
-      "Amazon Forecast",
-      "Amazon Personalize",
+      "Amazon SageMaker",
       "Amazon SageMaker Canvas",
-      "Amazon Churn Prediction"
+      "Amazon SageMaker Studio Lab",
+      "Amazon SageMaker Autopilot"
     ],
     "correctAnswer": "Amazon SageMaker Canvas"
   },
   {
     "id": 136,
-    "question": "In AWS, quale servizio fornisce un servizio di machine learning per l'analisi delle frodi online?",
+    "question": "Quale servizio AWS fornisce un servizio di gestione dei dati che facilita la catalogazione, la scoperta, la condivisione e la governance dei dati su scala?",
     "options": [
-      "Amazon SageMaker",
-      "Amazon Fraud Detector",
-      "Amazon Rekognition",
-      "Amazon Comprehend"
+      "AWS Glue Data Catalog",
+      "AWS Lake Formation",
+      "Amazon DataZone",
+      "Amazon Athena"
     ],
-    "correctAnswer": "Amazon Fraud Detector"
+    "correctAnswer": "Amazon DataZone"
   },
   {
     "id": 137,
-    "question": "Quale servizio AWS è un servizio di database relazionale serverless e on-demand compatibile con MySQL e PostgreSQL?",
+    "question": "Quale servizio AWS è un servizio di database relazionale serverless e on-demand compatibile con MySQL e PostgreSQL, con scalabilità istantanea?",
     "options": [
       "Amazon RDS",
-      "Amazon Aurora Serverless",
+      "Amazon Aurora Serverless v2",
       "Amazon Redshift Serverless",
       "Amazon DynamoDB"
     ],
-    "correctAnswer": "Amazon Aurora Serverless"
+    "correctAnswer": "Amazon Aurora Serverless v2"
   },
   {
     "id": 138,
@@ -1541,80 +1541,80 @@
   },
   {
     "id": 141,
-    "question": "Quale servizio AWS è un servizio di integrazione dati serverless e visuale?",
+    "question": "Quale strumento AWS ti aiuta a valutare le tue architetture cloud rispetto alle best practice del framework Well-Architected?",
     "options": [
-      "AWS Glue",
-      "AWS Data Pipeline",
-      "AWS Step Functions",
-      "AWS Glue DataBrew"
+      "AWS Trusted Advisor",
+      "AWS Config",
+      "AWS Well-Architected Tool",
+      "AWS CloudFormation"
     ],
-    "correctAnswer": "AWS Glue DataBrew"
+    "correctAnswer": "AWS Well-Architected Tool"
   },
   {
     "id": 142,
-    "question": "In AWS, quale servizio fornisce un servizio di gestione dei flussi di lavoro per i dati?",
+    "question": "In AWS, quale servizio fornisce un servizio di gestione dei flussi di lavoro per i dati tramite AWS Glue?",
     "options": [
       "AWS Glue",
-      "AWS Data Pipeline",
       "AWS Step Functions",
-      "AWS Glue Workflows"
+      "AWS Glue Workflows",
+      "Amazon EventBridge"
     ],
     "correctAnswer": "AWS Glue Workflows"
   },
   {
     "id": 143,
-    "question": "Quale servizio AWS è un servizio di analisi dei log in tempo reale e gestito?",
+    "question": "Quale servizio AWS è un servizio completamente gestito per l'analisi dei dati in streaming, basato su Apache Flink?",
     "options": [
       "Amazon CloudWatch Logs",
       "AWS CloudTrail",
-      "Amazon Kinesis Data Analytics",
+      "Amazon Managed Service for Apache Flink",
       "Amazon Athena"
     ],
-    "correctAnswer": "Amazon CloudWatch Logs"
+    "correctAnswer": "Amazon Managed Service for Apache Flink"
   },
   {
     "id": 144,
-    "question": "In AWS, quale servizio fornisce un servizio di metriche e allarmi per le tue risorse AWS?",
+    "question": "Nel modello di responsabilità condivisa di AWS, chi è responsabile della sicurezza 'nel' cloud, inclusa la configurazione dei gruppi di sicurezza e la crittografia dei dati?",
     "options": [
-      "AWS CloudTrail",
-      "AWS Config",
-      "Amazon CloudWatch",
-      "AWS Systems Manager"
+      "AWS",
+      "Il cliente",
+      "Sia AWS che il cliente",
+      "Il fornitore di terze parti"
     ],
-    "correctAnswer": "Amazon CloudWatch"
+    "correctAnswer": "Il cliente"
   },
   {
     "id": 145,
-    "question": "Quale servizio AWS è un servizio che ti aiuta a controllare la conformità delle tue risorse AWS alle policy aziendali e normative?",
+    "question": "Quanti pilastri compongono il framework AWS Well-Architected?",
     "options": [
-      "Amazon CloudWatch",
-      "AWS CloudTrail",
-      "AWS Config",
-      "AWS Trusted Advisor"
+      "4",
+      "5",
+      "6",
+      "7"
     ],
-    "correctAnswer": "AWS Config"
+    "correctAnswer": "6"
   },
   {
     "id": 146,
-    "question": "In AWS, quale servizio fornisce un servizio di threat intelligence che monitora continuamente le minacce alla sicurezza nel tuo account AWS?",
+    "question": "Quale servizio AWS fornisce un servizio di rete per le applicazioni che semplifica la connessione, la protezione e il monitoraggio dei servizi su più VPC e account?",
     "options": [
-      "AWS WAF",
-      "AWS Shield",
-      "Amazon GuardDuty",
-      "AWS Security Hub"
+      "AWS App Mesh",
+      "Amazon VPC Lattice",
+      "AWS Transit Gateway",
+      "AWS PrivateLink"
     ],
-    "correctAnswer": "Amazon GuardDuty"
+    "correctAnswer": "Amazon VPC Lattice"
   },
   {
     "id": 147,
-    "question": "Quale servizio AWS è un servizio che aggrega gli avvisi di sicurezza e ti aiuta a gestire e indagare sugli incidenti di sicurezza?",
+    "question": "Quale servizio AWS fornisce accesso sicuro alle applicazioni aziendali senza la necessità di una VPN, basandosi sull'identità dell'utente e sullo stato del dispositivo?",
     "options": [
-      "Amazon GuardDuty",
-      "Amazon Inspector",
-      "Amazon Macie",
-      "AWS Security Hub"
+      "AWS Client VPN",
+      "AWS Verified Access",
+      "AWS IAM Identity Center",
+      "AWS Direct Connect"
     ],
-    "correctAnswer": "AWS Security Hub"
+    "correctAnswer": "AWS Verified Access"
   },
   {
     "id": 148,
@@ -1629,14 +1629,14 @@
   },
   {
     "id": 149,
-    "question": "Quale servizio AWS è un servizio di protezione DDoS gestito che protegge le tue applicazioni AWS da attacchi DDoS?",
+    "question": "Quale servizio AWS centralizza automaticamente i dati di sicurezza da più fonti AWS e ambienti on-premise in un data lake dedicato alla sicurezza?",
     "options": [
-      "AWS WAF",
+      "AWS Security Hub",
       "Amazon GuardDuty",
-      "AWS Shield",
-      "AWS Network Firewall"
+      "Amazon Security Lake",
+      "Amazon Detective"
     ],
-    "correctAnswer": "AWS Shield"
+    "correctAnswer": "Amazon Security Lake"
   },
   {
     "id": 150,
@@ -1649,86 +1649,86 @@
     ],
     "correctAnswer": "AWS Network Firewall"
   },
-    {
+  {
     "id": 151,
-    "question": "Quale servizio AWS è un servizio di gestione dei certificati SSL/TLS?",
+    "question": "Quale servizio AWS permette a più parti di analizzare e collaborare sui propri dataset combinati senza condividere i dati grezzi?",
     "options": [
-      "AWS Key Management Service (KMS)",
-      "AWS Secrets Manager",
-      "AWS Certificate Manager (ACM)",
-      "AWS IAM"
+      "Amazon Athena",
+      "AWS Clean Rooms",
+      "AWS Lake Formation",
+      "Amazon Redshift"
     ],
-    "correctAnswer": "AWS Certificate Manager (ACM)"
+    "correctAnswer": "AWS Clean Rooms"
   },
   {
     "id": 152,
-    "question": "In AWS, quale servizio fornisce un servizio per l'emissione di certificati SSL/TLS privati?",
+    "question": "In AWS, quale servizio fornisce un servizio per l'emissione e la gestione di certificati SSL/TLS privati?",
     "options": [
       "AWS Certificate Manager",
-      "AWS Certificate Manager Private Certificate Authority (ACM Private CA)",
+      "AWS Private Certificate Authority (AWS Private CA)",
       "AWS Key Management Service (KMS)",
       "AWS Secrets Manager"
     ],
-    "correctAnswer": "AWS Certificate Manager Private Certificate Authority (ACM Private CA)"
+    "correctAnswer": "AWS Private Certificate Authority (AWS Private CA)"
   },
   {
     "id": 153,
-    "question": "Quale servizio AWS è un servizio che ti aiuta a creare, gestire e controllare chiavi di crittografia?",
+    "question": "Quale funzionalità AWS fornisce ambienti di calcolo isolati all'interno delle istanze EC2 per proteggere i dati altamente sensibili durante l'elaborazione?",
     "options": [
-      "AWS Secrets Manager",
-      "AWS Certificate Manager",
       "AWS Key Management Service (KMS)",
-      "AWS IAM"
+      "AWS Nitro Enclaves",
+      "AWS Secrets Manager",
+      "AWS CloudHSM"
     ],
-    "correctAnswer": "AWS Key Management Service (KMS)"
+    "correctAnswer": "AWS Nitro Enclaves"
   },
   {
     "id": 154,
-    "question": "In AWS, quale servizio fornisce un servizio per l'archiviazione e la rotazione automatica dei segreti (es. password dei database)?",
+    "question": "Quale servizio AWS ti permette di condividere in modo sicuro le risorse AWS con altri account AWS o all'interno della tua organizzazione?",
     "options": [
-      "AWS Key Management Service (KMS)",
-      "AWS Systems Manager Parameter Store",
-      "AWS Secrets Manager",
-      "AWS Certificate Manager"
+      "AWS Organizations",
+      "AWS Resource Access Manager (RAM)",
+      "AWS IAM",
+      "AWS Service Catalog"
     ],
-    "correctAnswer": "AWS Secrets Manager"
+    "correctAnswer": "AWS Resource Access Manager (RAM)"
   },
   {
     "id": 155,
-    "question": "Quale servizio AWS è un servizio per la gestione dei parametri di configurazione e dei segreti?",
+    "question": "Quale servizio AWS fornisce un servizio di disaster recovery scalabile e conveniente per server fisici, virtuali e cloud?",
     "options": [
-      "AWS Secrets Manager",
-      "AWS Systems Manager Parameter Store",
-      "AWS Key Management Service (KMS)",
-      "AWS Certificate Manager"
+      "AWS Backup",
+      "AWS Elastic Disaster Recovery (DRS)",
+      "Amazon S3",
+      "AWS Storage Gateway"
     ],
-    "correctAnswer": "AWS Systems Manager Parameter Store"
+    "correctAnswer": "AWS Elastic Disaster Recovery (DRS)"
   },
   {
     "id": 156,
-    "question": "In AWS, quale servizio fornisce un servizio di analisi dei costi e della spesa?",
+    "question": "Quale servizio AWS ti aiuta a valutare, migliorare e monitorare continuamente la resilienza delle tue applicazioni?",
     "options": [
-      "Amazon CloudWatch",
-      "AWS Config",
-      "AWS Cost Explorer",
-      "AWS Trusted Advisor"
+      "AWS Well-Architected Tool",
+      "AWS Resilience Hub",
+      "AWS Trusted Advisor",
+      "AWS Config"
     ],
-    "correctAnswer": "AWS Cost Explorer"
+    "correctAnswer": "AWS Resilience Hub"
   },
   {
     "id": 157,
-    "question": "Quale servizio AWS ti permette di impostare budget e ricevere notifiche sui costi?",
+    "question": "Quale modello di prezzo AWS offre risparmi significativi in cambio di un impegno di utilizzo a 1 o 3 anni, applicabile a EC2, Lambda e Fargate?",
     "options": [
-      "AWS Cost Explorer",
-      "AWS Trusted Advisor",
-      "AWS Budgets",
-      "AWS Organizations"
+      "Reserved Instances",
+      "Spot Instances",
+      "Savings Plans",
+      "On-Demand"
     ],
-    "correctAnswer": "AWS Budgets"
+    "correctAnswer": "Savings Plans"
   },
   {
     "id": 158,
-    "question": "In AWS, quale servizio fornisce un servizio che ti aiuta a pianificare, gestire e controllare i costi del tuo utilizzo di AWS?",
+    "question": "In AWS, quale servizio fornisce un report dettagliato che ti aiuta a pianificare, gestire e controllare i costi del tuo utilizzo di AWS?",
     "options": [
       "AWS Cost Explorer",
       "AWS Budgets",
@@ -1750,25 +1750,25 @@
   },
   {
     "id": 160,
-    "question": "In AWS, quale servizio fornisce un servizio di monitoraggio delle performance delle applicazioni distribuite, tracciando le richieste degli utenti?",
+    "question": "Quale distribuzione AWS di OpenTelemetry fornisce API, librerie e agenti per raccogliere tracce distribuite e metriche dalle applicazioni?",
     "options": [
+      "AWS X-Ray",
       "Amazon CloudWatch",
-      "AWS CloudTrail",
-      "AWS Config",
-      "AWS X-Ray"
+      "AWS Distro for OpenTelemetry (ADOT)",
+      "Amazon Managed Service for Prometheus"
     ],
-    "correctAnswer": "AWS X-Ray"
+    "correctAnswer": "AWS Distro for OpenTelemetry (ADOT)"
   },
   {
     "id": 161,
-    "question": "Quale servizio AWS è un servizio di monitoraggio delle performance e della salute dei server on-premise e delle istanze EC2?",
+    "question": "Quale funzionalità di Amazon CloudWatch ti permette di creare canary per monitorare gli endpoint e le API simulando il comportamento degli utenti?",
     "options": [
-      "Amazon CloudWatch",
-      "AWS Systems Manager",
-      "Amazon Inspector",
-      "AWS Config"
+      "Amazon CloudWatch Alarms",
+      "Amazon CloudWatch Logs",
+      "Amazon CloudWatch Synthetics",
+      "Amazon CloudWatch Metrics"
     ],
-    "correctAnswer": "Amazon CloudWatch"
+    "correctAnswer": "Amazon CloudWatch Synthetics"
   },
   {
     "id": 162,
@@ -1794,86 +1794,86 @@
   },
   {
     "id": 164,
-    "question": "In AWS, quale servizio fornisce un servizio di automazione per la gestione dei server, l'applicazione di patch e l'esecuzione di comandi su larga scala?",
+    "question": "Quale servizio AWS fornisce la pianificazione serverless di attività su scala, con supporto per invocazioni one-time e ricorrenti?",
     "options": [
-      "AWS OpsWorks",
-      "AWS CloudFormation",
-      "AWS Systems Manager",
-      "AWS Service Catalog"
+      "Amazon EventBridge",
+      "Amazon EventBridge Scheduler",
+      "AWS Step Functions",
+      "AWS Lambda"
     ],
-    "correctAnswer": "AWS Systems Manager"
+    "correctAnswer": "Amazon EventBridge Scheduler"
   },
   {
     "id": 165,
-    "question": "Quale servizio AWS è un servizio di configuration management basato su Puppet e Chef?",
+    "question": "Quale servizio AWS automatizza il processo di lift-and-shift per la migrazione di server fisici, virtuali e cloud verso AWS?",
     "options": [
-      "AWS Systems Manager",
-      "AWS Elastic Beanstalk",
-      "AWS OpsWorks",
-      "AWS CloudFormation"
+      "AWS Migration Hub",
+      "AWS Application Migration Service (MGN)",
+      "AWS Database Migration Service",
+      "AWS DataSync"
     ],
-    "correctAnswer": "AWS OpsWorks"
+    "correctAnswer": "AWS Application Migration Service (MGN)"
   },
   {
     "id": 166,
-    "question": "In AWS, quale servizio fornisce un framework per automatizzare il deployment di applicazioni su istanze EC2, on-premise o container?",
+    "question": "Quale servizio AWS fornisce un servizio di visualizzazione dati completamente gestito e compatibile con Grafana?",
     "options": [
-      "AWS CodeCommit",
-      "AWS CodeBuild",
-      "AWS CodeDeploy",
-      "AWS CodePipeline"
+      "Amazon QuickSight",
+      "Amazon Managed Grafana",
+      "Amazon CloudWatch Dashboards",
+      "Amazon OpenSearch Dashboards"
     ],
-    "correctAnswer": "AWS CodeDeploy"
+    "correctAnswer": "Amazon Managed Grafana"
   },
   {
     "id": 167,
-    "question": "Quale servizio AWS è un servizio di CI/CD completamente gestito che automatizza il processo di rilascio?",
+    "question": "Quale servizio AWS fornisce un servizio di monitoraggio completamente gestito e compatibile con Prometheus per container?",
     "options": [
-      "AWS CodeCommit",
-      "AWS CodeBuild",
-      "AWS CodeDeploy",
-      "AWS CodePipeline"
+      "Amazon CloudWatch",
+      "Amazon Managed Service for Prometheus",
+      "Amazon Managed Grafana",
+      "AWS X-Ray"
     ],
-    "correctAnswer": "AWS CodePipeline"
+    "correctAnswer": "Amazon Managed Service for Prometheus"
   },
   {
     "id": 168,
-    "question": "In AWS, quale servizio fornisce un servizio di build scalabile e completamente gestito?",
+    "question": "Quale servizio AWS utilizza il machine learning per fornire raccomandazioni sul codice e identificare le righe di codice più costose nelle applicazioni?",
     "options": [
-      "AWS CodeCommit",
-      "AWS CodeDeploy",
+      "Amazon Q Developer",
+      "Amazon CodeGuru",
       "AWS CodeBuild",
-      "AWS CodePipeline"
+      "AWS X-Ray"
     ],
-    "correctAnswer": "AWS CodeBuild"
+    "correctAnswer": "Amazon CodeGuru"
   },
   {
     "id": 169,
-    "question": "Quale servizio AWS è un servizio di repository Git privato e gestito?",
+    "question": "Quale servizio AWS ti permette di cercare e scoprire le risorse AWS su più regioni e account utilizzando una ricerca unificata?",
     "options": [
-      "AWS CodeBuild",
-      "AWS CodeDeploy",
-      "AWS CodeCommit",
-      "AWS CodePipeline"
+      "AWS Config",
+      "AWS Resource Explorer",
+      "AWS Systems Manager",
+      "AWS Organizations"
     ],
-    "correctAnswer": "AWS CodeCommit"
+    "correctAnswer": "AWS Resource Explorer"
   },
   {
     "id": 170,
-    "question": "In AWS, quale servizio fornisce un servizio di repository privato per pacchetti software?",
+    "question": "Quale opzione di acquisto EC2 ti permette di utilizzare capacità di calcolo inutilizzata di AWS con sconti fino al 90% rispetto al prezzo on-demand?",
     "options": [
-      "Amazon ECR",
-      "AWS CodeCommit",
-      "AWS CodeBuild",
-      "AWS CodeArtifact"
+      "Reserved Instances",
+      "Savings Plans",
+      "Spot Instances",
+      "Dedicated Hosts"
     ],
-    "correctAnswer": "AWS CodeArtifact"
+    "correctAnswer": "Spot Instances"
   },
   {
     "id": 171,
     "question": "Quale servizio AWS è un servizio di autenticazione e autorizzazione per gestire l'accesso alle risorse AWS?",
     "options": [
-      "AWS Cognito",
+      "Amazon Cognito",
       "AWS Directory Service",
       "AWS Organizations",
       "AWS Identity and Access Management (IAM)"
@@ -1882,14 +1882,14 @@
   },
   {
     "id": 172,
-    "question": "In AWS, quale servizio fornisce un servizio di single sign-on (SSO) gestito per accedere a account e applicazioni?",
+    "question": "Quale servizio AWS analizza le policy delle risorse per identificare l'accesso pubblico o cross-account non intenzionale?",
     "options": [
       "AWS IAM",
-      "AWS Cognito",
-      "AWS Directory Service",
-      "AWS IAM Identity Center (successor to AWS Single Sign-On)"
+      "IAM Access Analyzer",
+      "Amazon GuardDuty",
+      "AWS Config"
     ],
-    "correctAnswer": "AWS IAM Identity Center (successor to AWS Single Sign-On)"
+    "correctAnswer": "IAM Access Analyzer"
   },
   {
     "id": 173,
@@ -1897,65 +1897,65 @@
     "options": [
       "AWS Simple AD",
       "AWS Managed Microsoft AD",
-      "AWS Cognito",
+      "Amazon Cognito",
       "AWS Directory Service Connector"
     ],
     "correctAnswer": "AWS Managed Microsoft AD"
   },
   {
     "id": 174,
-    "question": "In AWS, quale servizio fornisce un servizio di directory gestito compatibile con LDAP?",
+    "question": "Quale servizio AWS fornisce credenziali di sicurezza temporanee per utenti federati e ruoli IAM?",
     "options": [
-      "AWS Managed Microsoft AD",
-      "AWS Simple AD",
-      "AWS Cognito",
-      "AWS Directory Service Connector"
+      "AWS IAM",
+      "AWS Security Token Service (STS)",
+      "Amazon Cognito",
+      "AWS Secrets Manager"
     ],
-    "correctAnswer": "AWS Simple AD"
+    "correctAnswer": "AWS Security Token Service (STS)"
   },
   {
     "id": 175,
-    "question": "Quale servizio AWS è un servizio di database a documenti compatibile con MongoDB?",
+    "question": "Quale funzionalità di Amazon ElastiCache permette di creare cache senza gestire nodi o cluster, con scalabilità automatica?",
     "options": [
-      "Amazon DynamoDB",
-      "Amazon DocumentDB (with MongoDB compatibility)",
-      "Amazon RDS",
-      "Amazon Keyspaces"
+      "Amazon ElastiCache for Redis",
+      "Amazon ElastiCache Serverless",
+      "Amazon MemoryDB",
+      "Amazon DynamoDB Accelerator (DAX)"
     ],
-    "correctAnswer": "Amazon DocumentDB (with MongoDB compatibility)"
+    "correctAnswer": "Amazon ElastiCache Serverless"
   },
   {
     "id": 176,
-    "question": "In AWS, quale servizio fornisce un servizio di database a colonne ampie compatibile con Apache Cassandra?",
+    "question": "Quale funzionalità di Amazon Aurora permette a un singolo database di estendersi su più regioni AWS per il disaster recovery e le letture a bassa latenza?",
     "options": [
-      "Amazon DynamoDB",
-      "Amazon DocumentDB",
-      "Amazon Keyspaces (for Apache Cassandra)",
-      "Amazon RDS"
+      "Amazon Aurora Serverless v2",
+      "Amazon Aurora Global Database",
+      "Amazon Aurora Multi-Master",
+      "Amazon RDS Multi-AZ"
     ],
-    "correctAnswer": "Amazon Keyspaces (for Apache Cassandra)"
+    "correctAnswer": "Amazon Aurora Global Database"
   },
   {
     "id": 177,
-    "question": "Quale servizio AWS è un servizio di database di ledger gestito e scalabile?",
+    "question": "Quale funzionalità di Amazon DynamoDB fornisce una replica multi-regione e multi-active completamente gestita per le tabelle DynamoDB?",
     "options": [
-      "Amazon RDS",
-      "Amazon DynamoDB",
-      "Amazon Quantum Ledger Database (QLDB)",
-      "Amazon Neptune"
+      "DynamoDB Streams",
+      "DynamoDB Accelerator (DAX)",
+      "DynamoDB Global Tables",
+      "DynamoDB On-Demand"
     ],
-    "correctAnswer": "Amazon Quantum Ledger Database (QLDB)"
+    "correctAnswer": "DynamoDB Global Tables"
   },
   {
     "id": 178,
-    "question": "In AWS, quale servizio fornisce un servizio di database time series completamente gestito?",
+    "question": "Quale funzionalità di Amazon DynamoDB cattura una sequenza ordinata di modifiche a livello di elemento in una tabella DynamoDB?",
     "options": [
-      "Amazon RDS",
-      "Amazon DynamoDB",
-      "Amazon Timestream",
-      "Amazon Redshift"
+      "DynamoDB Global Tables",
+      "DynamoDB Streams",
+      "DynamoDB Accelerator (DAX)",
+      "DynamoDB Transactions"
     ],
-    "correctAnswer": "Amazon Timestream"
+    "correctAnswer": "DynamoDB Streams"
   },
   {
     "id": 179,
@@ -1981,14 +1981,14 @@
   },
   {
     "id": 181,
-    "question": "Quale servizio AWS estende AWS al data center del cliente, fornendo servizi AWS on-premise?",
+    "question": "Quale servizio AWS aiuta le organizzazioni a migrare e modernizzare le loro applicazioni mainframe verso il cloud?",
     "options": [
-      "AWS Wavelength",
-      "AWS Local Zones",
-      "AWS Outposts",
-      "AWS Snow Family"
+      "AWS Application Migration Service",
+      "AWS Mainframe Modernization",
+      "AWS Migration Hub",
+      "AWS Database Migration Service"
     ],
-    "correctAnswer": "AWS Outposts"
+    "correctAnswer": "AWS Mainframe Modernization"
   },
   {
     "id": 182,
@@ -2014,7 +2014,7 @@
   },
   {
     "id": 184,
-    "question": "In AWS, quale servizio fornisce un servizio di data science completamente gestito per preparare, analizzare e visualizzare i dati?",
+    "question": "In AWS, quale servizio fornisce un ambiente di data science completamente gestito per preparare, analizzare e visualizzare i dati?",
     "options": [
       "Amazon SageMaker",
       "Amazon EMR",
@@ -2025,14 +2025,14 @@
   },
   {
     "id": 185,
-    "question": "Quale servizio AWS è un servizio di Machine Learning che aiuta gli analisti di dati e gli scienziati non esperti a creare modelli ML?",
+    "question": "Quale funzionalità di Amazon SageMaker fornisce modelli di fondazione pre-addestrati e soluzioni ML preconfigurate pronte per il deployment?",
     "options": [
-      "Amazon SageMaker",
+      "Amazon SageMaker Autopilot",
+      "Amazon SageMaker JumpStart",
       "Amazon SageMaker Canvas",
-      "Amazon SageMaker Studio Lab",
-      "Amazon SageMaker Autopilot"
+      "Amazon SageMaker Ground Truth"
     ],
-    "correctAnswer": "Amazon SageMaker Canvas"
+    "correctAnswer": "Amazon SageMaker JumpStart"
   },
   {
     "id": 186,
@@ -2058,113 +2058,113 @@
   },
   {
     "id": 188,
-    "question": "In AWS, quale servizio fornisce un servizio di Machine Learning per l'analisi del sentiment e l'estrazione di entità da testo?",
+    "question": "Quale servizio AWS fornisce un assistente AI generativo per le aziende, che risponde a domande, genera contenuti e completa attività basandosi sui dati aziendali?",
     "options": [
-      "Amazon Rekognition",
-      "Amazon Translate",
-      "Amazon Comprehend",
-      "Amazon Textract"
+      "Amazon Q Developer",
+      "Amazon Q Business",
+      "Amazon Bedrock",
+      "Amazon SageMaker"
     ],
-    "correctAnswer": "Amazon Comprehend"
+    "correctAnswer": "Amazon Q Business"
   },
   {
     "id": 189,
-    "question": "Quale servizio AWS è un servizio di Machine Learning per l'analisi delle immagini e dei video, identificando oggetti, persone, testo e attività?",
+    "question": "Quale servizio AWS fornisce moduli di sicurezza hardware (HSM) dedicati nel cloud per generare e utilizzare chiavi crittografiche?",
     "options": [
-      "Amazon Comprehend",
-      "Amazon Translate",
-      "Amazon Rekognition",
-      "Amazon Textract"
+      "AWS Key Management Service (KMS)",
+      "AWS CloudHSM",
+      "AWS Secrets Manager",
+      "AWS Certificate Manager"
     ],
-    "correctAnswer": "Amazon Rekognition"
+    "correctAnswer": "AWS CloudHSM"
   },
   {
     "id": 190,
-    "question": "In AWS, quale servizio fornisce un servizio di Machine Learning per l'estrazione automatica di dati strutturati e non strutturati da documenti scansionati o immagini?",
+    "question": "Quale funzionalità di Amazon CloudWatch facilita l'osservabilità delle applicazioni identificando automaticamente i problemi e le anomalie?",
     "options": [
-      "Amazon Rekognition",
-      "Amazon Comprehend",
-      "Amazon Textract",
-      "Amazon Translate"
+      "Amazon CloudWatch Synthetics",
+      "Amazon CloudWatch Application Insights",
+      "Amazon CloudWatch Logs",
+      "AWS X-Ray"
     ],
-    "correctAnswer": "Amazon Textract"
+    "correctAnswer": "Amazon CloudWatch Application Insights"
   },
   {
     "id": 191,
-    "question": "Quale servizio AWS è un servizio di Machine Learning per la previsione delle serie temporali?",
+    "question": "Quale dashboard AWS fornisce informazioni personalizzate sulla salute dei servizi AWS e notifiche sugli eventi che possono influenzare le tue risorse?",
     "options": [
-      "Amazon Personalize",
-      "Amazon Forecast",
-      "Amazon SageMaker",
-      "Amazon Comprehend"
+      "Amazon CloudWatch",
+      "AWS Trusted Advisor",
+      "AWS Health Dashboard",
+      "AWS Config"
     ],
-    "correctAnswer": "Amazon Forecast"
+    "correctAnswer": "AWS Health Dashboard"
   },
   {
     "id": 192,
-    "question": "In AWS, quale servizio fornisce un servizio di Machine Learning per creare raccomandazioni personalizzate per gli utenti?",
+    "question": "Quale funzionalità di Amazon Route 53 ti permette di gestire il failover DNS e controllare il recovery delle applicazioni su più regioni AWS?",
     "options": [
-      "Amazon Forecast",
-      "Amazon Personalize",
-      "Amazon SageMaker",
-      "Amazon Comprehend"
+      "Route 53 Resolver",
+      "Route 53 Application Recovery Controller",
+      "Route 53 Traffic Flow",
+      "Route 53 Health Checks"
     ],
-    "correctAnswer": "Amazon Personalize"
+    "correctAnswer": "Route 53 Application Recovery Controller"
   },
   {
     "id": 193,
-    "question": "Quale servizio AWS è un servizio di Machine Learning per la creazione di assistenti virtuali conversazionali?",
+    "question": "Quale classe di storage Amazon S3 è progettata per spostare automaticamente i dati tra livelli di accesso in base ai pattern di utilizzo, ottimizzando i costi?",
     "options": [
-      "Amazon Polly",
-      "Amazon Transcribe",
-      "Amazon Lex",
-      "Amazon Comprehend"
+      "Amazon S3 Standard",
+      "Amazon S3 Intelligent-Tiering",
+      "Amazon S3 Glacier",
+      "Amazon S3 Standard-IA"
     ],
-    "correctAnswer": "Amazon Lex"
+    "correctAnswer": "Amazon S3 Intelligent-Tiering"
   },
   {
     "id": 194,
-    "question": "In AWS, quale servizio fornisce un servizio di Machine Learning per convertire testo in parlato?",
+    "question": "Quale funzionalità di AWS CloudTrail fornisce un data lake gestito per l'archiviazione e l'analisi degli eventi di attività con query SQL?",
     "options": [
-      "Amazon Transcribe",
-      "Amazon Lex",
-      "Amazon Polly",
-      "Amazon Translate"
+      "CloudTrail Insights",
+      "CloudTrail Lake",
+      "Amazon Athena",
+      "Amazon CloudWatch Logs"
     ],
-    "correctAnswer": "Amazon Polly"
+    "correctAnswer": "CloudTrail Lake"
   },
   {
     "id": 195,
-    "question": "Quale servizio AWS è un servizio di Machine Learning per convertire parlato in testo?",
+    "question": "Quale funzionalità di Amazon CloudWatch monitora la disponibilità e le prestazioni delle applicazioni rivolte a Internet, analizzando il traffico degli utenti?",
     "options": [
-      "Amazon Translate",
-      "Amazon Polly",
-      "Amazon Transcribe",
-      "Amazon Lex"
+      "Amazon CloudWatch Synthetics",
+      "Amazon CloudWatch Internet Monitor",
+      "Amazon CloudWatch Alarms",
+      "AWS X-Ray"
     ],
-    "correctAnswer": "Amazon Transcribe"
+    "correctAnswer": "Amazon CloudWatch Internet Monitor"
   },
   {
     "id": 196,
-    "question": "In AWS, quale servizio fornisce un servizio di Machine Learning per la traduzione di testo?",
+    "question": "Quale strumento AWS fornisce un'interfaccia visuale per progettare e configurare architetture serverless con AWS CloudFormation e AWS SAM?",
     "options": [
-      "Amazon Comprehend",
-      "Amazon Transcribe",
-      "Amazon Translate",
-      "Amazon Polly"
+      "AWS CloudFormation Designer",
+      "AWS Application Composer",
+      "AWS CDK",
+      "AWS Proton"
     ],
-    "correctAnswer": "Amazon Translate"
+    "correctAnswer": "AWS Application Composer"
   },
   {
     "id": 197,
-    "question": "Quale servizio AWS è un servizio di Machine Learning per l'analisi e l'interpretazione dei documenti legali?",
+    "question": "Quale servizio AWS fornisce un modo semplice e a basso costo per lanciare e gestire server virtuali, database e storage per piccoli progetti?",
     "options": [
-      "Amazon Comprehend",
-      "Amazon Textract",
-      "Amazon Comprehend Medical",
-      "Amazon Comprehend Legal"
+      "Amazon EC2",
+      "Amazon Lightsail",
+      "AWS Lambda",
+      "AWS Fargate"
     ],
-    "correctAnswer": "Amazon Comprehend Legal"
+    "correctAnswer": "Amazon Lightsail"
   },
   {
     "id": 198,
@@ -2173,80 +2173,30 @@
       "Amazon Comprehend",
       "Amazon Textract",
       "Amazon Comprehend Medical",
-      "Amazon Comprehend Legal"
+      "Amazon HealthLake"
     ],
     "correctAnswer": "Amazon Comprehend Medical"
   },
   {
     "id": 199,
-    "question": "Quale servizio AWS è un servizio di Machine Learning per l'analisi e la comprensione dei video?",
+    "question": "Quale funzionalità di Amazon Bedrock permette ai modelli di fondazione di eseguire azioni e interagire con sistemi esterni per completare attività complesse?",
     "options": [
-      "Amazon Rekognition Video",
-      "Amazon Comprehend Video",
-      "Amazon Textract",
-      "Amazon Kinesis Video Streams"
+      "Amazon Bedrock Knowledge Bases",
+      "Amazon Bedrock Agents",
+      "Amazon Bedrock Guardrails",
+      "Amazon SageMaker"
     ],
-    "correctAnswer": "Amazon Rekognition Video"
+    "correctAnswer": "Amazon Bedrock Agents"
   },
   {
     "id": 200,
-    "question": "In AWS, quale servizio fornisce un servizio di Machine Learning per la costruzione di modelli di raccomandazione?",
+    "question": "Quale funzionalità di Amazon Bedrock permette di collegare i modelli di fondazione ai tuoi dati aziendali per fornire risposte tramite RAG (Retrieval Augmented Generation)?",
     "options": [
-      "Amazon Forecast",
-      "Amazon Personalize",
-      "Amazon SageMaker",
-      "Amazon Comprehend"
+      "Amazon Bedrock Agents",
+      "Amazon Bedrock Knowledge Bases",
+      "Amazon Bedrock Guardrails",
+      "Amazon Kendra"
     ],
-    "correctAnswer": "Amazon Personalize"
-  },
-  {
-    "id": 201,
-    "question": "E ora una domanda su DXC Technology<br>Quanti sono i dipendenti in DXC Technology Italia?",
-    "options": [
-      "più di 2500",
-      "poco più di 500",
-      "tra 1500 e 2000"
-    ],
-    "correctAnswer": "più di 2500"
-  },
-  {
-    "id": 202,
-    "question": "E ora una domanda su DXC Technology<br>In quali settori implementiamo soluzioni digitali?",
-    "options": [
-      "Banking, Public Sector e Energy&Utilities, Retail, Aereospace",
-      "Manufacturing, Automotive,Telco e Media",
-      "Tutte le risposte sono corrette"      
-    ],
-    "correctAnswer": "Tutte le risposte sono corrette"
-  },
-  {
-    "id": 203,
-    "question": "E ora una domanda su DXC Technology<br>DXC è una multinazionale nata dall’unione di?",
-    "options": [
-      "CSC e HPE",
-      "HPE e EDS",
-      "CSC e EDS"
-    ],
-    "correctAnswer": "CSC e HPE"
-  },
-  {
-    "id": 204,
-    "question": "E ora una domanda su DXC Technology<br>Quale è la modalità lavorativa in DXC?",
-    "options": [
-      "Nessuna delle seguenti",
-      "Full remote",
-      "Smart working"
-    ],
-    "correctAnswer": "Smart working"
-  },
-  {
-    "id": 205,
-    "question": "E ora una domanda su DXC Technology<br>Quali sono le principali certificazioni più conseguite in DXC Italia?",
-    "options": [
-      "Agile, Prince2, DevOps",
-      "Agile, ITIL, Design Thinking",
-      "Agile Scrum, Microsoft Azure, Blockchain"
-    ],
-    "correctAnswer": "Agile, ITIL, Design Thinking"
+    "correctAnswer": "Amazon Bedrock Knowledge Bases"
   }
 ]
