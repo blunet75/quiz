@@ -17,11 +17,16 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
             min-height: 100vh; /* Assicura che il body occupi almeno l'altezza della viewport */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
         /* Stile per il contenitore generale del gioco (titolo, quiz, messaggi) */
         #game-wrapper {
-            margin: 220px auto 40px; /* Sotto il logo DXC nello sfondo */
+            margin: 0 auto; /* Centrato orizzontalmente */
+            margin-top: 25vh; /* Posizionato al 25% dall'alto della viewport */
             max-width: 600px; /* Larghezza massima dell'intero blocco del quiz */
             padding: 20px; /* Padding interno di questo blocco */
             border-radius: 8px; /* Bordi arrotondati di questo blocco */
