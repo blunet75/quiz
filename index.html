@@ -91,7 +91,7 @@
             background: #D4551F;
         }
 
-        #newQuestionButton, #restartGameButton {
+        #newQuestionButton {
             margin-top: 10px;
             padding: 10px 20px;
             background: #5B7FE8; /* Blu DXC */
@@ -103,7 +103,7 @@
             display: none; /* Inizialmente nascosto */
         }
 
-        #newQuestionButton:hover, #restartGameButton:hover {
+        #newQuestionButton:hover {
             background: #4A6BD0;
         }
 
@@ -180,7 +180,6 @@
             </div>
 
             <div id="resultMessage"></div>
-            <button id="restartGameButton" onclick="resetGame()">Ricomincia Partita</button>
         </div>
     </div>
     <script>
@@ -302,7 +301,6 @@
                 shuffleArray(gameQuestions);
             }
 
-            document.getElementById('restartGameButton').style.display = 'none'; // Nasconde il pulsante Ricomincia
             document.getElementById('quizArea').style.display = 'block'; // Assicurati che l'area del quiz sia visibile
             displayNextQuestion();
         }
@@ -430,18 +428,6 @@
             document.getElementById('submitAnswerButton').style.display = 'none';
             document.getElementById('newQuestionButton').style.display = 'none';
             document.getElementById('quizArea').style.display = 'none'; // Nasconde l'area del quiz
-            document.getElementById('restartGameButton').style.display = 'inline-block'; // Mostra il pulsante Ricomincia
-        }
-
-        // Funzione per ricominciare il gioco
-        async function resetGame() {
-            if (allQuestions.length === 0) {
-                await loadQuestions(true);
-            }
-            document.getElementById('quizArea').style.display = 'block'; // Mostra l'area del quiz
-            document.getElementById('resultMessage').textContent = ''; // Pulisce il messaggio
-            document.getElementById('resultMessage').className = ''; // Pulisce la classe di colore
-            prepareGameQuestions(); // Prepara nuove domande per la partita
         }
 
         // All'avvio: carica i seriali
