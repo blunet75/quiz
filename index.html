@@ -183,26 +183,59 @@
             font-weight: bold;
             min-height: 1.5em;
         }
+
+        #serialScreen {
+            text-align: center;
+        }
+
+        #serialScreen input {
+            padding: 10px;
+            font-size: 1.3em;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            width: 200px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin: 15px 0;
+        }
+
+        #serialError {
+            color: #E8612D;
+            font-weight: bold;
+            min-height: 1.5em;
+        }
     </style>
 </head>
 <body>
 
     <div id="game-wrapper">
-        <h1>Rispondi correttamente ad almeno 8 domande su 10 per vincere un premio</h1>
-
-        <div id="loadingMessage">Caricamento domande...</div>
-
-        <div id="quizArea">
-            <p id="questionCounter"></p>
-            <p id="questionText">Domanda verrà caricata qui...</p>
-            <div id="optionsArea">
-            </div>
-            <button id="submitAnswerButton" onclick="checkAnswer()">Invia Risposta</button>
-            <button id="newQuestionButton" onclick="displayNextQuestion()">Prossima Domanda</button>
+        <div id="serialScreen">
+            <h1>Benvenuto al Quiz!</h1>
+            <p>Inserisci il tuo codice seriale per iniziare:</p>
+            <input type="text" id="serialInput" placeholder="XXXXXX" autocomplete="off" maxlength="6">
+            <br>
+            <button onclick="validateSerial()">Inizia</button>
+            <p id="serialError"></p>
         </div>
 
-        <div id="resultMessage"></div>
-        <button id="restartGameButton" onclick="resetGame()">Ricomincia Partita</button>
+        <div id="quizContent" style="display:none;">
+            <h1>Rispondi correttamente ad almeno 8 domande su 10 per vincere un premio</h1>
+
+            <div id="loadingMessage">Caricamento domande...</div>
+
+            <div id="quizArea">
+                <p id="questionCounter"></p>
+                <p id="questionText">Domanda verrà caricata qui...</p>
+                <div id="optionsArea">
+                </div>
+                <button id="submitAnswerButton" onclick="checkAnswer()">Invia Risposta</button>
+                <button id="newQuestionButton" onclick="displayNextQuestion()">Prossima Domanda</button>
+            </div>
+
+            <div id="resultMessage"></div>
+            <button id="restartGameButton" onclick="resetGame()">Ricomincia Partita</button>
+        </div>
     </div>
 
     <div id="unlockOverlay">
@@ -218,10 +251,47 @@
     </div>
     <script>
         let allQuestions = []; // Array per memorizzare tutte le domande caricate
+        let validSerials = []; // Array dei seriali validi
         let gameQuestions = []; // Array per le 10 domande della partita corrente
         let currentQuestionIndex = 0; // Indice della domanda corrente in gameQuestions
         let score = 0; // Punteggio del giocatore
         let questionsAskedCount = 0; // Contatore delle domande poste nella partita corrente
+
+        // Carica i seriali dal file JSON
+        async function loadSerials() {
+            try {
+                const response = await fetch('serials.json');
+                if (!response.ok) throw new Error('Errore caricamento seriali');
+                validSerials = await response.json();
+                console.log(`Caricati ${validSerials.length} seriali.`);
+            } catch (error) {
+                console.error('Errore nel caricare i seriali:', error);
+            }
+        }
+
+        // Valida il seriale inserito
+        function validateSerial() {
+            const input = document.getElementById('serialInput').value.trim().toUpperCase();
+            const errorDiv = document.getElementById('serialError');
+            if (!input) {
+                errorDiv.textContent = 'Inserisci un codice seriale.';
+                return;
+            }
+            if (!validSerials.includes(input)) {
+                errorDiv.textContent = 'Codice seriale non valido.';
+                return;
+            }
+            // Seriale valido: mostra il quiz
+            errorDiv.textContent = '';
+            document.getElementById('serialScreen').style.display = 'none';
+            document.getElementById('quizContent').style.display = 'block';
+            loadQuestions(false);
+        }
+
+        // Permetti invio con Enter nel campo seriale
+        document.getElementById('serialInput').addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') validateSerial();
+        });
 
         // Funzione per caricare le domande dal file JSON (silent = non mostra il quiz)
         async function loadQuestions(silent) {
@@ -488,9 +558,10 @@
             document.addEventListener('keydown', blockKeys);
             // Carica le domande in background per averle pronte al riavvio
             loadQuestions(true);
+            loadSerials();
         } else {
-            // Carica le domande all'avvio della pagina
-            loadQuestions(false);
+            // Carica i seriali all'avvio, le domande verranno caricate dopo validazione seriale
+            loadSerials();
         }
     </script>
 
