@@ -122,16 +122,78 @@
         .lose {
             color: #E8612D;
         }
+
+        #questionCounter {
+            font-size: 0.95em;
+            color: #555;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        #unlockOverlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.85);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #unlockOverlay.active {
+            display: flex;
+        }
+
+        #unlockBox {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 450px;
+            width: 90%;
+        }
+
+        #unlockBox h2 {
+            margin-top: 0;
+            color: #1A1A2E;
+        }
+
+        #unlockBox input {
+            padding: 10px;
+            font-size: 1.1em;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            width: 200px;
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        #unlockBox button {
+            background: #5B7FE8;
+        }
+
+        #unlockBox button:hover {
+            background: #4A6BD0;
+        }
+
+        #unlockError {
+            color: #E8612D;
+            font-weight: bold;
+            min-height: 1.5em;
+        }
     </style>
 </head>
 <body>
 
     <div id="game-wrapper">
-        <h1>Rispondi correttamente ad almeno 6 domande su 10 per vincere un premio</h1>
+        <h1>Rispondi correttamente ad almeno 8 domande su 10 per vincere un premio</h1>
 
         <div id="loadingMessage">Caricamento domande...</div>
 
         <div id="quizArea">
+            <p id="questionCounter"></p>
             <p id="questionText">Domanda verrà caricata qui...</p>
             <div id="optionsArea">
             </div>
@@ -141,6 +203,18 @@
 
         <div id="resultMessage"></div>
         <button id="restartGameButton" onclick="resetGame()">Ricomincia Partita</button>
+    </div>
+
+    <div id="unlockOverlay">
+        <div id="unlockBox">
+            <h2>Quiz completato</h2>
+            <p id="unlockResultText"></p>
+            <p>Inserisci il codice di sblocco per continuare:</p>
+            <input type="text" id="unlockCodeInput" placeholder="Codice" autocomplete="off">
+            <br>
+            <button onclick="verifyUnlockCode()">Sblocca</button>
+            <p id="unlockError"></p>
+        </div>
     </div>
     <script>
         let allQuestions = []; // Array per memorizzare tutte le domande caricate
@@ -227,6 +301,18 @@
             displayNextQuestion();
         }
 
+        // Blocca refresh/chiusura pagina quando il quiz è in stato di blocco
+        let pageLocked = false;
+        window.addEventListener('beforeunload', function(e) {
+            if (pageLocked) {
+                e.preventDefault();
+                e.returnValue = '';
+            }
+        });
+
+        // Codice di sblocco (modificare qui)
+        const UNLOCK_CODE = '6202';
+
         // Funzione per visualizzare la prossima domanda del gioco
         function displayNextQuestion() {
             if (questionsAskedCount >= 10) {
@@ -236,6 +322,7 @@
 
             const currentQuestion = gameQuestions[currentQuestionIndex];
 
+            document.getElementById('questionCounter').textContent = `Domanda ${questionsAskedCount + 1} di 10`;
             document.getElementById('questionText').innerHTML = currentQuestion.question;
 
             const optionsArea = document.getElementById('optionsArea');
@@ -338,7 +425,7 @@
             const resultMessageDiv = document.getElementById('resultMessage');
             resultMessageDiv.textContent = `Hai risposto correttamente a ${score} domande su 10. (${percentage.toFixed(0)}%)`;
 
-            if (percentage >= 60) {
+            if (percentage >= 80) {
                 resultMessageDiv.textContent += " Complimenti hai vinto!";
                 resultMessageDiv.className = 'win';
             } else {
@@ -348,8 +435,38 @@
 
             document.getElementById('submitAnswerButton').style.display = 'none';
             document.getElementById('newQuestionButton').style.display = 'none';
-            document.getElementById('restartGameButton').style.display = 'inline-block'; // Mostra il pulsante Ricomincia
             document.getElementById('quizArea').style.display = 'none'; // Nasconde l'area del quiz
+
+            // Blocca la pagina e mostra overlay
+            pageLocked = true;
+            document.getElementById('unlockResultText').textContent = resultMessageDiv.textContent;
+            document.getElementById('unlockOverlay').classList.add('active');
+            document.getElementById('game-wrapper').style.display = 'none';
+            // Disabilita tasti di navigazione
+            document.addEventListener('keydown', blockKeys);
+        }
+
+        function blockKeys(e) {
+            if (e.key === 'F5' || (e.ctrlKey && e.key === 'r') || (e.ctrlKey && e.key === 'R')) {
+                e.preventDefault();
+            }
+        }
+
+        function verifyUnlockCode() {
+            const input = document.getElementById('unlockCodeInput').value.trim();
+            if (input === UNLOCK_CODE) {
+                pageLocked = false;
+                document.removeEventListener('keydown', blockKeys);
+                document.getElementById('unlockOverlay').classList.remove('active');
+                document.getElementById('game-wrapper').style.display = '';
+                document.getElementById('resultMessage').textContent = '';
+                document.getElementById('resultMessage').className = '';
+                document.getElementById('restartGameButton').style.display = 'inline-block';
+                document.getElementById('unlockCodeInput').value = '';
+                document.getElementById('unlockError').textContent = '';
+            } else {
+                document.getElementById('unlockError').textContent = 'Codice errato. Riprova.';
+            }
         }
 
         // Funzione per ricominciare il gioco
