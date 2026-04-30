@@ -130,60 +130,6 @@
             text-align: left;
         }
 
-        #unlockOverlay {
-            display: none;
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: rgba(0,0,0,0.85);
-            z-index: 9999;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-
-        #unlockOverlay.active {
-            display: flex;
-        }
-
-        #unlockBox {
-            background: white;
-            padding: 40px;
-            border-radius: 10px;
-            text-align: center;
-            max-width: 450px;
-            width: 90%;
-        }
-
-        #unlockBox h2 {
-            margin-top: 0;
-            color: #1A1A2E;
-        }
-
-        #unlockBox input {
-            padding: 10px;
-            font-size: 1.1em;
-            border: 2px solid #ccc;
-            border-radius: 5px;
-            width: 200px;
-            text-align: center;
-            margin: 15px 0;
-        }
-
-        #unlockBox button {
-            background: #5B7FE8;
-        }
-
-        #unlockBox button:hover {
-            background: #4A6BD0;
-        }
-
-        #unlockError {
-            color: #E8612D;
-            font-weight: bold;
-            min-height: 1.5em;
-        }
-
         #serialScreen {
             text-align: center;
         }
@@ -235,18 +181,6 @@
 
             <div id="resultMessage"></div>
             <button id="restartGameButton" onclick="resetGame()">Ricomincia Partita</button>
-        </div>
-    </div>
-
-    <div id="unlockOverlay">
-        <div id="unlockBox">
-            <h2>Quiz completato</h2>
-            <p id="unlockResultText"></p>
-            <p>Inserisci il codice di sblocco per continuare:</p>
-            <input type="text" id="unlockCodeInput" placeholder="Codice" autocomplete="off">
-            <br>
-            <button onclick="verifyUnlockCode()">Sblocca</button>
-            <p id="unlockError"></p>
         </div>
     </div>
     <script>
@@ -373,18 +307,6 @@
             displayNextQuestion();
         }
 
-        // Blocca refresh/chiusura pagina quando il quiz è in stato di blocco
-        let pageLocked = false;
-        window.addEventListener('beforeunload', function(e) {
-            if (pageLocked) {
-                e.preventDefault();
-                e.returnValue = '';
-            }
-        });
-
-        // Codice di sblocco (modificare qui)
-        const UNLOCK_CODE = '6202';
-
         // Funzione per visualizzare la prossima domanda del gioco
         function displayNextQuestion() {
             if (questionsAskedCount >= 10) {
@@ -508,33 +430,7 @@
             document.getElementById('submitAnswerButton').style.display = 'none';
             document.getElementById('newQuestionButton').style.display = 'none';
             document.getElementById('quizArea').style.display = 'none'; // Nasconde l'area del quiz
-
-            // Blocca la pagina e mostra overlay
-            pageLocked = true;
-            sessionStorage.setItem('quizLocked', 'true');
-            sessionStorage.setItem('quizResult', resultMessageDiv.textContent);
-            document.getElementById('unlockResultText').textContent = resultMessageDiv.textContent;
-            document.getElementById('unlockOverlay').classList.add('active');
-            document.getElementById('game-wrapper').style.display = 'none';
-            // Disabilita tasti di navigazione
-            document.addEventListener('keydown', blockKeys);
-        }
-
-        function blockKeys(e) {
-            if (e.key === 'F5' || (e.ctrlKey && e.key === 'r') || (e.ctrlKey && e.key === 'R')) {
-                e.preventDefault();
-            }
-        }
-
-        function verifyUnlockCode() {
-            const input = document.getElementById('unlockCodeInput').value.trim();
-            if (input === UNLOCK_CODE) {
-                sessionStorage.removeItem('quizLocked');
-                sessionStorage.removeItem('quizResult');
-                location.reload();
-            } else {
-                document.getElementById('unlockError').textContent = 'Codice errato. Riprova.';
-            }
+            document.getElementById('restartGameButton').style.display = 'inline-block'; // Mostra il pulsante Ricomincia
         }
 
         // Funzione per ricominciare il gioco
@@ -548,21 +444,8 @@
             prepareGameQuestions(); // Prepara nuove domande per la partita
         }
 
-        // All'avvio: controlla se il quiz era bloccato (sopravvive al refresh)
-        if (sessionStorage.getItem('quizLocked') === 'true') {
-            pageLocked = true;
-            document.getElementById('loadingMessage').style.display = 'none';
-            document.getElementById('game-wrapper').style.display = 'none';
-            document.getElementById('unlockResultText').textContent = sessionStorage.getItem('quizResult') || '';
-            document.getElementById('unlockOverlay').classList.add('active');
-            document.addEventListener('keydown', blockKeys);
-            // Carica le domande in background per averle pronte al riavvio
-            loadQuestions(true);
-            loadSerials();
-        } else {
-            // Carica i seriali all'avvio, le domande verranno caricate dopo validazione seriale
-            loadSerials();
-        }
+        // All'avvio: carica i seriali
+        loadSerials();
     </script>
 
 </body>
