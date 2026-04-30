@@ -439,6 +439,8 @@
 
             // Blocca la pagina e mostra overlay
             pageLocked = true;
+            sessionStorage.setItem('quizLocked', 'true');
+            sessionStorage.setItem('quizResult', resultMessageDiv.textContent);
             document.getElementById('unlockResultText').textContent = resultMessageDiv.textContent;
             document.getElementById('unlockOverlay').classList.add('active');
             document.getElementById('game-wrapper').style.display = 'none';
@@ -456,6 +458,8 @@
             const input = document.getElementById('unlockCodeInput').value.trim();
             if (input === UNLOCK_CODE) {
                 pageLocked = false;
+                sessionStorage.removeItem('quizLocked');
+                sessionStorage.removeItem('quizResult');
                 document.removeEventListener('keydown', blockKeys);
                 document.getElementById('unlockOverlay').classList.remove('active');
                 document.getElementById('game-wrapper').style.display = '';
@@ -477,8 +481,18 @@
             prepareGameQuestions(); // Prepara nuove domande per la partita
         }
 
-        // Carica le domande all'avvio della pagina
-        loadQuestions();
+        // All'avvio: controlla se il quiz era bloccato (sopravvive al refresh)
+        if (sessionStorage.getItem('quizLocked') === 'true') {
+            pageLocked = true;
+            document.getElementById('loadingMessage').style.display = 'none';
+            document.getElementById('game-wrapper').style.display = 'none';
+            document.getElementById('unlockResultText').textContent = sessionStorage.getItem('quizResult') || '';
+            document.getElementById('unlockOverlay').classList.add('active');
+            document.addEventListener('keydown', blockKeys);
+        } else {
+            // Carica le domande all'avvio della pagina
+            loadQuestions();
+        }
     </script>
 
 </body>
