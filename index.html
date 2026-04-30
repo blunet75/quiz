@@ -223,19 +223,21 @@
         let score = 0; // Punteggio del giocatore
         let questionsAskedCount = 0; // Contatore delle domande poste nella partita corrente
 
-        // Funzione per caricare le domande dal file JSON
-        async function loadQuestions() {
+        // Funzione per caricare le domande dal file JSON (silent = non mostra il quiz)
+        async function loadQuestions(silent) {
             try {
-                const response = await fetch('questions.json'); // Assicurati che 'questions.json' sia nella stessa directory o specifica il percorso corretto
+                const response = await fetch('questions.json');
                 if (!response.ok) {
                     throw new Error(`Errore caricamento file: ${response.status}`);
                 }
                 allQuestions = await response.json();
-                console.log(`Caricate ${allQuestions.length} domande.`); // Debugging
+                console.log(`Caricate ${allQuestions.length} domande.`);
                 if (allQuestions.length > 0) {
-                    document.getElementById('loadingMessage').style.display = 'none'; // Nasconde il messaggio di caricamento
-                    document.getElementById('quizArea').style.display = 'block'; // Mostra l'area quiz
-                    prepareGameQuestions(); // Prepara e mostra le prime domande della partita
+                    document.getElementById('loadingMessage').style.display = 'none';
+                    if (!silent) {
+                        document.getElementById('quizArea').style.display = 'block';
+                        prepareGameQuestions();
+                    }
                 } else {
                     document.getElementById('loadingMessage').textContent = 'Errore: Nessuna domanda trovata nel file.';
                 }
@@ -457,24 +459,19 @@
         function verifyUnlockCode() {
             const input = document.getElementById('unlockCodeInput').value.trim();
             if (input === UNLOCK_CODE) {
-                pageLocked = false;
                 sessionStorage.removeItem('quizLocked');
                 sessionStorage.removeItem('quizResult');
-                document.removeEventListener('keydown', blockKeys);
-                document.getElementById('unlockOverlay').classList.remove('active');
-                document.getElementById('game-wrapper').style.display = '';
-                document.getElementById('resultMessage').textContent = '';
-                document.getElementById('resultMessage').className = '';
-                document.getElementById('restartGameButton').style.display = 'inline-block';
-                document.getElementById('unlockCodeInput').value = '';
-                document.getElementById('unlockError').textContent = '';
+                location.reload();
             } else {
                 document.getElementById('unlockError').textContent = 'Codice errato. Riprova.';
             }
         }
 
         // Funzione per ricominciare il gioco
-        function resetGame() {
+        async function resetGame() {
+            if (allQuestions.length === 0) {
+                await loadQuestions(true);
+            }
             document.getElementById('quizArea').style.display = 'block'; // Mostra l'area del quiz
             document.getElementById('resultMessage').textContent = ''; // Pulisce il messaggio
             document.getElementById('resultMessage').className = ''; // Pulisce la classe di colore
@@ -489,9 +486,11 @@
             document.getElementById('unlockResultText').textContent = sessionStorage.getItem('quizResult') || '';
             document.getElementById('unlockOverlay').classList.add('active');
             document.addEventListener('keydown', blockKeys);
+            // Carica le domande in background per averle pronte al riavvio
+            loadQuestions(true);
         } else {
             // Carica le domande all'avvio della pagina
-            loadQuestions();
+            loadQuestions(false);
         }
     </script>
 
