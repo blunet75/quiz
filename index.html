@@ -156,9 +156,13 @@
         <div id="quizContent">
             <h1>Rispondi correttamente ad almeno 8 domande su 10 per vincere un premio</h1>
 
+            <div id="startScreen" style="text-align:center; padding: 10px 0 20px;">
+                <button id="startButton" onclick="startGame()">Inizia il Quiz</button>
+            </div>
+
             <div id="timerDisplay">&#9201; Tempo rimanente: <span id="timerValue">2:00</span></div>
 
-            <div id="loadingMessage">Caricamento domande...</div>
+            <div id="loadingMessage" style="display:none;">Caricamento domande...</div>
 
             <div id="quizArea">
                 <p id="questionCounter"></p>
@@ -417,7 +421,7 @@
                 resultMessageDiv.textContent += " Complimenti hai vinto!";
                 resultMessageDiv.className = 'win';
             } else {
-                resultMessageDiv.textContent += " Mi dispiace non hai vinto ma puoi ritirare comunque un piccolo gadget.";
+                resultMessageDiv.textContent += " Mi dispiace, non hai vinto.";
                 resultMessageDiv.className = 'lose';
             }
 
@@ -426,8 +430,20 @@
             document.getElementById('quizArea').style.display = 'none';
         }
 
-        // All'avvio: carica le domande direttamente
-        loadQuestions(false);
+        function startGame() {
+            document.getElementById('startScreen').style.display = 'none';
+            if (allQuestions.length > 0) {
+                document.getElementById('quizArea').style.display = 'block';
+                prepareGameQuestions();
+                startTimer();
+            } else {
+                document.getElementById('loadingMessage').style.display = 'block';
+                loadQuestions(false);
+            }
+        }
+
+        // All'avvio: pre-carica le domande in silenzio
+        loadQuestions(true);
     </script>
 
 </body>
