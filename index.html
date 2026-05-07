@@ -157,10 +157,11 @@
             <h1>Rispondi correttamente ad almeno 8 domande su 10 per vincere un premio</h1>
 
             <div id="startScreen" style="text-align:center; padding: 10px 0 20px;">
+                <p style="font-size:1em; color:#555; margin-bottom:12px;">Avrai <strong>3 minuti</strong> per rispondere a tutte le domande.</p>
                 <button id="startButton" onclick="startGame()">Inizia il Quiz</button>
             </div>
 
-            <div id="timerDisplay">&#9201; Tempo rimanente: <span id="timerValue">2:00</span></div>
+            <div id="timerDisplay">&#9201; Tempo rimanente: <span id="timerValue">3:00</span></div>
 
             <div id="loadingMessage" style="display:none;">Caricamento domande...</div>
 
@@ -183,10 +184,10 @@
         let score = 0; // Punteggio del giocatore
         let questionsAskedCount = 0; // Contatore delle domande poste nella partita corrente
         let timerInterval = null;
-        let timeRemaining = 120; // 2 minuti in secondi
+        let timeRemaining = 180; // 3 minuti in secondi
 
         function startTimer() {
-            timeRemaining = 120;
+            timeRemaining = 180;
             const timerDisplay = document.getElementById('timerDisplay');
             timerDisplay.style.display = 'block';
             timerDisplay.classList.remove('warning');
