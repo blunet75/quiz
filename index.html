@@ -130,43 +130,33 @@
             text-align: left;
         }
 
-        #serialScreen {
-            text-align: center;
-        }
-
-        #serialScreen input {
-            padding: 10px;
-            font-size: 1.3em;
-            border: 2px solid #ccc;
-            border-radius: 5px;
-            width: 200px;
-            text-align: center;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin: 15px 0;
-        }
-
-        #serialError {
-            color: #E8612D;
+        #timerDisplay {
+            font-size: 1.4em;
             font-weight: bold;
-            min-height: 1.5em;
+            text-align: center;
+            margin-bottom: 15px;
+            padding: 8px 16px;
+            border-radius: 6px;
+            background: #f0f4ff;
+            border: 2px solid #5B7FE8;
+            color: #1A1A2E;
+            display: none;
+        }
+
+        #timerDisplay.warning {
+            background: #fff3e0;
+            border-color: #E8612D;
+            color: #E8612D;
         }
     </style>
 </head>
 <body>
 
     <div id="game-wrapper">
-        <div id="serialScreen">
-            <h1>Benvenuto al Quiz!</h1>
-            <p>Inserisci il tuo codice seriale per iniziare:</p>
-            <input type="text" id="serialInput" placeholder="XXXXXX" autocomplete="off" maxlength="6">
-            <br>
-            <button onclick="validateSerial()">Inizia</button>
-            <p id="serialError"></p>
-        </div>
-
-        <div id="quizContent" style="display:none;">
+        <div id="quizContent">
             <h1>Rispondi correttamente ad almeno 8 domande su 10 per vincere un premio</h1>
+
+            <div id="timerDisplay">&#9201; Tempo rimanente: <span id="timerValue">2:00</span></div>
 
             <div id="loadingMessage">Caricamento domande...</div>
 
@@ -184,47 +174,45 @@
     </div>
     <script>
         let allQuestions = []; // Array per memorizzare tutte le domande caricate
-        let validSerials = []; // Array dei seriali validi
         let gameQuestions = []; // Array per le 10 domande della partita corrente
         let currentQuestionIndex = 0; // Indice della domanda corrente in gameQuestions
         let score = 0; // Punteggio del giocatore
         let questionsAskedCount = 0; // Contatore delle domande poste nella partita corrente
+        let timerInterval = null;
+        let timeRemaining = 120; // 2 minuti in secondi
 
-        // Carica i seriali dal file JSON
-        async function loadSerials() {
-            try {
-                const response = await fetch('serials.json');
-                if (!response.ok) throw new Error('Errore caricamento seriali');
-                validSerials = await response.json();
-                console.log(`Caricati ${validSerials.length} seriali.`);
-            } catch (error) {
-                console.error('Errore nel caricare i seriali:', error);
+        function startTimer() {
+            timeRemaining = 120;
+            const timerDisplay = document.getElementById('timerDisplay');
+            timerDisplay.style.display = 'block';
+            timerDisplay.classList.remove('warning');
+            updateTimerDisplay();
+            timerInterval = setInterval(() => {
+                timeRemaining--;
+                updateTimerDisplay();
+                if (timeRemaining <= 30) {
+                    timerDisplay.classList.add('warning');
+                }
+                if (timeRemaining <= 0) {
+                    clearInterval(timerInterval);
+                    endGame(true);
+                }
+            }, 1000);
+        }
+
+        function stopTimer() {
+            if (timerInterval) {
+                clearInterval(timerInterval);
+                timerInterval = null;
             }
         }
 
-        // Valida il seriale inserito
-        function validateSerial() {
-            const input = document.getElementById('serialInput').value.trim().toUpperCase();
-            const errorDiv = document.getElementById('serialError');
-            if (!input) {
-                errorDiv.textContent = 'Inserisci un codice seriale.';
-                return;
-            }
-            if (!validSerials.includes(input)) {
-                errorDiv.textContent = 'Codice seriale non valido.';
-                return;
-            }
-            // Seriale valido: mostra il quiz
-            errorDiv.textContent = '';
-            document.getElementById('serialScreen').style.display = 'none';
-            document.getElementById('quizContent').style.display = 'block';
-            loadQuestions(false);
+        function updateTimerDisplay() {
+            const minutes = Math.floor(timeRemaining / 60);
+            const seconds = timeRemaining % 60;
+            document.getElementById('timerValue').textContent =
+                minutes + ':' + seconds.toString().padStart(2, '0');
         }
-
-        // Permetti invio con Enter nel campo seriale
-        document.getElementById('serialInput').addEventListener('keydown', function(e) {
-            if (e.key === 'Enter') validateSerial();
-        });
 
         // Funzione per caricare le domande dal file JSON (silent = non mostra il quiz)
         async function loadQuestions(silent) {
@@ -240,6 +228,7 @@
                     if (!silent) {
                         document.getElementById('quizArea').style.display = 'block';
                         prepareGameQuestions();
+                        startTimer();
                     }
                 } else {
                     document.getElementById('loadingMessage').textContent = 'Errore: Nessuna domanda trovata nel file.';
@@ -412,10 +401,17 @@
         }
 
         // Funzione per terminare il gioco e mostrare il risultato finale
-        function endGame() {
+        function endGame(timeout) {
+            stopTimer();
+            document.getElementById('timerDisplay').style.display = 'none';
             const percentage = (score / 10) * 100;
             const resultMessageDiv = document.getElementById('resultMessage');
-            resultMessageDiv.textContent = `Hai risposto correttamente a ${score} domande su 10. (${percentage.toFixed(0)}%)`;
+
+            if (timeout) {
+                resultMessageDiv.textContent = 'Tempo scaduto! Hai risposto correttamente a ' + score + ' domande su 10. (' + percentage.toFixed(0) + '%)';
+            } else {
+                resultMessageDiv.textContent = 'Hai risposto correttamente a ' + score + ' domande su 10. (' + percentage.toFixed(0) + '%)';
+            }
 
             if (percentage >= 80) {
                 resultMessageDiv.textContent += " Complimenti hai vinto!";
@@ -427,11 +423,11 @@
 
             document.getElementById('submitAnswerButton').style.display = 'none';
             document.getElementById('newQuestionButton').style.display = 'none';
-            document.getElementById('quizArea').style.display = 'none'; // Nasconde l'area del quiz
+            document.getElementById('quizArea').style.display = 'none';
         }
 
-        // All'avvio: carica i seriali
-        loadSerials();
+        // All'avvio: carica le domande direttamente
+        loadQuestions(false);
     </script>
 
 </body>
